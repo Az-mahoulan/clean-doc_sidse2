@@ -17,6 +17,12 @@ function splitGuide(): GuidePage[] {
     const html = MARKER + part;
     pages.push({ id, title: id, html });
   }
+  // The first section belongs to the introduction page
+  if (pages.length > 1 && pages[0]?.id === "intro" && pages[1]) {
+    pages[0].html += "\n" + pages[1].html;
+    pages.splice(1, 1);
+  }
+
 
   // Titles from the navigation when available
   const titleById = new Map<string, string>();
