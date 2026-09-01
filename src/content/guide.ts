@@ -185,68 +185,58 @@ export const navGroups: NavGroup[] = [
 ];
 
 export const guideHtml = `<div class="doc-header" id="intro">
-    <span class="eyebrow">Guide d'utilisation</span>
-    <h1 class="doctitle">Bienvenue dans la documentation de SIDSE IBDC</h1>
+    <h1 class="doctitle">Bienvenue sur SIDSE IBDC</h1>
     <p class="doc-lede">
-      <b>SIDSE IBDC</b> est la plateforme de gestion intelligente des Plans de Développement Communal pour un suivi efficace et transparent.
+      SIDSE IBDC est la plateforme de Gestion intelligente des Plans de Développement Communale pour un suivi efficace et transparent.
     </p>
-    <p class="lede" style="margin-top: 0.85rem;">
+    <p class="lede" style="margin-top: 0.75rem;">
       Le présent guide explique, étape par étape, comment utiliser la plateforme SIDSE IBDC.
     </p>
   </div>
 
-  <section class="block" style="border-bottom: 0; padding-top: 1.75rem;">
-    <div class="section-kicker">Accès rapide</div>
-    <h2>Raccourcis essentiels</h2>
+  <section class="block" style="border-bottom: 0; padding-top: 2rem;">
+    <div class="section-kicker" style="background:#eff6ff; color:#2563eb;">ACCÈS RAPIDES</div>
+    <h2>Les actions clés du guide</h2>
     <p class="lede">
-      Accédez directement aux actions clés et aux fonctionnalités les plus recherchées de la plateforme :
+      Retrouvez directement les parcours d'utilisation les plus importants de la plateforme.
     </p>
 
-    <div class="quick-links-grid">
-      <a href="#creer" class="quick-link-card">
-        <div class="ql-icon ql-icon-user"></div>
-        <div class="ql-body">
-          <div class="ql-tag">Administration</div>
-          <div class="ql-title">Créer un utilisateur</div>
-          <div class="ql-desc">Vérification de l'email, saisie de l'identité, mot de passe et attribution du profil.</div>
+    <div class="actions-grid">
+      <a href="#creer" class="action-card">
+        <div class="action-num num-blue">01</div>
+        <div class="action-body">
+          <div class="action-title">Créer un utilisateur</div>
+          <div class="action-desc">Ajouter un compte et lui attribuer un profil.</div>
         </div>
-        <div class="ql-arrow">›</div>
+        <div class="action-arrow">↗</div>
       </a>
 
-      <a href="#profils" class="quick-link-card">
-        <div class="ql-icon ql-icon-shield"></div>
-        <div class="ql-body">
-          <div class="ql-tag">Comptes &amp; Accès</div>
-          <div class="ql-title">Gérer et savoir ce que peut voir et faire un utilisateur</div>
-          <div class="ql-desc">Découvrir les 11 profils disponibles, les permissions d'interface et le socle commun.</div>
+      <a href="#profils" class="action-card">
+        <div class="action-num num-purple">02</div>
+        <div class="action-body">
+          <div class="action-title">Gérer les accès d'un utilisateur</div>
+          <div class="action-desc">Savoir ce qu'il peut voir et faire sur la plateforme.</div>
         </div>
-        <div class="ql-arrow">›</div>
+        <div class="action-arrow">↗</div>
       </a>
 
-      <a href="#eval-nouvelle" class="quick-link-card">
-        <div class="ql-icon ql-icon-eval"></div>
-        <div class="ql-body">
-          <div class="ql-tag">Module PDC</div>
-          <div class="ql-title">Faire une évaluation de PTA</div>
-          <div class="ql-desc">Enregistrer une évaluation trimestrielle ou annuelle d'un Plan de Travail Annuel.</div>
+      <a href="#eval-nouvelle" class="action-card">
+        <div class="action-num num-green">03</div>
+        <div class="action-body">
+          <div class="action-title">Faire une évaluation de PTA</div>
+          <div class="action-desc">Créer une nouvelle évaluation du Plan de Travail Annuel.</div>
         </div>
-        <div class="ql-arrow">›</div>
+        <div class="action-arrow">↗</div>
       </a>
 
-      <a href="#pdc-rapports" class="quick-link-card">
-        <div class="ql-icon ql-icon-chart"></div>
-        <div class="ql-body">
-          <div class="ql-tag">Module PDC</div>
-          <div class="ql-title">Voir une synthèse Évaluation</div>
-          <div class="ql-desc">Consulter les rapports consolidés, bilans financiers et synthèses d'exécution.</div>
+      <a href="#pdc-rapports" class="action-card">
+        <div class="action-num num-orange">04</div>
+        <div class="action-body">
+          <div class="action-title">Voir une synthèse Évaluation</div>
+          <div class="action-desc">Consulter une vue consolidée des résultats et indicateurs.</div>
         </div>
-        <div class="ql-arrow">›</div>
+        <div class="action-arrow">↗</div>
       </a>
-    </div>
-
-    <div class="callout" style="margin-top: 2rem;">
-      <b>Comment naviguer dans ce guide</b>
-      Utilisez le sommaire à gauche pour parcourir les modules ou cliquez sur le bouton <b>Suivant</b> au bas de chaque page pour suivre le guide pas à pas.
     </div>
   </section>
 
