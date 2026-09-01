@@ -80,17 +80,19 @@ function DocsPage() {
     setPageId(target);
     window.history.replaceState(null, "", `#${anchor}`);
     if (anchor === target && !samePage) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollTop();
       return;
     }
     setTimeout(
-      () =>
-        document
-          .getElementById(anchor)
-          ?.scrollIntoView({ behavior: "smooth", block: "start" }),
-      samePage ? 0 : 80,
+      () => {
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: samePage ? "smooth" : "auto", block: "start" });
+        else scrollTop();
+      },
+      samePage ? 0 : 90,
     );
   };
+
 
   const scrollTop = () => {
     if (typeof window === "undefined") return;
