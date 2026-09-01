@@ -80,23 +80,41 @@ function DocsPage() {
     setPageId(target);
     window.history.replaceState(null, "", `#${anchor}`);
     if (anchor === target && !samePage) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollTop();
       return;
     }
     setTimeout(
-      () =>
-        document
-          .getElementById(anchor)
-          ?.scrollIntoView({ behavior: "smooth", block: "start" }),
-      samePage ? 0 : 80,
+      () => {
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: samePage ? "smooth" : "auto", block: "start" });
+        else scrollTop();
+      },
+      samePage ? 0 : 90,
     );
   };
 
+
+  const scrollTop = () => {
+    if (typeof window === "undefined") return;
+    const html = document.documentElement;
+    const previous = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    html.scrollTop = 0;
+    document.body.scrollTop = 0;
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      html.style.scrollBehavior = previous;
+    });
+  };
+
   const goToPage = (id: string) => {
+    setMenuOpen(false);
     setPageId(id);
     window.history.replaceState(null, "", `#${id}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollTop();
   };
+
 
   return (
     <div className="min-h-screen bg-background">
