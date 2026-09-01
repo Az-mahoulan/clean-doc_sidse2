@@ -92,11 +92,27 @@ function DocsPage() {
     );
   };
 
+  const scrollTop = () => {
+    if (typeof window === "undefined") return;
+    const html = document.documentElement;
+    const previous = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    html.scrollTop = 0;
+    document.body.scrollTop = 0;
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      html.style.scrollBehavior = previous;
+    });
+  };
+
   const goToPage = (id: string) => {
+    setMenuOpen(false);
     setPageId(id);
     window.history.replaceState(null, "", `#${id}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollTop();
   };
+
 
   return (
     <div className="min-h-screen bg-background">
