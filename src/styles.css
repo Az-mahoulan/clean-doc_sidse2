@@ -4,28 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -45,91 +28,37 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ring-offset-background: var(--background);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-surface: var(--surface);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.6rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --surface: oklch(0.983 0.004 240);
+  --foreground: oklch(0.24 0.03 260);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.24 0.03 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-}
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --popover-foreground: oklch(0.24 0.03 260);
+  --primary: oklch(0.52 0.09 190);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.008 240);
+  --secondary-foreground: oklch(0.3 0.03 260);
+  --muted: oklch(0.965 0.006 240);
+  --muted-foreground: oklch(0.55 0.025 258);
+  --accent: oklch(0.955 0.02 190);
+  --accent-foreground: oklch(0.42 0.08 190);
+  --destructive: oklch(0.58 0.2 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.6 0.13 155);
+  --warning: oklch(0.72 0.13 75);
+  --border: oklch(0.92 0.008 250);
+  --input: oklch(0.92 0.008 250);
+  --ring: oklch(0.52 0.09 190);
 }
 
 @layer base {
@@ -140,5 +69,309 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Documentation content styles (applied to the imported guide HTML)
+   --------------------------------------------------------------- */
+@layer components {
+  .doc-content {
+    font-size: 0.975rem;
+    line-height: 1.75;
+    color: var(--color-foreground);
+    scroll-behavior: smooth;
+  }
+
+  .doc-content > .doc-header {
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .doc-content .eyebrow,
+  .doc-content .section-kicker {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--color-accent-foreground);
+    background: var(--color-accent);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.9rem;
+  }
+
+  .doc-content .doctitle {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .doc-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .doc-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2.25rem 0 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .doc-content .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: none;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .doc-content .block {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+    scroll-margin-top: 5rem;
+  }
+
+  .doc-content .block:last-of-type {
+    border-bottom: 0;
+  }
+
+  .doc-content p {
+    margin: 0 0 1rem;
+  }
+
+  .doc-content .lede,
+  .doc-content .doc-lede {
+    color: var(--color-muted-foreground);
+    font-size: 1.02rem;
+  }
+
+  .doc-content b {
+    font-weight: 600;
+    color: var(--color-foreground);
+  }
+
+  .doc-content a {
+    color: var(--color-accent-foreground);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Callouts */
+  .doc-content .callout {
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 0.95rem 1.1rem;
+    margin: 1.25rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted-foreground);
+  }
+
+  .doc-content .callout b {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-display);
+    color: var(--color-foreground);
+  }
+
+  .doc-content .callout.todo {
+    border-left-color: var(--color-warning);
+  }
+
+  /* Cards & lists */
+  .doc-content .card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-card);
+    padding: 1.1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .doc-content ul.plain,
+  .doc-content ol.steps,
+  .doc-content ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.15rem;
+  }
+
+  .doc-content ul.plain {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .doc-content ul.plain > li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-content ul.plain > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-primary);
+  }
+
+  .doc-content ol.steps > li {
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-content ol.steps > li::marker {
+    color: var(--color-accent-foreground);
+    font-weight: 700;
+  }
+
+  /* Screenshots */
+  .doc-content .shot {
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--radius) + 4px);
+    overflow: hidden;
+    background: var(--color-surface);
+    margin: 1.5rem 0 0.6rem;
+    box-shadow: 0 1px 2px oklch(0.24 0.03 260 / 0.05);
+  }
+
+  .doc-content .shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .doc-content .shot-caption {
+    font-size: 0.82rem;
+    color: var(--color-muted-foreground);
+    margin: 0 0 1.75rem;
+  }
+
+  /* Tables */
+  .doc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    margin: 1.25rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .doc-content th {
+    text-align: left;
+    font-family: var(--font-display);
+    background: var(--color-surface);
+    font-weight: 700;
+  }
+
+  .doc-content th,
+  .doc-content td {
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .doc-content tr:last-child td {
+    border-bottom: 0;
+  }
+
+  /* Role grid */
+  .doc-content .role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+
+  .doc-content .role-chip {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.75rem 0.85rem;
+    background: var(--color-card);
+  }
+
+  .doc-content .role-chip .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    margin-top: 0.5rem;
+    flex: none;
+  }
+
+  .doc-content .role-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .doc-content .role-desc {
+    font-size: 0.82rem;
+    color: var(--color-muted-foreground);
+    line-height: 1.5;
+  }
+
+  .doc-content .badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .doc-content .action-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .doc-content .action-icons span {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.78rem;
+    color: var(--color-muted-foreground);
+  }
+
+  .doc-content .doc-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.8rem;
+    color: var(--color-muted-foreground);
   }
 }
