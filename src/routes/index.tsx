@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { guideHtml, navGroups, type NavItem } from "@/content/guide";
+import { navGroups, type NavItem } from "@/content/guide";
+import { guidePages, pageIdForAnchor } from "@/content/pages";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,13 +27,16 @@ export const Route = createFileRoute("/")({
 
 function DocsPage() {
   const [query, setQuery] = useState("");
-  const [activeId, setActiveId] = useState<string>("intro");
+  const [pageId, setPageId] = useState<string>(guidePages[0]?.id ?? "intro");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const allIds = useMemo(
-    () => navGroups.flatMap((g) => g.items.map((i) => i.href)),
-    [],
+  const index = Math.max(
+    0,
+    guidePages.findIndex((p) => p.id === pageId),
   );
+  const page = guidePages[index];
+  const prev = guidePages[index - 1];
+  const next = guidePages[index + 1];
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -45,47 +49,53 @@ function DocsPage() {
       .filter((g) => g.items.length > 0);
   }, [query]);
 
-  const onThisPage = useMemo<NavItem[]>(() => {
-    const group = navGroups.find((g) =>
-      g.items.some((i) => i.href === activeId),
-    );
-    if (!group) return [];
-    let parentIndex = group.items.findIndex((i) => i.href === activeId);
-    while (parentIndex > 0 && group.items[parentIndex]?.sub) parentIndex--;
-    const parent = group.items[parentIndex];
-    if (!parent) return [];
-    const rest = group.items.slice(parentIndex + 1);
-    const children: NavItem[] = [];
-    for (const item of rest) {
-      if (!item.sub) break;
-      children.push(item);
-    }
-    return [parent, ...children];
-  }, [activeId]);
+  const onThisPage = useMemo<NavItem[]>(
+    () =>
+      navGroups
+        .flatMap((g) => g.items)
+        .filter((i) => pageIdForAnchor[i.href] === page?.id),
+    [page?.id],
+  );
 
-
+  // Deep-link support (#anchor)
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible[0]?.target.id) setActiveId(visible[0].target.id);
-      },
-      { rootMargin: "-88px 0px -70% 0px", threshold: 0 },
-    );
-    allIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, [allIds]);
+    const hash = window.location.hash.replace("#", "");
+    const target = hash ? pageIdForAnchor[hash] : undefined;
+    if (target) {
+      setPageId(target);
+      if (hash !== target) {
+        setTimeout(
+          () => document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" }),
+          80,
+        );
+      }
+    }
+  }, []);
 
-  const go = (id: string) => (event: React.MouseEvent) => {
+  const goToAnchor = (anchor: string) => (event: React.MouseEvent) => {
     event.preventDefault();
     setMenuOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const target = pageIdForAnchor[anchor] ?? anchor;
+    const samePage = target === page?.id;
+    setPageId(target);
+    window.history.replaceState(null, "", `#${anchor}`);
+    if (anchor === target && !samePage) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    setTimeout(
+      () =>
+        document
+          .getElementById(anchor)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" }),
+      samePage ? 0 : 80,
+    );
+  };
+
+  const goToPage = (id: string) => {
+    setPageId(id);
     window.history.replaceState(null, "", `#${id}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -112,8 +122,14 @@ function DocsPage() {
             </span>
           </div>
           <div className="ml-auto hidden text-sm text-muted-foreground sm:block">
-            Piè Baromètre · Guide d'utilisation
+            Étape {index + 1} sur {guidePages.length}
           </div>
+        </div>
+        <div className="h-0.5 w-full bg-border">
+          <div
+            className="h-0.5 bg-primary transition-all duration-300"
+            style={{ width: `${((index + 1) / guidePages.length) * 100}%` }}
+          />
         </div>
       </header>
 
@@ -142,12 +158,12 @@ function DocsPage() {
                 </p>
                 <ul className="space-y-0.5 border-l border-border">
                   {group.items.map((item) => {
-                    const active = item.href === activeId;
+                    const active = pageIdForAnchor[item.href] === page?.id;
                     return (
                       <li key={item.href}>
                         <a
                           href={`#${item.href}`}
-                          onClick={go(item.href)}
+                          onClick={goToAnchor(item.href)}
                           className={`-ml-px block border-l py-1.5 text-[13.5px] transition-colors ${
                             item.sub ? "pl-6" : "pl-3"
                           } ${
@@ -175,9 +191,45 @@ function DocsPage() {
         {/* Content */}
         <main className="min-w-0 flex-1 py-10 lg:py-14">
           <article
+            key={page?.id}
             className="doc-content max-w-3xl"
-            dangerouslySetInnerHTML={{ __html: guideHtml }}
+            dangerouslySetInnerHTML={{ __html: page?.html ?? "" }}
           />
+
+          {/* Pagination */}
+          <nav className="mt-12 grid max-w-3xl gap-3 border-t border-border pt-8 sm:grid-cols-2">
+            {prev ? (
+              <button
+                type="button"
+                onClick={() => goToPage(prev.id)}
+                className="group rounded-lg border border-border bg-card px-4 py-3 text-left transition-colors hover:border-primary"
+              >
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                  ← Précédent
+                </span>
+                <span className="mt-0.5 block font-display text-sm font-bold">
+                  {prev.title}
+                </span>
+              </button>
+            ) : (
+              <span />
+            )}
+            {next && (
+              <button
+                type="button"
+                onClick={() => goToPage(next.id)}
+                className="group rounded-lg border border-primary bg-primary px-4 py-3 text-right text-primary-foreground transition-opacity hover:opacity-90 sm:col-start-2"
+              >
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.1em] opacity-80">
+                  Suivant →
+                </span>
+                <span className="mt-0.5 block font-display text-sm font-bold">
+                  {next.title}
+                </span>
+              </button>
+            )}
+          </nav>
+
           <footer className="doc-footer max-w-3xl">
             Guide évolutif — SIDSE IBDC (Piè Baromètre). De nouvelles sections
             sont ajoutées au fur et à mesure.
@@ -194,14 +246,10 @@ function DocsPage() {
               <li key={item.href}>
                 <a
                   href={`#${item.href}`}
-                  onClick={go(item.href)}
+                  onClick={goToAnchor(item.href)}
                   className={`block text-[13px] leading-snug transition-colors ${
                     item.sub ? "pl-3" : ""
-                  } ${
-                    item.href === activeId
-                      ? "font-semibold text-accent-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  } text-muted-foreground hover:text-foreground`}
                 >
                   {item.title}
                 </a>
@@ -213,3 +261,4 @@ function DocsPage() {
     </div>
   );
 }
+
