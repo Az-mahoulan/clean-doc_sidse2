@@ -212,6 +212,18 @@ function DocsPage() {
             key={page?.id}
             className="doc-content max-w-3xl"
             dangerouslySetInnerHTML={{ __html: page?.html ?? "" }}
+            onClick={(e) => {
+              const target = (e.target as HTMLElement).closest("a");
+              if (target) {
+                const href = target.getAttribute("href");
+                if (href && href.startsWith("#")) {
+                  e.preventDefault();
+                  const hash = href.replace("#", "");
+                  const targetPage = pageIdForAnchor[hash] ?? hash;
+                  goToPage(targetPage);
+                }
+              }
+            }}
           />
 
           {/* Pagination */}

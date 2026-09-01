@@ -186,21 +186,67 @@ export const navGroups: NavGroup[] = [
 
 export const guideHtml = `<div class="doc-header" id="intro">
     <span class="eyebrow">Guide d'utilisation</span>
-    <h1 class="doctitle">Bienvenue sur SIDSE IBDC</h1>
+    <h1 class="doctitle">Bienvenue dans la documentation de SIDSE IBDC</h1>
     <p class="doc-lede">
-      Ce guide explique, étape par étape et avec des captures d'écran de la plateforme, comment utiliser SIDSE IBDC (Piè Baromètre) : les profils utilisateurs, la gestion des permissions et la gestion des comptes. D'autres sections (tableau de bord, PDC, ODD &amp; indicateurs, projets phares…) viendront compléter ce document.
+      <b>SIDSE IBDC</b> est la plateforme de gestion intelligente des Plans de Développement Communal pour un suivi efficace et transparent.
+    </p>
+    <p class="lede" style="margin-top: 0.85rem;">
+      Le présent guide explique, étape par étape, comment utiliser la plateforme SIDSE IBDC.
     </p>
   </div>
 
-  <section class="block" id="intro-detail">
-    <div class="section-kicker">À propos</div>
-    <h2>Ce que couvre ce guide</h2>
+  <section class="block" style="border-bottom: 0; padding-top: 1.75rem;">
+    <div class="section-kicker">Accès rapide</div>
+    <h2>Raccourcis essentiels</h2>
     <p class="lede">
-      SIDSE IBDC est la plateforme de suivi utilisée par la commune (ici illustrée avec l'exemple <b>Glazoué</b>) pour gérer le Plan de Développement Communal (PDC), les Objectifs de Développement Durable (ODD) et les indicateurs associés, ainsi que les projets phares. Chaque utilisateur y accède avec un compte associé à un <b>profil</b>, qui détermine ce qu'il peut voir et faire.
+      Accédez directement aux actions clés et aux fonctionnalités les plus recherchées de la plateforme :
     </p>
-    <div class="callout">
-      <b>Comment lire ce guide</b>
-      Chaque section explique une action précise (ex. « changer le profil d'un utilisateur ») avec la marche à suivre numérotée et une capture d'écran réelle de la plateforme.
+
+    <div class="quick-links-grid">
+      <a href="#creer" class="quick-link-card">
+        <div class="ql-icon ql-icon-user"></div>
+        <div class="ql-body">
+          <div class="ql-tag">Administration</div>
+          <div class="ql-title">Créer un utilisateur</div>
+          <div class="ql-desc">Vérification de l'email, saisie de l'identité, mot de passe et attribution du profil.</div>
+        </div>
+        <div class="ql-arrow">›</div>
+      </a>
+
+      <a href="#profils" class="quick-link-card">
+        <div class="ql-icon ql-icon-shield"></div>
+        <div class="ql-body">
+          <div class="ql-tag">Comptes &amp; Accès</div>
+          <div class="ql-title">Gérer et savoir ce que peut voir et faire un utilisateur</div>
+          <div class="ql-desc">Découvrir les 11 profils disponibles, les permissions d'interface et le socle commun.</div>
+        </div>
+        <div class="ql-arrow">›</div>
+      </a>
+
+      <a href="#eval-nouvelle" class="quick-link-card">
+        <div class="ql-icon ql-icon-eval"></div>
+        <div class="ql-body">
+          <div class="ql-tag">Module PDC</div>
+          <div class="ql-title">Faire une évaluation de PTA</div>
+          <div class="ql-desc">Enregistrer une évaluation trimestrielle ou annuelle d'un Plan de Travail Annuel.</div>
+        </div>
+        <div class="ql-arrow">›</div>
+      </a>
+
+      <a href="#pdc-rapports" class="quick-link-card">
+        <div class="ql-icon ql-icon-chart"></div>
+        <div class="ql-body">
+          <div class="ql-tag">Module PDC</div>
+          <div class="ql-title">Voir une synthèse Évaluation</div>
+          <div class="ql-desc">Consulter les rapports consolidés, bilans financiers et synthèses d'exécution.</div>
+        </div>
+        <div class="ql-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="callout" style="margin-top: 2rem;">
+      <b>Comment naviguer dans ce guide</b>
+      Utilisez le sommaire à gauche pour parcourir les modules ou cliquez sur le bouton <b>Suivant</b> au bas de chaque page pour suivre le guide pas à pas.
     </div>
   </section>
 

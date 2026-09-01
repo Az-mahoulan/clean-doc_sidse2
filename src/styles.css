@@ -246,6 +246,121 @@
     box-shadow: 0 1px 3px oklch(0.24 0.03 260 / 0.04);
   }
 
+  /* Quick links grid on Présentation */
+  .doc-content .quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 1.25rem;
+  }
+
+  .doc-content .quick-link-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--radius) + 4px);
+    background: var(--color-card);
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 3px oklch(0.24 0.03 260 / 0.03);
+    cursor: pointer;
+  }
+
+  .doc-content .quick-link-card:hover {
+    border-color: color-mix(in oklch, var(--color-primary) 35%, var(--color-border));
+    background: color-mix(in oklch, var(--color-primary) 2%, var(--color-card));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px oklch(0.24 0.03 260 / 0.06);
+  }
+
+  .doc-content .ql-icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: calc(var(--radius) + 1px);
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 1.25rem 1.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0.1rem;
+  }
+
+  .doc-content .ql-icon-user {
+    background-color: color-mix(in oklch, #6c4fd6 10%, transparent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c4fd6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cline x1='19' x2='19' y1='8' y2='14'/%3E%3Cline x1='22' x2='16' y1='11' y2='11'/%3E%3C/svg%3E");
+  }
+
+  .doc-content .ql-icon-shield {
+    background-color: color-mix(in oklch, #1f6fb2 10%, transparent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f6fb2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+  }
+
+  .doc-content .ql-icon-eval {
+    background-color: color-mix(in oklch, #c07f1a 10%, transparent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c07f1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='m9 15 2 2 4-4'/%3E%3C/svg%3E");
+  }
+
+  .doc-content .ql-icon-chart {
+    background-color: color-mix(in oklch, #0d7377 10%, transparent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d7377' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3v18h18'/%3E%3Cpath d='M18 17V9'/%3E%3Cpath d='M13 17V5'/%3E%3Cpath d='M8 17v-3'/%3E%3C/svg%3E");
+  }
+
+  .doc-content .ql-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .doc-content .ql-tag {
+    font-family: var(--font-display);
+    font-size: 0.67rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-muted-foreground);
+    margin-bottom: 0.2rem;
+  }
+
+  .doc-content .ql-title {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-foreground);
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+    transition: color 0.15s;
+  }
+
+  .doc-content .quick-link-card:hover .ql-title {
+    color: var(--color-primary);
+  }
+
+  .doc-content .ql-desc {
+    font-size: 0.805rem;
+    color: var(--color-muted-foreground);
+    line-height: 1.5;
+  }
+
+  .doc-content .ql-arrow {
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--color-muted-foreground);
+    align-self: center;
+    flex: none;
+    transition: all 0.15s;
+    opacity: 0.5;
+  }
+
+  .doc-content .quick-link-card:hover .ql-arrow {
+    color: var(--color-primary);
+    transform: translateX(3px);
+    opacity: 1;
+  }
+
   .doc-content ul.plain,
   .doc-content ol.steps,
   .doc-content ul {
