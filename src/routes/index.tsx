@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { guideHtml, navGroups } from "@/content/guide";
+import { guideHtml, navGroups, type NavItem } from "@/content/guide";
 
 export const Route = createFileRoute("/")({
   head: () => ({
