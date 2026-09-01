@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -159,6 +159,12 @@
     scroll-margin-top: 5rem;
   }
 
+  .doc-content > .block:first-child,
+  .doc-content > .doc-header:first-child {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   .doc-content .block:last-of-type {
     border-bottom: 0;
   }
@@ -186,34 +192,58 @@
 
   /* Callouts */
   .doc-content .callout {
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-primary);
-    background: var(--color-surface);
-    border-radius: var(--radius);
-    padding: 0.95rem 1.1rem;
-    margin: 1.25rem 0;
-    font-size: 0.92rem;
+    position: relative;
+    padding: 1.05rem 1.25rem 1.05rem 3.25rem;
+    margin: 1.5rem 0;
+    background: color-mix(in oklch, var(--color-primary) 4%, var(--color-card));
+    border: 1px solid color-mix(in oklch, var(--color-primary) 18%, var(--color-border));
+    border-radius: calc(var(--radius) + 3px);
+    font-size: 0.895rem;
     color: var(--color-muted-foreground);
+    line-height: 1.68;
+  }
+
+  /* Info icon — Lucide "Info" */
+  .doc-content .callout::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 1.05rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234154b5' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.85;
   }
 
   .doc-content .callout b {
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
     font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
     color: var(--color-foreground);
   }
 
+  /* Todo variant — Lucide "AlertTriangle" */
   .doc-content .callout.todo {
-    border-left-color: var(--color-warning);
+    background: color-mix(in oklch, var(--color-warning) 5%, var(--color-card));
+    border-color: color-mix(in oklch, var(--color-warning) 25%, var(--color-border));
   }
 
-  /* Cards & lists */
+  .doc-content .callout.todo::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c07f1a' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+  }
+
+  /* Cards */
   .doc-content .card {
     border: 1px solid var(--color-border);
-    border-radius: var(--radius);
+    border-radius: calc(var(--radius) + 3px);
     background: var(--color-card);
-    padding: 1.1rem 1.25rem;
+    padding: 1.2rem 1.4rem;
     margin: 1.25rem 0;
+    box-shadow: 0 1px 3px oklch(0.24 0.03 260 / 0.04);
   }
 
   .doc-content ul.plain,
@@ -280,25 +310,62 @@
   .doc-content table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.86rem;
-    margin: 1.25rem 0;
+    font-size: 0.855rem;
+    margin: 1.5rem 0;
     border: 1px solid var(--color-border);
-    border-radius: var(--radius);
+    border-radius: calc(var(--radius) + 3px);
     overflow: hidden;
+    box-shadow: 0 1px 4px oklch(0.24 0.03 260 / 0.05);
+  }
+
+  /* Header row */
+  .doc-content thead tr,
+  .doc-content tr:first-child:has(th) {
+    background: color-mix(in oklch, var(--color-primary) 5%, var(--color-surface));
+    border-bottom: 2px solid color-mix(in oklch, var(--color-primary) 18%, var(--color-border));
   }
 
   .doc-content th {
     text-align: left;
     font-family: var(--font-display);
-    background: var(--color-surface);
+    font-size: 0.78rem;
     font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-foreground);
+    padding: 0.7rem 1rem;
+    border-right: 1px solid color-mix(in oklch, var(--color-primary) 12%, var(--color-border));
+    vertical-align: middle;
+    white-space: nowrap;
   }
 
-  .doc-content th,
+  .doc-content th:last-child {
+    border-right: 0;
+  }
+
+  /* Data cells */
   .doc-content td {
-    padding: 0.6rem 0.8rem;
+    padding: 0.65rem 1rem;
     border-bottom: 1px solid var(--color-border);
+    border-right: 1px solid color-mix(in oklch, var(--color-border) 60%, transparent);
     vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .doc-content td:last-child {
+    border-right: 0;
+  }
+
+  /* Zebra rows */
+  .doc-content tbody tr:nth-child(even),
+  .doc-content tr:nth-child(even):not(:has(th)) {
+    background: color-mix(in oklch, var(--color-surface) 60%, var(--color-card));
+  }
+
+  /* Row hover */
+  .doc-content tbody tr:hover,
+  .doc-content tr:not(:first-child):hover {
+    background: color-mix(in oklch, var(--color-primary) 3.5%, var(--color-card));
+    transition: background 0.1s;
   }
 
   .doc-content tr:last-child td {
@@ -315,56 +382,93 @@
 
   .doc-content .role-chip {
     display: flex;
-    gap: 0.65rem;
+    gap: 0.75rem;
     align-items: flex-start;
     border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 0.75rem 0.85rem;
+    border-radius: calc(var(--radius) + 2px);
+    padding: 0.9rem 1rem;
     background: var(--color-card);
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+
+  .doc-content .role-chip:hover {
+    border-color: color-mix(in oklch, var(--color-ring) 35%, var(--color-border));
+    box-shadow: 0 1px 4px oklch(0.24 0.03 260 / 0.06);
   }
 
   .doc-content .role-chip .dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 999px;
-    margin-top: 0.5rem;
+    margin-top: 0.45rem;
     flex: none;
+    box-shadow: 0 0 0 3px color-mix(in oklch, currentColor 12%, transparent);
   }
 
   .doc-content .role-name {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.15rem;
   }
 
   .doc-content .role-desc {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: var(--color-muted-foreground);
-    line-height: 1.5;
+    line-height: 1.55;
+  }
+
+  /* Hint spans inside steps */
+  .doc-content .hint {
+    display: block;
+    margin-top: 0.35rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.81rem;
+    color: var(--color-muted-foreground);
+    background: var(--color-surface);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--color-border);
+    line-height: 1.55;
   }
 
   .doc-content .badge {
-    display: inline-block;
-    padding: 0.1rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.65rem;
     border-radius: 999px;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
+    font-family: var(--font-display);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-foreground);
+    letter-spacing: 0.01em;
   }
 
   .doc-content .action-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.5rem;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
   }
 
   .doc-content .action-icons span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
     border: 1px solid var(--color-border);
     background: var(--color-surface);
-    border-radius: 999px;
-    padding: 0.15rem 0.6rem;
-    font-size: 0.78rem;
+    border-radius: var(--radius-sm);
+    padding: 0.2rem 0.65rem;
+    font-size: 0.77rem;
+    font-weight: 500;
     color: var(--color-muted-foreground);
+    transition: border-color 0.12s, color 0.12s;
+  }
+
+  .doc-content .action-icons span:hover {
+    border-color: color-mix(in oklch, var(--color-ring) 40%, var(--color-border));
+    color: var(--color-foreground);
   }
 
   .doc-content .doc-footer {

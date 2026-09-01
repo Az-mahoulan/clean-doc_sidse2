@@ -1,0 +1,699 @@
+# Guide d'utilisation SIDSE IBDC (Piè Baromètre)
+
+> **Plateforme :** SIDSE IBDC (Glazoué)
+> **Source :** https://clean-doc-style.lovable.app
+> **Format :** Markdown avec captures d'écran intégrées
+
+`## Bienvenue sur SIDSE IBDC
+
+*Guide d'utilisation*
+
+Ce guide explique, étape par étape et avec des captures d'écran de la plateforme, comment utiliser SIDSE IBDC (Piè Baromètre) : les profils utilisateurs, la gestion des permissions et la gestion des comptes. D'autres sections (tableau de bord, PDC, ODD & indicateurs, projets phares…) viendront compléter ce document.
+
+  
+
+---
+
+    
+### [À propos] Ce que couvre ce guide
+
+    
+_SIDSE IBDC est la plateforme de suivi utilisée par la commune (ici illustrée avec l'exemple **Glazoué**) pour gérer le Plan de Développement Communal (PDC), les Objectifs de Développement Durable (ODD) et les indicateurs associés, ainsi que les projets phares. Chaque utilisateur y accède avec un compte associé à un **profil**, qui détermine ce qu'il peut voir et faire._
+
+    
+> 💡 **Comment lire ce guide**  
+> Chaque section explique une action précise (ex. « changer le profil d'un utilisateur ») avec la marche à suivre numérotée et une capture d'écran réelle de la plateforme.
+
+  
+
+  
+
+---
+
+    
+### [Comptes & accès] Les profils utilisateurs
+
+    
+_Chaque compte créé sur la plateforme se voit attribuer un profil parmi la liste ci-dessous. Le profil détermine les permissions accordées par défaut (voir la section « Permissions d'interface »), qui peuvent ensuite être ajustées individuellement pour chaque utilisateur._
+
+    
+![Liste des profils disponibles sur SIDSE IBDC](./images/shot-01.jpg)
+
+    *📷 Liste des profils proposés lors de la création ou de la modification d'un compte utilisateur.*
+
+    
+**Profils et Rôles disponibles :**
+
+Accès complet, y compris la gestion des utilisateurs.
+      AdministrateurAccès complet aux modules métier, sans la gestion des utilisateurs.
+      Administration-FinanceSocle commun + Suivi des PIT + Suivi financier.
+      PersonnelSocle commun + Suivi des PIT.
+      PartenaireSocle commun (tableau de bord décideur, PDC, indicateurs, rapports…).
+      Partenaire / ONGOrganisation non gouvernementale associée à la commune. *(permissions à confirmer)*
+      Bailleur / DonateurSocle commun — accès en consultation aux projets soutenus.
+      Agent-CollecteurSocle commun — chargé de la collecte de données sur le terrain.
+      Arrondissement de ChefsSocle commun — représentant au niveau de l'arrondissement.
+      VUDSocle commun — profil lié au suivi urbain / développement.
+      Ministère / PréfectureSocle commun — instance de tutelle départementale ou nationale.
+    
+    
+> 💡 **Le détail complet**  
+> Le détail module par module de chaque profil (« socle commun » et permissions supplémentaires) est expliqué et illustré dans la section <a href="#permissions-par-profil" style="color:inherit;">Permissions par défaut selon le profil</a>.
+
+  
+
+  
+
+---
+
+    
+### [Administration] Comprendre les permissions d'interface
+
+    
+_En plus du profil général, chaque utilisateur peut avoir ses permissions ajustées individuellement, module par module. C'est ce que montre l'écran **« Permissions d'interface »**, accessible depuis la gestion des utilisateurs._
+
+    
+![Écran des permissions d'interface pour un profil Super Administrateur](./images/shot-02.jpg)
+
+    *📷 Exemple : permissions du profil **Super Administrateur** — tous les modules sont activés.*
+
+    
+#### i. Comment lire cet écran
+
+    
+| Bloc de permissions | Contenu |
+| --- | --- |
+| Gestion du PDC | Tableau de bord, Tableau de bord décideur, Gestion de PDC, Éléments des indicateurs, Visualiser les indicateurs, Rapports, Nouveau PTA, Révision PTA, Suivi des PIT, Nouvelle évaluation, Recommandations, Suivi des recommandations, Calendrier budgétaire, Calendrier des évaluations, Structures municipales, Partenaires, Source de financement, Suivi financier, Statistiques. |
+| ODD & Indicateurs | Liste des ODD, Liste des indicateurs, Faire une collecte, Paramètres ODD. |
+| Projets Phares | Projets de tableau de bord, Projets, Secteurs, Collecte de données, Contrôle qualité. |
+| Paramètres | Gestion des utilisateurs. |
+
+    
+1. **Chaque interrupteur (toggle)** correspond à un écran ou une fonctionnalité précise de la plateforme.
+        
+   > 💡 *Un interrupteur activé (violet) donne accès à cette fonctionnalité pour l'utilisateur concerné.*
+2. **L'étiquette « Par défaut »** sous chaque permission indique qu'elle correspond au réglage standard du profil de l'utilisateur.
+        
+   > 💡 *Une permission modifiée manuellement n'affiche plus cette étiquette.*
+3. **Le compteur en haut à droite de chaque bloc** (ex. « 19/19 ») indique le nombre de permissions activées sur le total du bloc.
+4. **Bouton « Réinitialiser »** : ramène toutes les permissions du bloc aux réglages par défaut du profil.
+5. **Bouton « Sauvegarder »** : enregistre les modifications apportées aux permissions de l'utilisateur.
+
+    
+#### i. Permissions par défaut selon le profil
+
+    
+_En observant les réglages « Par défaut » de plusieurs comptes, on retrouve un **socle commun** de permissions accordé à la majorité des profils, auquel s'ajoutent des permissions spécifiques pour certains d'entre eux._
+
+    
+> 💡 **Le socle commun (« base »)**  
+> Tableau de bord décideur, Gestion de PDC, Visualiser les Indicateurs, Rapports (bloc Gestion du PDC) · Liste des indicateurs (bloc ODD & Indicateurs) · Projets de tableau de bord (bloc Projets Phares).
+
+    
+| Profil | Gestion du PDC | ODD & Indicateurs | Projets Phares | Gestion des utilisateurs |
+| --- | --- | --- | --- | --- |
+| Super Administrateur | 19/19 — tout | 4/4 — tout | 5/5 — tout | ✅ Oui |
+| Administrateur | 19/19 — tout | 4/4 — tout | 5/5 — tout | ❌ Non |
+| Administration‑Finance | 6/19 — socle + Suivi des PIT + Suivi financier | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Personnel | 5/19 — socle + Suivi des PIT | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Partenaire | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Bailleur / Donateur | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Ministère / Préfecture | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+| VUD | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Agent‑Collecteur | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+| Arrondissement de Chefs | 4/19 — socle | 1/4 — socle | 1/5 — socle | ❌ Non |
+
+    
+> 💡 **À confirmer**  
+> Le profil « Partenaire / ONG » n'a pas encore de capture d'écran dédiée — il sera ajouté dès que possible. Rappel : quel que soit le profil, l'administrateur peut toujours accorder ou retirer une permission individuellement (voir étape 5 ci-dessous).
+
+    
+![Permissions du profil Administrateur](./images/shot-03.jpg)
+
+    *📷 Profil **Administrateur** : accès à tous les modules métier, sauf « Gestion des utilisateurs ».*
+
+    
+![Permissions du profil Administration-Finance](./images/shot-04.jpg)
+
+    *📷 Profil **Administration‑Finance** : le socle commun, complété par « Suivi des PIT » et « Suivi financier ».*
+
+    
+![Permissions du profil Personnel](./images/shot-05.jpg)
+
+    *📷 Profil **Personnel** : le socle commun, complété par « Suivi des PIT ».*
+
+    
+![Exemple du socle commun de permissions, profil Partenaire](./images/shot-06.jpg)
+
+    *📷 Exemple du **socle commun** partagé par plusieurs profils (ici « Partenaire ») : Tableau de bord décideur, Gestion de PDC, Visualiser les Indicateurs, Rapports, Liste des indicateurs, Projets de tableau de bord.*
+
+  
+
+  
+
+---
+
+    
+### [Administration] Gestion des utilisateurs
+
+    
+_C'est depuis cet écran que l'administrateur consulte, crée, modifie et gère les comptes de la plateforme._
+
+    
+#### 1. Voir la liste des utilisateurs
+
+    
+![Liste des utilisateurs de la plateforme SIDSE IBDC](./images/shot-07.jpg)
+
+    *📷 Écran « Gestion des utilisateurs » : liste de tous les comptes de la commune.*
+
+    
+      
+- ID, Nom, Prénoms, Contact, Email  : identité du compte.
+- Profil  : rôle attribué à l'utilisateur (voir section « Profils utilisateurs »).
+- Institution  : structure de rattachement (ex. la commune).
+- Statut  : indique si le compte est  Activé  ou désactivé.
+- Action  : icônes permettant de gérer le compte.
+           
+             🛡 Permissions  ⇄ Changer le profil  ✎ Modifier  🗑 Supprimer
+
+    
+
+    
+#### 2. Rechercher ou filtrer un utilisateur
+
+    
+1. Utiliser le champ **« Nom, prénom ou email… »** pour rechercher un utilisateur précis.
+2. Utiliser le menu déroulant **« Tous les profils »** pour n'afficher que les comptes d'un profil donné (ex. uniquement les « Personnel »).
+
+    
+#### 3. Créer un utilisateur
+
+    
+_La création d'un compte se fait en deux temps : la plateforme vérifie d'abord si l'adresse email existe déjà, puis propose soit de créer un nouveau compte, soit d'associer un compte existant à l'institution._
+
+    
+1. **Cliquer sur « + Créer un utilisateur »** en haut à droite de l'écran « Gestion des utilisateurs ».
+2. **Étape 1 — Vérification :** saisir l'adresse email de la personne, puis cliquer sur **« Vérifier »**.
+        
+   > 💡 *La plateforme recherche si un compte existe déjà avec cet email.*
+
+    
+![Fenêtre de vérification de l'email avant création d'un utilisateur](./images/shot-08.jpg)
+
+    *📷 Étape 1 : saisie de l'email et vérification de l'existence du compte.*
+
+    
+> 💡 **Deux cas de figure possibles**  
+> Selon le résultat de la vérification, la fenêtre propose soit de créer un nouveau compte (aucun compte trouvé), soit d'associer un compte existant à l'institution (un compte existe déjà). Les deux cas sont détaillés ci-dessous.
+
+    
+#### 3a. Cas 1 — Aucun compte trouvé : créer un nouveau compte
+
+    
+![Formulaire d'identité pour créer un nouvel utilisateur](./images/shot-09.jpg)
+
+    *📷 Aucun compte trouvé pour cet email : la plateforme invite à renseigner les informations du nouvel utilisateur.*
+
+    
+1. **Identité** : renseigner le **Nom** et les **Prénoms** de la personne.
+2. **Contact** : renseigner le **Téléphone** (l'email saisi à l'étape précédente est déjà pré-rempli).
+
+    
+![Formulaire compte et accès pour créer un nouvel utilisateur](./images/shot-10.jpg)
+
+    *📷 Suite du formulaire : profil, langue, mot de passe et photo de profil.*
+
+    
+1. **Compte & Accès** : choisir le **Profil** de l'utilisateur (ex. Personnel, Administrateur…) et la **Langue** de l'interface.
+2. Définir un **Mot de passe** et le confirmer dans le champ **« Confirmer le mot de passe »**.
+3. Ajouter éventuellement une **Photo de profil** (facultatif).
+4. Cliquer sur **« Créer l'utilisateur »** pour valider, ou sur **« Annuler »** pour abandonner.
+
+    
+#### 3b. Cas 2 — Un compte existe déjà : associer l'utilisateur
+
+    
+![Fenêtre indiquant qu'un utilisateur existe déjà pour cet email](./images/shot-11.jpg)
+
+    *📷 Un compte existe déjà pour cet email : la plateforme affiche l'identité trouvée (« Utilisateur trouvé »).*
+
+    
+1. La fenêtre affiche le nom et l'email du compte déjà existant, avec l'indicateur d'étape passé à **« 2 Association »**.
+2. Si le message **« Cet utilisateur est déjà associé à une institution »** apparaît, cela signifie que ce compte appartient déjà à une autre institution ; l'association à une nouvelle institution n'est alors pas proposée depuis cet écran.
+3. Cliquer sur **« Annuler »** pour fermer la fenêtre dans ce cas.
+
+    
+#### 4. Changer le profil d'un utilisateur
+
+    
+![Fenêtre de changement de profil d'un utilisateur](./images/shot-12.jpg)
+
+    *📷 Fenêtre « Changer le profil », ouverte depuis la ligne d'un utilisateur.*
+
+    
+1. Dans la liste des utilisateurs, cliquer sur l'icône **⇄ (changer le profil)** sur la ligne de l'utilisateur concerné.
+2. La fenêtre **« Changer le profil »** s'ouvre et affiche le nom et l'email du compte sélectionné.
+3. Dans le champ **« Nouveau profil »**, choisir le profil souhaité dans la liste déroulante (Super Administrateur, Administrateur, Partenaire, Personnel, Arrondissement de chefs, Agent-collecteur, VUD, Ministère / Préfecture, Bailleur / Donateur, Partenaire / ONG, Administration-Finance).
+4. Cliquer sur **« Enregistrer »** pour appliquer le nouveau profil, ou sur **« Annuler »** pour ne rien changer.
+
+    
+#### 5. Modifier les permissions d'un utilisateur
+
+    
+1. Dans la liste des utilisateurs, cliquer sur l'icône **🛡 (permissions)** sur la ligne de l'utilisateur concerné.
+2. La page **« Permissions d'interface »** s'ouvre pour ce compte (voir la section dédiée ci-dessus pour le détail des blocs).
+3. Activer ou désactiver les permissions souhaitées, puis cliquer sur **« Sauvegarder »**.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Accéder aux modules de la plateforme
+
+    
+_Après connexion, la page d'accueil de l'institution (ici la commune de Glazoué) présente les **modules** disponibles : PDC, ODD, Projet Phare, et Gestion des paramètres de comptes. C'est le point de départ pour accéder au module de gestion du Plan de Développement Communal._
+
+    
+![Écran de sélection des modules de la plateforme](./images/shot-13.jpg)
+
+    *📷 Espace de travail : choix du module à ouvrir (PDC, ODD, Projet Phare, Paramètres).*
+
+    
+1. Cliquer sur **« Accéder au module »** sous la carte **« Plan de Développement Communal (PDC) »** pour entrer dans le module PDC.
+2. Le menu latéral de gauche s'affiche alors avec toutes les sections du module : Tableau de bord, Tableau de bord décideur, Gestion de PDC, Éléments des Indicateurs, Visualiser les Indicateurs, Rapports, ainsi que la Gestion de PTA et de PIT.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Tableau de bord PDC
+
+    
+_Vue d'ensemble de l'avancement du Plan de Développement Communal : projets actifs, taux d'exécution, budget consommé, partenaires actifs, ainsi que le suivi du PTA (Plan de Travail Annuel) en cours._
+
+    
+![Tableau de bord PDC](./images/shot-14.jpg)
+
+    *📷 Tableau de bord PDC : indicateurs clés, informations PTA, projets en cours et activités récentes.*
+
+    
+      
+- Cartes du haut  : Projets PDC actifs, Taux d'exécution, Budget consommé, Partenaires actifs.
+- Portée temporelle  et  Vision  : rappellent la période couverte par le PDC et sa vision stratégique.
+- Filtres Année / Trimestre  : permettent d'affiner les chiffres affichés sur une période précise (bouton « Réinitialiser » pour revenir à la vue globale).
+- Informations PTA  : montant du PTA, montant exécuté, date de dernière révision, prochaine évaluation, et nombre d'activités en retard.
+- Niveau de mise en œuvre  : compare la prévision, la réalisation et le taux à date.
+- Projets en cours  et  Activités récentes  : suivi visuel de l'avancement de chaque projet et journal des dernières actions.
+
+    
+  
+
+  
+
+---
+
+    
+### [Module PDC] Tableau de bord Décideurs
+
+    
+_Vue simplifiée destinée aux décideurs, avec des filtres de recherche pour cibler un PDC, une année ou un PTA précis, et des raccourcis vers les documents stratégiques._
+
+    
+![Tableau de bord Décideurs](./images/shot-15.jpg)
+
+    *📷 Tableau de bord Décideurs : filtres de recherche, informations PTA et accès rapide.*
+
+    
+1. **Filtres de recherche** : choisir un PDC, une année, un PTA et une date de référence, puis cliquer sur **« Rechercher »**.
+2. **Informations PTA** : montant, montant exécuté, dernière révision, prochaine évaluation (affiche « N/A » tant qu'aucun PDC/PTA n'est sélectionné).
+3. **Activités en retard** : cliquer sur cette carte pour voir le détail (voir section « Activités en retard » ci-dessous).
+4. **Accès rapide** : liens directs vers le **Document de Plan TBS** (Tableau de Bord Stratégique) et le module **ODD**.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Gestion des PDC
+
+    
+_Écran de gestion des Plans de Développement Communaux eux-mêmes : création, recherche et export de la liste des PDC de l'institution._
+
+    
+![Écran de gestion des PDC](./images/shot-16.jpg)
+
+    *📷 Liste des PDC de l'institution, avec recherche par code ou libellé.*
+
+    
+1. Utiliser le champ **« Rechercher par code ou libellé… »** pour retrouver un PDC existant.
+2. Cliquer sur **« + Nouveau PDC »** pour créer un nouveau plan de développement communal.
+3. Cliquer sur **« Exportateur »** pour exporter la liste affichée.
+4. Le tableau affiche pour chaque PDC : ID, Code, Libellé, Description, dates de Début/Fin et le fichier associé.
+
+    
+> 💡 **Capture à venir**  
+> Le détail du formulaire de création d'un nouveau PDC (« + Nouveau PDC ») sera ajouté dès qu'une capture de cet écran sera disponible.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Éléments des Indicateurs
+
+    
+_Ce hub regroupe les trois outils permettant de définir, planifier et suivre les indicateurs de performance d'un PDC._
+
+    
+![Hub Éléments des Indicateurs](./images/shot-17.jpg)
+
+    *📷 Trois modules accessibles : Gestion, Planification et Collecte de données.*
+
+    
+#### 1. Gestion des indicateurs
+
+    
+![Écran de gestion des indicateurs](./images/shot-18.jpg)
+
+    *📷 Créer, modifier et supprimer les indicateurs de performance.*
+
+    
+1. Utiliser les filtres **Recherche, PDC, Activité, Statut, Type proxy, ODD, Cible ODD** pour retrouver un indicateur précis, puis cliquer sur **« Rechercher »**.
+2. Cliquer sur **« + Nouvel Indicateur »** pour créer un indicateur.
+3. Le tableau affiche : ID, PDC, Activité, Indicateur, Valeur de référence, Valeur cible, Date référence, Date cible, Statut.
+
+    
+#### 2. Planification des indicateurs
+
+    
+![Écran de planification des indicateurs](./images/shot-19.jpg)
+
+    *📷 Définir les valeurs cibles annuelles pour chaque indicateur du PDC.*
+
+    
+1. Filtrer par **PDC, Activité, Indicateur, Année**, puis cliquer sur **« Rechercher »**.
+2. Cliquer sur **« + Nouvelle Planification »** pour définir une nouvelle valeur cible annuelle.
+3. Le tableau affiche : ID, Indicateur, Valeur cible, Année, Statut.
+
+    
+#### 3. Collecte de données
+
+    
+![Hub Collecte de données des indicateurs](./images/shot-20.jpg)
+
+    *📷 Trois actions possibles : nouvelle collecte, données rejetées, validation.*
+
+    
+1. **Nouvelle collection** : saisir de nouvelles données d'indicateurs, avec statut soumettre/valider.
+2. **Données rejetées** : gérer les données rejetées, avec possibilité de les soumettre à nouveau.
+3. **Validation** : valider ou rejeter les données soumises par les collecteurs.
+
+    
+![Écran Collecte de Données](./images/shot-21.jpg)
+
+    *📷 Écran « Collecte de Données » : filtrer par PDC, activité, indicateur, année, ou lancer une nouvelle collecte via « + Nouvelle Collection ».*
+
+    
+![Écran Données validées](./images/shot-22.jpg)
+
+    *📷 « Données validées » : liste des collectes déjà validées, avec les mêmes filtres et un export possible.*
+
+    
+![Écran Données rejetées à corriger](./images/shot-23.jpg)
+
+    *📷 « Données rejetées à corriger » : les collectes renvoyées pour correction avant nouvelle soumission.*
+
+    
+#### 4. Visualiser les indicateurs
+
+    
+![Écran de visualisation des indicateurs](./images/shot-24.jpg)
+
+    *📷 Analyse graphique des indicateurs d'un PDC.*
+
+    
+1. Choisir un **PDC** dans la liste déroulante.
+2. Filtrer éventuellement par **Année**.
+3. La liste des indicateurs disponibles pour ce PDC s'affiche alors ; cliquer sur un indicateur pour voir son graphique d'évolution.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Objectifs de Développement Durable (ODD)
+
+    
+_Cette page présente les 17 Objectifs de Développement Durable des Nations Unies, utilisés pour classer les indicateurs et les projets de la commune._
+
+    
+![Liste des 17 Objectifs de Développement Durable](./images/shot-25.jpg)
+
+    *📷 Les 17 ODD affichés sous forme de grille cliquable.*
+
+    
+1. Cliquer sur un **objectif (ODD)** pour voir le détail de ses cibles et de ses indicateurs proxy associés.
+2. Le compteur en haut à droite (**« 17 objectifs »**) confirme que l'ensemble des ODD officiels est chargé.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Activités en retard
+
+    
+_Liste des activités du PTA qui n'ont eu aucune tâche exécutée sur la période d'évaluation en cours — accessible directement depuis le Tableau de bord Décideurs._
+
+    
+![Écran des activités en retard](./images/shot-26.jpg)
+
+    *📷 Écran « Activités en Retard », avec filtres PDC / Année / PTA / recherche par nom ou code.*
+
+    
+1. Depuis le **Tableau de bord Décideurs**, cliquer sur la carte **« Activités en retard »**.
+2. Utiliser les filtres **PDC, Année, PTA** ou la recherche par **nom ou code d'activité** pour cibler une activité précise.
+3. Le tableau affiche : Code, Activité, PTA, Piste de la firme, Structures associées, Tâches totales, Tâches non exécutées.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Structure & Finance
+
+    
+_Ce groupe du menu latéral regroupe les référentiels utilisés dans tout le PDC : l'organigramme de la mairie, les partenaires impliqués et les sources de financement des projets._
+
+    
+#### 1. Structures municipales
+
+    
+![Écran Structures Municipales](./images/shot-27.jpg)
+
+    *📷 Gérer les structures de la mairie (organigramme).*
+
+    
+1. Filtrer par **Statut** ou **Parent de structure** pour retrouver une structure dans la hiérarchie.
+2. Cliquer sur **« + Nouvelle Structure »** pour ajouter une structure municipale.
+3. Le tableau affiche : ID, Sigle, Structure, Parent de structure, Statut.
+
+    
+#### 2. Partenaires
+
+    
+![Écran Gestion des Partenaires](./images/shot-28.jpg)
+
+    *📷 Gérer les partenaires du projet, avec indicateurs (total, actifs, types distincts).*
+
+    
+1. Filtrer par **Type** ou **Statut**, ou rechercher par **Nom ou sigle**.
+2. Cliquer sur **« + Nouveau Partenaire »** pour ajouter un partenaire.
+3. Le tableau affiche : ID, Date, Logo, Sigle, Partenaire, Type, Statut.
+
+    
+#### 3. Sources de financement
+
+    
+![Écran Sources de Financement](./images/shot-29.jpg)
+
+    *📷 Gérer les sources de financement des projets.*
+
+    
+1. Filtrer par **Partenaire** ou **Statut**, ou rechercher une source.
+2. Cliquer sur **« + Nouvelle Source »** pour ajouter une source de financement.
+3. Le tableau affiche : ID, Date, Partenaire, Source, Statut.
+
+  
+
+  
+
+---
+
+    
+### [Module PDC] Gestion des PTA, des PIT et des évaluations
+
+    
+_Le PTA (Plan de Travail Annuel) décline le PDC en actions annuelles ; le PIT (Plan Individuel de Travail) en assure le suivi individuel ; les évaluations mesurent enfin le niveau de réalisation de l'un et de l'autre._
+
+    
+#### 1. Gestion des PTA — créer un nouveau PTA
+
+    
+![Écran Gestion des PTA](./images/shot-30.jpg)
+
+    *📷 Liste des Plans de Travail Annuels de l'institution.*
+
+    
+1. Filtrer par **PDC** ou rechercher un PTA, puis cliquer sur **« + Nouveau PTA »** pour en créer un.
+
+    
+![Formulaire Nouveau PTA - Planification](./images/shot-31.jpg)
+
+    *📷 Étape « Planification » : PDC associé et année du PTA, puis période d'exécution.*
+
+    
+1. **Planification** : choisir le **PDC associé** et l'**Année du PTA**.
+2. **Période d'exécution** : renseigner la **Date de début** et la **Date de fin**.
+
+    
+![Formulaire Nouveau PTA - Configuration et documents](./images/shot-32.jpg)
+
+    *📷 Suite du formulaire : statut et documents joints.*
+
+    
+1. **Configuration** : définir le **Statut** du PTA (ex. « Activé »).
+2. **Documents** : ajouter une **Observation** ou un commentaire, et joindre un fichier si besoin.
+3. Cliquer sur **« Enregistrer »** pour valider la création du PTA.
+
+    
+#### 2. Révisions PTA
+
+    
+![Écran Révisions PTA](./images/shot-33.jpg)
+
+    *📷 Gestion et suivi des révisions de Plans de Travail Annuels.*
+
+    
+1. Sélectionner un **PDC** et une **année** pour afficher les révisions disponibles.
+2. Cliquer sur **« + Nouveau PTA »** si une révision nécessite la création d'un nouveau plan.
+
+    
+#### 3. Suivi des PIT
+
+    
+![Écran Suivi des plans individuels de travail](./images/shot-34.jpg)
+
+    *📷 Gestion et consultation des évaluations PIT (Plan Individuel de Travail).*
+
+    
+1. Rechercher un PIT, ou filtrer par **PDC** et **Année**.
+2. Le tableau affiche : ID, PTA, Année, Date début, Date de fin, Statut, Actions.
+
+    
+#### 4. Nouvelle évaluation
+
+    
+![Écran Liste des Évaluations](./images/shot-35.jpg)
+
+    *📷 Liste des évaluations de Plans de Travail : choisir un PDC puis une année pour afficher les évaluations existantes.*
+
+    
+1. Sélectionner un **PDC**, puis une **année**, pour voir les évaluations disponibles.
+2. Cliquer sur **« + Nouvelle Évaluation »** pour en créer une.
+
+    
+![Formulaire Nouvelle évaluation](./images/shot-36.jpg)
+
+    *📷 Formulaire « Nouvelle évaluation » : PDC, PTA associé, période et statut.*
+
+    
+1. **Planification** : choisir le **PDC** puis le **PTA associé**.
+2. **Période** : renseigner la **Date de début** et la **Date de fin** de l'évaluation.
+3. **Configuration** : définir le **Statut**, puis cliquer sur **« Enregistrer »**.
+
+    
+#### 5. Rapports & Évaluations
+
+    
+![Hub Rapports PDC](./images/shot-37.jpg)
+
+    *📷 Le hub « Rapports » regroupe 6 modules d'analyse du PDC.*
+
+    
+      
+- Évaluation de PIT  : analyse du niveau de réalisation du Plan de Travail Individuel.
+- Évaluation de PTA  : analyse du niveau de réalisation du Plan de Travail Annuel.
+- Évaluation de PDC  : analyse du niveau de mise en œuvre et des résultats du Plan de Développement Communal.
+- Projection financière  : estimation prévisionnelle des ressources financières par source de financement.
+- Visualisation de PTA  : le Plan de Travail Annuel sous forme de tableau détaillé.
+- Synthèse Évaluation  : vue d'ensemble consolidée des indicateurs d'évaluation (budget, TEP, activités en retard, dates clés).
+
+    
+
+    
+![Écran Évaluation de PTA](./images/shot-38.jpg)
+
+    *📷 Évaluation de PTA : tâches totales, terminées, en cours, en retard, avec filtres de recherche détaillés (PDC, année, PTA, trimestre, structure…).*
+
+    
+![Écran Évaluation de PIT](./images/shot-39.jpg)
+
+    *📷 Évaluation de PIT : même principe que l'évaluation de PTA, au niveau individuel.*
+
+    
+![Écran Visualisation de PTA](./images/shot-40.jpg)
+
+    *📷 Visualisation de PTA : liste détaillée des tâches du PTA avec taux d'exécution et suivi financier (TEF mandaté / engagé / décaissé).*
+
+    
+![Écran Synthèse Évaluation](./images/shot-41.jpg)
+
+    *📷 Synthèse Évaluation : vue consolidée par niveau hiérarchique (Programme, Projet, Action, Activité) — TEP physique & TEF financier.*
+
+    
+1. Depuis chaque écran de rapport, définir les **filtres de recherche** souhaités puis cliquer sur **« Rechercher »**.
+2. Utiliser le bouton **« Exportateur »** pour exporter les résultats lorsque disponible.
+
+  
+
+  
+
+---
+
+    
+### [Prochainement] Sections à venir
+
+    
+_Ce guide sera complété au fur et à mesure avec les captures d'écran des autres modules de la plateforme. Voici les sections prévues :_
+
+    
+- ODD & Indicateurs : collecte détaillée, paramètres ODD
+- Projets phares : projets, secteurs, collecte de données, contrôle qualité
+- Calendrier budgétaire et calendrier des évaluations
+- Suppression d'un compte utilisateur
+
+  
+
+  
+
+---
+*Documentation SIDSE IBDC (Piè Baromètre)*
+`

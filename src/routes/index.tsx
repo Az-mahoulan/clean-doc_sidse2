@@ -156,7 +156,7 @@ function DocsPage() {
         <aside
           className={`${
             menuOpen ? "block" : "hidden"
-          } fixed inset-x-0 top-16 bottom-0 z-30 overflow-y-auto border-r border-border bg-background px-4 py-6 lg:sticky lg:top-16 lg:z-auto lg:block lg:h-[calc(100vh-4rem)] lg:w-[286px] lg:flex-none lg:px-0 lg:pr-6`}
+          } fixed inset-x-0 top-16 bottom-0 z-30 overflow-y-auto border-r border-border bg-background px-4 py-8 lg:sticky lg:top-16 lg:z-auto lg:block lg:h-[calc(100vh-4rem)] lg:w-[286px] lg:flex-none lg:px-0 lg:pr-6 lg:py-10`}
         >
           <label className="relative mb-5 block">
             <span className="sr-only">Rechercher dans le guide</span>
@@ -207,7 +207,7 @@ function DocsPage() {
         </aside>
 
         {/* Content */}
-        <main className="min-w-0 flex-1 py-10 lg:py-14">
+        <main className="min-w-0 flex-1 py-8 lg:py-10">
           <article
             key={page?.id}
             className="doc-content max-w-3xl"
@@ -220,13 +220,18 @@ function DocsPage() {
               <button
                 type="button"
                 onClick={() => goToPage(prev.id)}
-                className="group rounded-lg border border-border bg-card px-4 py-3 text-left transition-colors hover:border-primary"
+                className="group flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 text-left transition-all duration-150 hover:border-ring/40 hover:shadow-sm"
               >
-                <span className="block text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-                  ← Précédent
+                <span className="flex size-7 flex-none items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors group-hover:border-ring/40 group-hover:text-foreground">
+                  ‹
                 </span>
-                <span className="mt-0.5 block font-display text-sm font-bold">
-                  {prev.title}
+                <span>
+                  <span className="block text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
+                    Précédent
+                  </span>
+                  <span className="mt-0.5 block font-display text-[13.5px] font-semibold text-foreground">
+                    {prev.title}
+                  </span>
                 </span>
               </button>
             ) : (
@@ -236,26 +241,26 @@ function DocsPage() {
               <button
                 type="button"
                 onClick={() => goToPage(next.id)}
-                className="group rounded-lg border border-primary bg-primary px-4 py-3 text-right text-primary-foreground transition-opacity hover:opacity-90 sm:col-start-2"
+                className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-5 py-4 text-right transition-all duration-150 hover:border-ring/40 hover:shadow-sm sm:col-start-2"
               >
-                <span className="block text-[11px] font-semibold uppercase tracking-[0.1em] opacity-80">
-                  Suivant →
+                <span className="flex-1 min-w-0">
+                  <span className="block text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
+                    Suivant
+                  </span>
+                  <span className="mt-0.5 block font-display text-[13.5px] font-semibold text-foreground">
+                    {next.title}
+                  </span>
                 </span>
-                <span className="mt-0.5 block font-display text-sm font-bold">
-                  {next.title}
+                <span className="flex size-7 flex-none items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors group-hover:border-ring/40 group-hover:text-foreground">
+                  ›
                 </span>
               </button>
             )}
           </nav>
-
-          <footer className="doc-footer max-w-3xl">
-            Guide évolutif — SIDSE IBDC (Piè Baromètre). De nouvelles sections
-            sont ajoutées au fur et à mesure.
-          </footer>
         </main>
 
         {/* On this page */}
-        <aside className="sticky top-16 hidden h-[calc(100vh-4rem)] w-56 flex-none py-14 xl:block">
+        <aside className="sticky top-16 hidden h-[calc(100vh-4rem)] w-56 flex-none py-8 lg:py-10 xl:block">
           <p className="mb-3 font-display text-[11px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
             Sur cette page
           </p>

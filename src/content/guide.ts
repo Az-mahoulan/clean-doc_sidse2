@@ -212,7 +212,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/15b9077f-3f06-42bc-b088-e2f1f92a25ef/shot-01.jpg" alt="Liste des profils disponibles sur SIDSE IBDC">
+      <img src="/shot-01.jpg" alt="Liste des profils disponibles sur SIDSE IBDC">
     </div>
     <p class="shot-caption">Liste des profils proposés lors de la création ou de la modification d'un compte utilisateur.</p>
 
@@ -243,7 +243,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/773f1e46-0cfd-422d-a2a6-e8e7248ffdab/shot-02.jpg" alt="Écran des permissions d'interface pour un profil Super Administrateur">
+      <img src="/shot-02.jpg" alt="Écran des permissions d'interface pour un profil Super Administrateur">
     </div>
     <p class="shot-caption">Exemple : permissions du profil <b>Super Administrateur</b> — tous les modules sont activés.</p>
 
@@ -309,22 +309,22 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </div>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/1f7ef03a-e124-4bed-92c7-47a91de03ff7/shot-03.jpg" alt="Permissions du profil Administrateur">
+      <img src="/shot-03.jpg" alt="Permissions du profil Administrateur">
     </div>
     <p class="shot-caption">Profil <b>Administrateur</b> : accès à tous les modules métier, sauf « Gestion des utilisateurs ».</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/edc50e96-375b-437c-a6d0-fafd2e0ba46a/shot-04.jpg" alt="Permissions du profil Administration-Finance">
+      <img src="/shot-04.jpg" alt="Permissions du profil Administration-Finance">
     </div>
     <p class="shot-caption">Profil <b>Administration‑Finance</b> : le socle commun, complété par « Suivi des PIT » et « Suivi financier ».</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/bf7bcb80-2e78-4465-a8bd-cc032b6561e3/shot-05.jpg" alt="Permissions du profil Personnel">
+      <img src="/shot-05.jpg" alt="Permissions du profil Personnel">
     </div>
     <p class="shot-caption">Profil <b>Personnel</b> : le socle commun, complété par « Suivi des PIT ».</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/f04f262e-28de-405d-9ddd-0540955a8234/shot-06.jpg" alt="Exemple du socle commun de permissions, profil Partenaire">
+      <img src="/shot-06.jpg" alt="Exemple du socle commun de permissions, profil Partenaire">
     </div>
     <p class="shot-caption">Exemple du <b>socle commun</b> partagé par plusieurs profils (ici « Partenaire ») : Tableau de bord décideur, Gestion de PDC, Visualiser les Indicateurs, Rapports, Liste des indicateurs, Projets de tableau de bord.</p>
   </section>
@@ -338,7 +338,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="voir-liste"><span class="num">1</span>Voir la liste des utilisateurs</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/fccb7585-c401-4149-8b62-c950ebc148a3/shot-07.jpg" alt="Liste des utilisateurs de la plateforme SIDSE IBDC">
+      <img src="/shot-07.jpg" alt="Liste des utilisateurs de la plateforme SIDSE IBDC">
     </div>
     <p class="shot-caption">Écran « Gestion des utilisateurs » : liste de tous les comptes de la commune.</p>
     <div class="card">
@@ -373,7 +373,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       </li>
     </ol>
     <div class="shot">
-      <img src="/__l5e/assets-v1/7a867e4d-b7e7-42f9-835c-1f79a4f16956/shot-08.jpg" alt="Fenêtre de vérification de l'email avant création d'un utilisateur">
+      <img src="/shot-08.jpg" alt="Fenêtre de vérification de l'email avant création d'un utilisateur">
     </div>
     <p class="shot-caption">Étape 1 : saisie de l'email et vérification de l'existence du compte.</p>
 
@@ -384,7 +384,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" style="margin-top:20px;"><span class="num">3a</span>Cas 1 — Aucun compte trouvé : créer un nouveau compte</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/d497b13e-bce9-4402-a0b8-bf64a5b80989/shot-09.jpg" alt="Formulaire d'identité pour créer un nouvel utilisateur">
+      <img src="/shot-09.jpg" alt="Formulaire d'identité pour créer un nouvel utilisateur">
     </div>
     <p class="shot-caption">Aucun compte trouvé pour cet email : la plateforme invite à renseigner les informations du nouvel utilisateur.</p>
     <ol class="steps">
@@ -393,7 +393,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </ol>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/c2b36fca-b2f5-40a4-a8da-a63e14963cda/shot-10.jpg" alt="Formulaire compte et accès pour créer un nouvel utilisateur">
+      <img src="/shot-10.jpg" alt="Formulaire compte et accès pour créer un nouvel utilisateur">
     </div>
     <p class="shot-caption">Suite du formulaire : profil, langue, mot de passe et photo de profil.</p>
     <ol class="steps">
@@ -405,7 +405,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" style="margin-top:20px;"><span class="num">3b</span>Cas 2 — Un compte existe déjà : associer l'utilisateur</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/8109d66d-7d02-42d9-874c-33bba2b4077e/shot-11.jpg" alt="Fenêtre indiquant qu'un utilisateur existe déjà pour cet email">
+      <img src="/shot-11.jpg" alt="Fenêtre indiquant qu'un utilisateur existe déjà pour cet email">
     </div>
     <p class="shot-caption">Un compte existe déjà pour cet email : la plateforme affiche l'identité trouvée (« Utilisateur trouvé »).</p>
     <ol class="steps">
@@ -416,7 +416,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="changer-profil"><span class="num">4</span>Changer le profil d'un utilisateur</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/0a5e57e4-e2fb-4cb3-b6a4-1c463de6dd28/shot-12.jpg" alt="Fenêtre de changement de profil d'un utilisateur">
+      <img src="/shot-12.jpg" alt="Fenêtre de changement de profil d'un utilisateur">
     </div>
     <p class="shot-caption">Fenêtre « Changer le profil », ouverte depuis la ligne d'un utilisateur.</p>
     <ol class="steps">
@@ -441,7 +441,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Après connexion, la page d'accueil de l'institution (ici la commune de Glazoué) présente les <b>modules</b> disponibles : PDC, ODD, Projet Phare, et Gestion des paramètres de comptes. C'est le point de départ pour accéder au module de gestion du Plan de Développement Communal.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/5cd0e41c-7f1e-41b0-bfb3-dd8d458685b0/shot-13.jpg" alt="Écran de sélection des modules de la plateforme">
+      <img src="/shot-13.jpg" alt="Écran de sélection des modules de la plateforme">
     </div>
     <p class="shot-caption">Espace de travail : choix du module à ouvrir (PDC, ODD, Projet Phare, Paramètres).</p>
     <ol class="steps">
@@ -457,7 +457,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Vue d'ensemble de l'avancement du Plan de Développement Communal : projets actifs, taux d'exécution, budget consommé, partenaires actifs, ainsi que le suivi du PTA (Plan de Travail Annuel) en cours.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/e8015583-ddd1-4001-b8ad-d29b91942521/shot-14.jpg" alt="Tableau de bord PDC">
+      <img src="/shot-14.jpg" alt="Tableau de bord PDC">
     </div>
     <p class="shot-caption">Tableau de bord PDC : indicateurs clés, informations PTA, projets en cours et activités récentes.</p>
     <div class="card">
@@ -479,7 +479,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Vue simplifiée destinée aux décideurs, avec des filtres de recherche pour cibler un PDC, une année ou un PTA précis, et des raccourcis vers les documents stratégiques.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/bb828439-aebb-43e6-a720-0d0d852b5f2b/shot-15.jpg" alt="Tableau de bord Décideurs">
+      <img src="/shot-15.jpg" alt="Tableau de bord Décideurs">
     </div>
     <p class="shot-caption">Tableau de bord Décideurs : filtres de recherche, informations PTA et accès rapide.</p>
     <ol class="steps">
@@ -497,7 +497,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Écran de gestion des Plans de Développement Communaux eux-mêmes : création, recherche et export de la liste des PDC de l'institution.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/441f8f08-f5c3-4c85-8669-97e8038ae46f/shot-16.jpg" alt="Écran de gestion des PDC">
+      <img src="/shot-16.jpg" alt="Écran de gestion des PDC">
     </div>
     <p class="shot-caption">Liste des PDC de l'institution, avec recherche par code ou libellé.</p>
     <ol class="steps">
@@ -519,13 +519,13 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Ce hub regroupe les trois outils permettant de définir, planifier et suivre les indicateurs de performance d'un PDC.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/4e25a3ff-f51b-4b3f-9580-a41b176e94e3/shot-17.jpg" alt="Hub Éléments des Indicateurs">
+      <img src="/shot-17.jpg" alt="Hub Éléments des Indicateurs">
     </div>
     <p class="shot-caption">Trois modules accessibles : Gestion, Planification et Collecte de données.</p>
 
     <h3 class="subhead" id="pdc-indicateurs-gestion"><span class="num">1</span>Gestion des indicateurs</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/4b658dd8-4d1f-4156-9864-abbef15d841d/shot-18.jpg" alt="Écran de gestion des indicateurs">
+      <img src="/shot-18.jpg" alt="Écran de gestion des indicateurs">
     </div>
     <p class="shot-caption">Créer, modifier et supprimer les indicateurs de performance.</p>
     <ol class="steps">
@@ -536,7 +536,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pdc-indicateurs-planification"><span class="num">2</span>Planification des indicateurs</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/9a97fa5f-1103-4a09-ac0f-5d1352e5c3c6/shot-19.jpg" alt="Écran de planification des indicateurs">
+      <img src="/shot-19.jpg" alt="Écran de planification des indicateurs">
     </div>
     <p class="shot-caption">Définir les valeurs cibles annuelles pour chaque indicateur du PDC.</p>
     <ol class="steps">
@@ -547,7 +547,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pdc-indicateurs-collecte"><span class="num">3</span>Collecte de données</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/6eb84021-697e-47b9-bcd1-a92361bf601b/shot-20.jpg" alt="Hub Collecte de données des indicateurs">
+      <img src="/shot-20.jpg" alt="Hub Collecte de données des indicateurs">
     </div>
     <p class="shot-caption">Trois actions possibles : nouvelle collecte, données rejetées, validation.</p>
     <ol class="steps">
@@ -557,23 +557,23 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </ol>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/00db4a57-28fb-4b4d-9671-9ad370c66e5c/shot-21.jpg" alt="Écran Collecte de Données">
+      <img src="/shot-21.jpg" alt="Écran Collecte de Données">
     </div>
     <p class="shot-caption">Écran « Collecte de Données » : filtrer par PDC, activité, indicateur, année, ou lancer une nouvelle collecte via « + Nouvelle Collection ».</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/94a4f707-57e1-4b4d-ad24-c0176f674a86/shot-22.jpg" alt="Écran Données validées">
+      <img src="/shot-22.jpg" alt="Écran Données validées">
     </div>
     <p class="shot-caption">« Données validées » : liste des collectes déjà validées, avec les mêmes filtres et un export possible.</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/b48d3828-05d5-4a5d-a38e-d5f32f60b1bf/shot-23.jpg" alt="Écran Données rejetées à corriger">
+      <img src="/shot-23.jpg" alt="Écran Données rejetées à corriger">
     </div>
     <p class="shot-caption">« Données rejetées à corriger » : les collectes renvoyées pour correction avant nouvelle soumission.</p>
 
     <h3 class="subhead" id="pdc-indicateurs-visualiser"><span class="num">4</span>Visualiser les indicateurs</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/666de1f7-d27b-426f-80db-2fd9d33ba5a0/shot-24.jpg" alt="Écran de visualisation des indicateurs">
+      <img src="/shot-24.jpg" alt="Écran de visualisation des indicateurs">
     </div>
     <p class="shot-caption">Analyse graphique des indicateurs d'un PDC.</p>
     <ol class="steps">
@@ -590,7 +590,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Cette page présente les 17 Objectifs de Développement Durable des Nations Unies, utilisés pour classer les indicateurs et les projets de la commune.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/2a3caf40-aefb-40b0-bfb5-8284da405909/shot-25.jpg" alt="Liste des 17 Objectifs de Développement Durable">
+      <img src="/shot-25.jpg" alt="Liste des 17 Objectifs de Développement Durable">
     </div>
     <p class="shot-caption">Les 17 ODD affichés sous forme de grille cliquable.</p>
     <ol class="steps">
@@ -606,7 +606,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Liste des activités du PTA qui n'ont eu aucune tâche exécutée sur la période d'évaluation en cours — accessible directement depuis le Tableau de bord Décideurs.
     </p>
     <div class="shot">
-      <img src="/__l5e/assets-v1/9e09c77f-03be-4797-b202-d84ff51f5aec/shot-26.jpg" alt="Écran des activités en retard">
+      <img src="/shot-26.jpg" alt="Écran des activités en retard">
     </div>
     <p class="shot-caption">Écran « Activités en Retard », avec filtres PDC / Année / PTA / recherche par nom ou code.</p>
     <ol class="steps">
@@ -625,7 +625,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="sf-structures"><span class="num">1</span>Structures municipales</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/b54e07e1-bff3-4f90-8c86-b0adf24e4e65/shot-27.jpg" alt="Écran Structures Municipales">
+      <img src="/shot-27.jpg" alt="Écran Structures Municipales">
     </div>
     <p class="shot-caption">Gérer les structures de la mairie (organigramme).</p>
     <ol class="steps">
@@ -636,7 +636,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="sf-partenaires"><span class="num">2</span>Partenaires</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/c6307707-5a22-4090-bcfa-f17a2f9ae13e/shot-28.jpg" alt="Écran Gestion des Partenaires">
+      <img src="/shot-28.jpg" alt="Écran Gestion des Partenaires">
     </div>
     <p class="shot-caption">Gérer les partenaires du projet, avec indicateurs (total, actifs, types distincts).</p>
     <ol class="steps">
@@ -647,7 +647,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="sf-sources"><span class="num">3</span>Sources de financement</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/9b83af50-dfcf-4093-8d57-337a5afbd749/shot-29.jpg" alt="Écran Sources de Financement">
+      <img src="/shot-29.jpg" alt="Écran Sources de Financement">
     </div>
     <p class="shot-caption">Gérer les sources de financement des projets.</p>
     <ol class="steps">
@@ -666,14 +666,14 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pta-gestion"><span class="num">1</span>Gestion des PTA — créer un nouveau PTA</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/2608dee2-ce7f-4656-833e-b95bb49fb69f/shot-30.jpg" alt="Écran Gestion des PTA">
+      <img src="/shot-30.jpg" alt="Écran Gestion des PTA">
     </div>
     <p class="shot-caption">Liste des Plans de Travail Annuels de l'institution.</p>
     <ol class="steps">
       <li>Filtrer par <b>PDC</b> ou rechercher un PTA, puis cliquer sur <b>« + Nouveau PTA »</b> pour en créer un.</li>
     </ol>
     <div class="shot">
-      <img src="/__l5e/assets-v1/3d05c212-cf48-46c4-9f75-641020a43e14/shot-31.jpg" alt="Formulaire Nouveau PTA - Planification">
+      <img src="/shot-31.jpg" alt="Formulaire Nouveau PTA - Planification">
     </div>
     <p class="shot-caption">Étape « Planification » : PDC associé et année du PTA, puis période d'exécution.</p>
     <ol class="steps">
@@ -681,7 +681,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       <li><b>Période d'exécution</b> : renseigner la <b>Date de début</b> et la <b>Date de fin</b>.</li>
     </ol>
     <div class="shot">
-      <img src="/__l5e/assets-v1/4372c6a0-8bf6-4377-b61f-26c1c610332e/shot-32.jpg" alt="Formulaire Nouveau PTA - Configuration et documents">
+      <img src="/shot-32.jpg" alt="Formulaire Nouveau PTA - Configuration et documents">
     </div>
     <p class="shot-caption">Suite du formulaire : statut et documents joints.</p>
     <ol class="steps">
@@ -692,7 +692,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pta-revision"><span class="num">2</span>Révisions PTA</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/d2bea376-cabd-4885-a886-14bdad5e6ce7/shot-33.jpg" alt="Écran Révisions PTA">
+      <img src="/shot-33.jpg" alt="Écran Révisions PTA">
     </div>
     <p class="shot-caption">Gestion et suivi des révisions de Plans de Travail Annuels.</p>
     <ol class="steps">
@@ -702,7 +702,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pit-suivi"><span class="num">3</span>Suivi des PIT</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/ffef4888-7b5e-4ebc-9bb1-89595c1f2db7/shot-34.jpg" alt="Écran Suivi des plans individuels de travail">
+      <img src="/shot-34.jpg" alt="Écran Suivi des plans individuels de travail">
     </div>
     <p class="shot-caption">Gestion et consultation des évaluations PIT (Plan Individuel de Travail).</p>
     <ol class="steps">
@@ -712,7 +712,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="eval-nouvelle"><span class="num">4</span>Nouvelle évaluation</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/09f95c71-1835-4f40-a6fa-f547187ef419/shot-35.jpg" alt="Écran Liste des Évaluations">
+      <img src="/shot-35.jpg" alt="Écran Liste des Évaluations">
     </div>
     <p class="shot-caption">Liste des évaluations de Plans de Travail : choisir un PDC puis une année pour afficher les évaluations existantes.</p>
     <ol class="steps">
@@ -720,7 +720,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
       <li>Cliquer sur <b>« + Nouvelle Évaluation »</b> pour en créer une.</li>
     </ol>
     <div class="shot">
-      <img src="/__l5e/assets-v1/eca7282f-5cdf-4e56-8d00-4628563ac879/shot-36.jpg" alt="Formulaire Nouvelle évaluation">
+      <img src="/shot-36.jpg" alt="Formulaire Nouvelle évaluation">
     </div>
     <p class="shot-caption">Formulaire « Nouvelle évaluation » : PDC, PTA associé, période et statut.</p>
     <ol class="steps">
@@ -731,7 +731,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <h3 class="subhead" id="pdc-rapports"><span class="num">5</span>Rapports &amp; Évaluations</h3>
     <div class="shot">
-      <img src="/__l5e/assets-v1/15bcda69-104a-432b-99de-2df0abf90ad6/shot-37.jpg" alt="Hub Rapports PDC">
+      <img src="/shot-37.jpg" alt="Hub Rapports PDC">
     </div>
     <p class="shot-caption">Le hub « Rapports » regroupe 6 modules d'analyse du PDC.</p>
     <div class="card">
@@ -746,22 +746,22 @@ export const guideHtml = `<div class="doc-header" id="intro">
     </div>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/574e9663-19ae-4352-aae1-42b20cde0908/shot-38.jpg" alt="Écran Évaluation de PTA">
+      <img src="/shot-38.jpg" alt="Écran Évaluation de PTA">
     </div>
     <p class="shot-caption">Évaluation de PTA : tâches totales, terminées, en cours, en retard, avec filtres de recherche détaillés (PDC, année, PTA, trimestre, structure…).</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/45c1e31f-2d6e-4bb2-b0b4-219ef9f235d4/shot-39.jpg" alt="Écran Évaluation de PIT">
+      <img src="/shot-39.jpg" alt="Écran Évaluation de PIT">
     </div>
     <p class="shot-caption">Évaluation de PIT : même principe que l'évaluation de PTA, au niveau individuel.</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/2c96ca07-d435-446c-a586-31fd4340a1b4/shot-40.jpg" alt="Écran Visualisation de PTA">
+      <img src="/shot-40.jpg" alt="Écran Visualisation de PTA">
     </div>
     <p class="shot-caption">Visualisation de PTA : liste détaillée des tâches du PTA avec taux d'exécution et suivi financier (TEF mandaté / engagé / décaissé).</p>
 
     <div class="shot">
-      <img src="/__l5e/assets-v1/aea122bb-ca72-4c0c-a075-fd81a0c8cbc9/shot-41.jpg" alt="Écran Synthèse Évaluation">
+      <img src="/shot-41.jpg" alt="Écran Synthèse Évaluation">
     </div>
     <p class="shot-caption">Synthèse Évaluation : vue consolidée par niveau hiérarchique (Programme, Projet, Action, Activité) — TEP physique &amp; TEF financier.</p>
     <ol class="steps">
