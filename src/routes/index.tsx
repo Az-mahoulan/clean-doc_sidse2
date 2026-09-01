@@ -45,29 +45,24 @@ function DocsPage() {
       .filter((g) => g.items.length > 0);
   }, [query]);
 
-  const onThisPage = useMemo(() => {
+  const onThisPage = useMemo<NavItem[]>(() => {
     const group = navGroups.find((g) =>
       g.items.some((i) => i.href === activeId),
     );
     if (!group) return [];
-    const index = group.items.findIndex((i) => i.href === activeId);
-    let parentIndex = index;
-    while (parentIndex > 0 && group.items[parentIndex].sub) parentIndex--;
+    let parentIndex = group.items.findIndex((i) => i.href === activeId);
+    while (parentIndex > 0 && group.items[parentIndex]?.sub) parentIndex--;
     const parent = group.items[parentIndex];
-    const children = group.items
-      .slice(parentIndex + 1)
-      .reduce<typeof group.items>((acc, item) => {
-        if (!item.sub) return acc;
-        return acc.concat(item);
-      }, []);
-    const stop = group.items
-      .slice(parentIndex + 1)
-      .findIndex((item) => !item.sub);
-    return [
-      parent,
-      ...(stop === -1 ? children : children.slice(0, stop)),
-    ];
+    if (!parent) return [];
+    const rest = group.items.slice(parentIndex + 1);
+    const children: NavItem[] = [];
+    for (const item of rest) {
+      if (!item.sub) break;
+      children.push(item);
+    }
+    return [parent, ...children];
   }, [activeId]);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
