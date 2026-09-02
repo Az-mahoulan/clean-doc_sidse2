@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Guide pas à pas de la plateforme SIDSE IBDC (Piè Baromètre) : comptes, permissions, PDC, indicateurs et rapports.",
+          "Guide pas à pas de la plateforme SIDSE IBDC (Le Baromètre) : comptes, permissions, PDC, indicateurs et rapports.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -57,40 +57,51 @@ function DocsPage() {
     [page?.id],
   );
 
-  // Deep-link support (#anchor)
+  // Deep-link support (#anchor) + bouton retour/avancer du navigateur
+  // On utilise hashchange (et non popstate) car TanStack Router intercepte
+  // popstate et redirige vers NotFound quand il ne reconnaît pas l'URL.
   useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    const target = hash ? pageIdForAnchor[hash] : undefined;
-    if (target) {
-      setPageId(target);
-      if (hash !== target) {
-        setTimeout(
-          () => document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" }),
-          80,
-        );
+    const onHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      const target = hash ? pageIdForAnchor[hash] : undefined;
+      if (target) {
+        setPageId(target);
+        // Si l'ancre est une sous-section (hash ≠ pageId), scroller vers l'élément
+        if (hash !== target) {
+          setTimeout(
+            () => document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" }),
+            80,
+          );
+        } else {
+          scrollTop();
+        }
+      } else if (!hash) {
+        setPageId(guidePages[0]?.id ?? "intro");
+        scrollTop();
       }
-    }
+    };
+
+    // Restaurer depuis l'URL courante au premier rendu
+    onHashChange();
+    // hashchange se déclenche automatiquement quand le navigateur navigue
+    // vers/depuis une URL #hash, y compris avec les boutons retour/avancer
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const goToAnchor = (anchor: string) => (event: React.MouseEvent) => {
     event.preventDefault();
     setMenuOpen(false);
-    const target = pageIdForAnchor[anchor] ?? anchor;
-    const samePage = target === page?.id;
-    setPageId(target);
-    window.history.replaceState(null, "", `#${anchor}`);
-    if (anchor === target && !samePage) {
-      scrollTop();
+    // Changer location.hash crée une entrée dans l'historique du navigateur
+    // et déclenche hashchange → onHashChange s'occupe de la mise à jour d'état.
+    // On ne touche pas à pushState/replaceState pour éviter tout conflit avec TanStack Router.
+    if (window.location.hash === `#${anchor}`) {
+      // Déjà sur cette ancre : juste scroller
+      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
-    setTimeout(
-      () => {
-        const el = document.getElementById(anchor);
-        if (el) el.scrollIntoView({ behavior: samePage ? "smooth" : "auto", block: "start" });
-        else scrollTop();
-      },
-      samePage ? 0 : 90,
-    );
+    window.location.hash = anchor;
   };
 
 
@@ -110,9 +121,13 @@ function DocsPage() {
 
   const goToPage = (id: string) => {
     setMenuOpen(false);
-    setPageId(id);
-    window.history.replaceState(null, "", `#${id}`);
-    scrollTop();
+    // Changer location.hash → hashchange → onHashChange
+    if (window.location.hash === `#${id}`) {
+      setPageId(id);
+      scrollTop();
+      return;
+    }
+    window.location.hash = id;
   };
 
 

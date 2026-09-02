@@ -12,16 +12,19 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page introuvable</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          Cette page s'affiche suite à une erreur de navigation, à l'utilisation du bouton retour du navigateur, ou à une tentative d'accès à une adresse qui n'existe pas dans ce guide.
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Cliquez sur le bouton ci-dessous pour retourner au guide d'utilisation.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            ← Retour au guide
           </Link>
         </div>
       </div>
