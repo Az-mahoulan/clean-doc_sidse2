@@ -144,9 +144,11 @@ function DocsPage() {
             ☰
           </button>
           <div className="flex items-center gap-2.5">
-            <span className="flex size-8 items-center justify-center rounded-lg bg-primary font-display text-sm font-extrabold text-primary-foreground">
-              S
-            </span>
+            <img
+              src="/logo.png"
+              alt="Logo SIDSE IBDC"
+              className="h-8 w-auto max-w-[36px] object-contain"
+            />
             <span className="font-display text-[15px] font-bold tracking-tight">
               SIDSE IBDC
               <span className="ml-2 rounded-full bg-secondary px-2 py-0.5 align-middle text-[11px] font-semibold text-muted-foreground">
