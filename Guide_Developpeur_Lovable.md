@@ -688,10 +688,16 @@ _Le module **Objectifs de Développement Durable (ODD)** de SIDSE IBDC offre aux
 
 1. Depuis l'espace d'accueil de la plateforme (espace de travail), localiser la carte violette **« Objectif de Développement Durable (ODD) »**.
 2. Vérifier le badge vert **« Disponible »**.
-3. Cliquer sur le lien **« Accéder au module → »** au bas de la carte, ou utiliser le sélecteur rapide de module dans l'en-tête supérieur droit pour ouvrir l'espace ODD.
+3. Cliquer sur le bouton **« Accéder au module → »** au bas de la carte.
 
-> 💡 **Territorialisation des ODD**  
-> Le module ODD permet d'établir une passerelle directe entre les investissements communaux (PDC, PTA) et les cibles mondiales de développement durable.
+Dès l'ouverture du module, l'interface s'ouvre par défaut sur l'écran **Liste des ODD** avec le menu de navigation complet à gauche :
+
+![Interface principale du module ODD](./images/shot-82.png)
+
+*📷 Interface principale du module ODD : menu de navigation latéral à gauche et écran d'accueil « Liste des ODD » au centre.*
+
+> 💡 **Basculer d'un module à un autre**  
+> Vous pouvez à tout moment changer de module sans repasser par la page d'accueil en cliquant sur le sélecteur situé en haut à droite de l'en-tête (affichant « ODD », « PDC », « PROJET », « PARAMÈTRE »…).
 
 ---
 

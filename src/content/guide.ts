@@ -1804,17 +1804,28 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <ol class="steps">
       <li>Depuis le tableau de bord d'accueil de la commune (espace de travail), parcourez la liste des modules disponibles.</li>
       <li>Localisez la carte violette <b>« Objectif de Développement Durable (ODD) »</b> portant le badge vert <b>« ✔ Disponible »</b>.</li>
-      <li>Cliquez sur le lien <b>« Accéder au module → »</b> situé au bas de la carte, ou basculez directement via le menu sélecteur de module situé dans l'en-tête supérieur droit.</li>
+      <li>Cliquez sur le bouton <b>« Accéder au module → »</b> situé au bas de la carte.</li>
     </ol>
 
     <div class="shot">
       <img src="/shot-62.jpg" alt="Espace d'accueil et sélection du module Objectif de Développement Durable (ODD)">
     </div>
-    <p class="shot-caption">Espace de travail communal : carte du module <b>« Objectif de Développement Durable (ODD) »</b> avec badge « Disponible » et lien d'accès direct.</p>
+    <p class="shot-caption">Espace de travail communal : carte du module <b>« Objectif de Développement Durable (ODD) »</b> avec badge « Disponible » et bouton d'accès direct.</p>
+
+    <!-- Étape 2 : Interface principale du module ODD -->
+    <h3 class="subhead"><span class="num">2</span>L'interface de travail et le menu du module ODD</h3>
+    <p>
+      Dès que vous accédez au module ODD, l'interface principale s'ouvre par défaut sur l'écran <b>Liste des ODD</b>, et le menu latéral de gauche se déploie avec l'ensemble des rubriques de suivi :
+    </p>
+
+    <div class="shot">
+      <img src="/shot-82.png" alt="Interface principale du module ODD avec menu latéral et écran Liste des ODD">
+    </div>
+    <p class="shot-caption">Interface principale du module <b>ODD</b> : menu de navigation latéral à gauche et écran d'accueil « Liste des ODD » au centre.</p>
 
     <div class="callout">
-      <b>Territorialisation des ODD</b>
-      Le module ODD est interconnecté avec les orientations du PDC et les activités des PTA. Il permet de mesurer concrètement comment les investissements communaux contribuent aux cibles mondiales de développement durable.
+      <b>Basculer d'un module à un autre</b>
+      Vous pouvez à tout moment changer de module sans repasser par la page d'accueil en cliquant sur le <b>sélecteur de module</b> situé en haut à droite de l'en-tête (affichant « ODD », « PDC », « PROJET », « PARAMÈTRE »…).
     </div>
   </section>
 
