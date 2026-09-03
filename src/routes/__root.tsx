@@ -8,6 +8,14 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 function NotFoundComponent() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash && hash.startsWith("#/")) {
+      const clean = hash.replace(/^#\//, "#");
+      window.location.replace("/" + clean);
+    }
+  }, []);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">

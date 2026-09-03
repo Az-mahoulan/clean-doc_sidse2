@@ -62,7 +62,7 @@ function DocsPage() {
   // popstate et redirige vers NotFound quand il ne reconnaît pas l'URL.
   useEffect(() => {
     const onHashChange = () => {
-      const hash = window.location.hash.replace("#", "");
+      const hash = window.location.hash.replace(/^#\/?/, "");
       const target = hash ? pageIdForAnchor[hash] : undefined;
       if (target) {
         setPageId(target);

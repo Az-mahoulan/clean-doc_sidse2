@@ -284,11 +284,6 @@ export const navGroups: NavGroup[] = [
         "href": "projet-qualite",
         "title": "Contrôle qualité des données",
         "sub": false
-      },
-      {
-        "href": "projet-qualite-actions",
-        "title": "Validation et rejet des données",
-        "sub": true
       }
     ]
   },
@@ -1895,132 +1890,176 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module ODD</div>
     <h2>Détail d'un ODD &amp; cibles</h2>
     <p class="lede">
-      En cliquant sur <b>« Voir les cibles &amp; indicateurs → »</b> depuis une carte d'ODD, vous accédez à la fiche détaillée de l'objectif et à la liste complète des cibles associées souscrites par la commune.
+      En cliquant sur <b>« Voir les cibles &amp; indicateurs → »</b> depuis une carte d'ODD, vous accédez à la fiche descriptive de l'objectif et à la liste des cibles prioritaires souscrites par la commune.
+      <span class="hint">Cet écran centralise les informations de l'ODD et permet d'accéder au suivi de chaque cible opérationnelle.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Organisation de l'écran « Détail ODD »
-      </h3>
-      <ol class="steps">
-        <li>
-          <b>Fil d'Ariane &amp; Bouton Retour :</b> La barre supérieure indique la position <code>Liste des ODD • Détail ODD</code>. Cliquez sur <b>« ← Retour »</b> pour revenir à la grille des ODD à tout moment.
-        </li>
-        <li>
-          <b>Bloc Information ODD :</b> Rappelle le libellé officiel de l'objectif (ex. <i>ÉGALITÉ ENTRE LES SEXES</i>) accompagné de son pictogramme international.
-        </li>
-        <li>
-          <b>Section « Toutes les cibles de l'ODD » :</b> Tableau recensant les cibles prioritaires souscrites pour cet objectif, avec filtre déroulant pour isoler une cible spécifique.
-        </li>
-        <li>
-          <b>Action « 👁 ouvrir » :</b> Cliquez sur le bouton bleu bordé <b>« 👁 ouvrir »</b> dans la colonne <i>Action</i> pour afficher la fiche détaillée d'une cible et ses indicateurs de mesure.
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 1 : Consulter les informations et les cibles -->
+    <h3 class="subhead"><span class="num">1</span>Consulter la fiche de l'ODD et les cibles souscrites</h3>
+    <ol class="steps">
+      <li>
+        Visualisez en haut de l'écran le libellé officiel de l'objectif (ex. <i>ÉGALITÉ ENTRE LES SEXES</i>) ainsi que son logo officiel.
+      </li>
+      <li>
+        Parcourez la section <b>« Toutes les cibles de l'ODD »</b> qui récapitule les cibles souscrites pour cet objectif.
+      </li>
+    </ol>
+
+    <!-- Étape 2 : Ouvrir le détail d'une cible -->
+    <h3 class="subhead"><span class="num">2</span>Accéder au détail d'une cible</h3>
+    <ol class="steps">
+      <li>
+        Repérez la cible souhaitée dans le tableau (ex. <i>5.5 - Garantir la participation entière et effective des femmes...</i>).
+      </li>
+      <li>
+        Dans la colonne <b>Action</b>, cliquez sur le bouton <b>« 👁 ouvrir »</b> (mis en évidence par la flèche rouge) pour afficher la fiche détaillée de la cible et ses indicateurs de suivi.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-64.jpg" alt="Fiche descriptive Détail ODD avec tableau des cibles souscrites et bouton ouvrir">
+      <img src="/shot-96.png" alt="Écran Détail ODD avec tableau des cibles souscrites et bouton ouvrir">
     </div>
-    <p class="shot-caption">Écran <b>« Détail ODD »</b> : fiche descriptive de l'objectif sélectionné, tableau des cibles souscrites et bouton d'action « ouvrir ».</p>
+    <p class="shot-caption">Écran <b>« Détail ODD »</b> — la flèche rouge indique l'emplacement du bouton <b>« 👁 ouvrir »</b> dans la colonne Action pour afficher le détail de la cible.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour découvrir la fiche détaillée d'une cible et ses indicateurs de mesure, consultez la section suivante <a href="#odd-cible-detail" style="color:inherit;font-weight:600;">Détail d'une cible ODD &amp; ses indicateurs →</a>
+    </div>
   </section>
 
   <section class="block" id="odd-cible-detail">
     <div class="section-kicker">Module ODD</div>
     <h2>Détail d'une cible ODD &amp; ses indicateurs</h2>
     <p class="lede">
-      L'écran <b>Détail Cible</b> affiche les spécifications complètes de la cible sélectionnée ainsi que le tableau des indicateurs opérationnels servant à mesurer son niveau d'atteinte.
+      Accessible après avoir cliqué sur <b>« 👁 ouvrir »</b> depuis le tableau des cibles, l'écran <b>Détail Cible</b> présente l'énoncé complet de la cible retenue ainsi que les indicateurs opérationnels chargés de mesurer son niveau d'atteinte.
+      <span class="hint">Cet écran permet d'examiner les spécifications de la cible et de vérifier la périodicité de collecte de chacun de ses indicateurs associés.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Éléments consultables sur la fiche cible
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.75rem;">
-          <b>Fil d'Ariane à 3 niveaux :</b> <code>Liste des ODD • Détail ODD • Détail Cible</code> avec bouton <b>« ← Retour »</b> pour remonter d'un cran dans la hiérarchie.
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Libellé intégral de la cible :</b> Texte complet décrivant la finalité visée (ex. <i>« Garantir la participation entière et effective des femmes et leur accès en toute égalité aux fonctions de direction à tous les niveaux de décision, dans la vie politique, économique et publique »</i>).
-        </li>
-        <li>
-          <b>Tableau « Tous les indicateurs de la cible » :</b> Détaille chaque indicateur rattaché avec son code (ex. <i>5.5.3 - Proportion de femmes conseillères communales</i>, <i>5.5.6 - Proportion de femmes occupant des postes de responsabilités dans l'administration communale</i>) et sa <b>périodicité de collecte</b> (ex. <i>trimestriel</i>).
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Spécifications de la cible -->
+    <h3 class="subhead"><span class="num">1</span>Consulter les spécifications de la cible</h3>
+    <ol class="steps">
+      <li>
+        <b>Fil d'Ariane et retour :</b> visualisez la position hiérarchique (<code>Liste des ODD • Détail ODD • Détail Cible</code>) ou utilisez le bouton <b>« ← Retour »</b> pour remonter d'un niveau.
+      </li>
+      <li>
+        <b>Libellé de la cible :</b> lisez l'énoncé complet définissant la finalité poursuivie (ex. <i>« Garantir la participation entière et effective des femmes et leur accès en toute égalité aux fonctions de direction... »</i>).
+      </li>
+    </ol>
+
+    <!-- Étape 2 : Indicateurs de suivi rattachés -->
+    <h3 class="subhead"><span class="num">2</span>Examiner les indicateurs de suivi rattachés</h3>
+    <ol class="steps">
+      <li>
+        <b>Tableau des indicateurs :</b> parcourez la section <b>« Tous les indicateurs de la cible »</b> listant chaque indicateur opérationnel avec son code (ex. <i>5.5.3</i>, <i>5.5.6</i>).
+      </li>
+      <li>
+        <b>Périodicité de collecte :</b> vérifiez la fréquence de renseignement des données sur le terrain (ex. <i>trimestriel</i>).
+      </li>
+    </ol>
 
     <div class="shot">
       <img src="/shot-65.jpg" alt="Écran Détail Cible avec libellé de la cible et tableau des indicateurs associés">
     </div>
-    <p class="shot-caption">Écran <b>« Détail Cible »</b> : énoncé officiel de la cible et liste des indicateurs de suivi avec périodicité de collecte trimestrielle.</p>
+    <p class="shot-caption">Écran <b>« Détail Cible »</b> — énoncé officiel de la cible et liste des indicateurs de suivi avec périodicité de collecte trimestrielle.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour consulter l'ensemble des indicateurs de la commune toutes cibles confondues, accédez à la section suivante <a href="#odd-indicateurs" style="color:inherit;font-weight:600;">Liste des indicateurs ODD →</a>
+    </div>
   </section>
 
   <section class="block" id="odd-indicateurs">
     <div class="section-kicker">Module ODD</div>
     <h2>Liste des indicateurs ODD</h2>
     <p class="lede">
-      Accessible directement depuis le menu latéral via <b>« Liste des indicateurs »</b>, cet écran constitue le répertoire centralisé de tous les indicateurs ODD souscrits par la collectivité (ex. <b>16 indicateurs</b> actifs à Glazoué).
+      Accessible depuis le menu latéral via l'onglet <b>« Liste des indicateurs »</b>, cet écran centralise l'ensemble des indicateurs ODD souscrits par la collectivité (16 indicateurs actifs à Glazoué).
+      <span class="hint">Ce répertoire permet de consulter les cibles associées, la périodicité de collecte et d'accéder aux options de visualisation.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Structure du tableau des indicateurs
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.7rem;">
-          <b>ODD :</b> Indique l'ODD de rattachement (ex. <i>5 - ÉGALITÉ ENTRE LES SEXES</i>, <i>6 - EAU PROPRE ET ASSAINISSEMENT</i>, <i>8 - TRAVAIL DÉCENT ET CROISSANCE ÉCONOMIQUE</i>).
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Cible :</b> Rappelle le numéro et l'énoncé de la cible mère associée.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Indicateur :</b> Numérotation et libellé précis de la métrique (ex. <i>6.2.2 - Nombre de toilettes publiques fonctionnelles</i>, <i>6.2.3 - Nombre de toilettes publiques avec lavage des mains</i>, <i>8.2.2 - Ressources propres par habitant</i>).
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Périodicité de collecte :</b> Fréquence réglementaire d'actualisation des données (ex. <i>trimestriel</i>).
-        </li>
-        <li>
-          <b>Visualisation :</b> Deux boutons interactifs dédiés à l'analyse (<b>Histogramme</b> et <b>Tableau</b>).
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Consulter le répertoire -->
+    <h3 class="subhead"><span class="num">1</span>Consulter le répertoire des indicateurs</h3>
+    <ol class="steps">
+      <li>
+        <b>Accéder à l'écran :</b> cliquez sur <b>« Liste des indicateurs »</b> dans le menu latéral sous le module ODD.
+      </li>
+      <li>
+        <b>Tableau récapitulatif :</b> consultez les colonnes <b>ODD</b>, <b>Cible</b>, <b>Indicateur</b> (code et intitulé) et <b>Périodicité de collecte</b> (ex. <i>trimestriel</i>).
+      </li>
+    </ol>
 
     <div class="shot">
       <img src="/shot-66.jpg" alt="Catalogue des 16 indicateurs ODD souscrits avec tableau et boutons de visualisation">
     </div>
-    <p class="shot-caption">Écran <b>« Liste des indicateurs »</b> : répertoire des indicateurs souscrits avec options de visualisation analytique.</p>
+    <p class="shot-caption">Écran <b>« Liste des indicateurs »</b> — répertoire des indicateurs souscrits pour la collectivité.</p>
+
+    <!-- Étape 2 : Lancer la visualisation -->
+    <h3 class="subhead"><span class="num">2</span>Lancer la visualisation d'un indicateur</h3>
+    <ol class="steps">
+      <li>
+        Dans la colonne <b>Visualisation</b> (désignée par la flèche rouge), repérez les boutons d'action disponibles pour chaque indicateur.
+      </li>
+      <li>
+        Cliquez sur <b>« ⟳ Histogramme »</b> pour afficher l'évolution graphique ou sur <b>« ⟳ Tableau »</b> pour afficher la table de données chiffrées.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-97.png" alt="Boutons Histogramme et Tableau dans la colonne Visualisation des indicateurs ODD">
+    </div>
+    <p class="shot-caption">Colonne <b>« Visualisation »</b> — la flèche rouge désigne les boutons <b>« Histogramme »</b> et <b>« Tableau »</b> pour analyser les mesures collectées.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour découvrir l'écran d'analyse graphique et tabulaire, consultez la section suivante <a href="#odd-indicateurs-visu" style="color:inherit;font-weight:600;">Visualisation graphique &amp; tabulaire →</a>
+    </div>
   </section>
 
   <section class="block" id="odd-indicateurs-visu">
     <div class="section-kicker">Module ODD</div>
     <h2>Visualisation graphique &amp; tabulaire</h2>
     <p class="lede">
-      Pour chaque indicateur du répertoire, la plateforme met à votre disposition deux formats d'exploration complémentaires dans la colonne <b>Visualisation</b> : l'histogramme chronologique et la table de données chiffrées.
+      Accessible en cliquant sur <b>« Histogramme »</b> ou <b>« Tableau »</b> depuis la liste des indicateurs, cette interface permet d'explorer les données collectées sous forme de graphique ou de tableau chiffré.
+      <span class="hint">Vous pouvez filtrer l'affichage par année et basculer à tout moment entre la vue graphique et la vue tabulaire.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Les deux modes de visualisation disponibles
-      </h3>
-      <ol class="steps">
-        <li style="margin-bottom:0.8rem;">
-          <b>Bouton « 📊 Histogramme » :</b>
-          Génère un graphique d'évolution dans le temps des valeurs collectées au fil des trimestres et des années. Il permet aux décideurs et aux agents de visualiser immédiatement les tendances, les progrès enregistrés ou les paliers de stagnation.
-        </li>
-        <li>
-          <b>Bouton « 📋 Tableau » :</b>
-          Affiche les séries statistiques détaillées sous forme tabulaire (date exacte, valeur numérique collectée, période de référence, utilisateur collecteur). Idéal pour les contrôles de cohérence et l'export des données dans les rapports périodiques.
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 1 : Consulter l'histogramme -->
+    <h3 class="subhead"><span class="num">1</span>Consulter l'évolution graphique de l'indicateur</h3>
+    <ol class="steps">
+      <li>
+        <b>Affichage de l'histogramme :</b> la vue graphique s'affiche avec l'intitulé de l'indicateur (ex. <i>5.5.3 Proportion de femmes conseillères communales</i>).
+      </li>
+      <li>
+        <b>Filtrer par période :</b> sélectionnez l'année souhaitée dans le menu déroulant <b>« Filtre par période »</b> (ex. <i>2022</i>) pour afficher les données correspondantes.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-66.jpg" alt="Boutons Histogramme et Tableau dans la colonne Visualisation des indicateurs ODD">
+      <img src="/shot-99.jpeg" alt="Écran de visualisation de l'histogramme de l'indicateur ODD">
     </div>
-    <p class="shot-caption">Focus sur la colonne <b>« Visualisation »</b> : accès immédiat au rendu graphique (Histogramme) et au détail tabulaire (Tableau) pour chaque indicateur.</p>
+    <p class="shot-caption">Écran <b>« Visualisation »</b> — affichage de l'histogramme par période avec filtre annuel.</p>
+
+    <!-- Étape 2 : Basculer vers la vue tableau -->
+    <h3 class="subhead"><span class="num">2</span>Basculer vers la vue tabulaire</h3>
+    <ol class="steps">
+      <li>
+        En haut à droite de l'écran, repérez le sélecteur d'affichage composé des boutons <b>« Graphique »</b> et <b>« Tableau »</b>.
+      </li>
+      <li>
+        Cliquez sur le bouton <b>« Tableau »</b> (indiqué par la flèche rouge) pour afficher les données sous forme tabulaire.
+      </li>
+      <li>
+        Pour revenir à la liste des indicateurs, cliquez sur le bouton <b>« ← Retour »</b> situé en haut à gauche.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-98.png" alt="Bascule vers la vue tabulaire avec le bouton Tableau">
+    </div>
+    <p class="shot-caption">Bascule d'affichage — la flèche rouge met en évidence le bouton <b>« Tableau »</b> pour passer de la vue graphique à la vue tabulaire.</p>
 
     <div class="callout">
-      <b>Mise à jour automatique</b>
-      Dès qu'une nouvelle collecte est validée dans le système, l'histogramme et le tableau de l'indicateur sont instantanément réactualisés sans aucune intervention manuelle.
+      <b>Que faire ensuite ?</b>
+      Pour renseigner de nouvelles mesures sur le terrain, accédez à la section suivante <a href="#odd-collecte" style="color:inherit;font-weight:600;">Collecte de données ODD →</a>
     </div>
   </section>
 
@@ -2028,77 +2067,146 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module ODD</div>
     <h2>Collecte de données ODD</h2>
     <p class="lede">
-      Accessible via l'onglet <b>« Faire une collecte »</b> du menu latéral, cette interface constitue le registre centralisé de toutes les données collectées sur le terrain pour renseigner les indicateurs communaux.
+      Accessible via l'onglet <b>« Faire une collecte »</b> du menu latéral, cette interface constitue le registre centralisé de toutes les mesures collectées sur le terrain pour renseigner les indicateurs communaux (15 collectes enregistrées).
+      <span class="hint">Elle permet de filtrer les collectes, de vérifier leur validation officielle et d'accéder au détail des données recueillies.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Les composantes de l'écran « Liste des collectes »
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.7rem;">
-          <b>Bouton « + Nouvelle collecte » :</b> Bouton d'action bleu foncé en haut à droite pour ouvrir la fenêtre de saisie d'une nouvelle mesure.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Filtres multicritères combinables :</b> Trois menus déroulants pour restreindre la liste : filtre par <b>ODD</b>, filtre par <b>CIBLE</b> et filtre par <b>INDICATEUR</b>.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Colonnes de données :</b> Date et heure de soumission, ODD, Cible, Indicateur, Région/Commune (ex. <i>GLAZOUE</i>), Année (ex. <i>2022</i>), Période (ex. <i>Octobre à Décembre</i>) et Valeur exacte relevée.
-        </li>
-        <li>
-          <b>Statut &amp; Gestion :</b> Badge vert <b>« Valider »</b> attestant de la prise en compte officielle de la mesure, et icône de corbeille bleue pour supprimer ou corriger un enregistrement erroné si vous détenez les droits requis.
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Filtrer les collectes -->
+    <h3 class="subhead"><span class="num">1</span>Rechercher et filtrer les collectes</h3>
+    <ol class="steps">
+      <li>
+        <b>Accéder à l'écran :</b> cliquez sur <b>« Faire une collecte »</b> dans le menu latéral sous le module ODD.
+      </li>
+      <li>
+        <b>Filtres multicritères combinables :</b> utilisez les 3 listes déroulantes pointées par les flèches rouges pour affiner l'affichage :
+        <ul>
+          <li><b>ODD :</b> sélectionnez un objectif particulier (ex. <i>17 - Partenariats</i>) ou <i>« Tous les ODD »</i>.</li>
+          <li><b>CIBLE :</b> filtrez sur une cible spécifique ou conservez <i>« Toutes »</i>.</li>
+          <li><b>INDICATEUR :</b> restreignez aux collectes d'un indicateur précis.</li>
+        </ul>
+      </li>
+      <li>
+        <b>Données du tableau :</b> chaque ligne affiche la Date de saisie, l'ODD, la Cible, l'Indicateur, la Région/Commune (<i>GLAZOUE</i>), l'Année (<i>2022</i>), la Période (<i>Octobre à Décembre</i>) et la Valeur calculée.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-67.jpg" alt="Tableau récapitulatif des collectes ODD avec filtres et statuts de validation">
+      <img src="/shot-101.png" alt="Filtres multicritères ODD, Cible et Indicateur dans la liste des collectes">
     </div>
-    <p class="shot-caption">Écran <b>« Liste des collectes »</b> : historique exhaustif des 15 collectes enregistrées avec filtres multicritères et statut validé.</p>
+    <p class="shot-caption">Filtres multicritères — les 3 flèches rouges désignent les sélecteurs <b>ODD</b>, <b>CIBLE</b> et <b>INDICATEUR</b> pour cibler instantanément une série de mesures.</p>
+
+    <!-- Étape 2 : Statut de validation -->
+    <h3 class="subhead"><span class="num">2</span>Vérifier le statut de validation</h3>
+    <ol class="steps">
+      <li>
+        Repérez la colonne <b>Statut</b> désignée par la flèche rouge dans le tableau des collectes.
+      </li>
+      <li>
+        Le badge vert <b>« Valider »</b> confirme que la donnée relevée sur le terrain a été vérifiée et approuvée par le responsable communal pour être intégrée aux calculs officiels et aux visualisations.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-102.png" alt="Statut de validation d'une collecte ODD">
+    </div>
+    <p class="shot-caption">Colonne <b>« Statut »</b> — la flèche rouge met en évidence le bouton/badge <b>« Valider »</b> garantissant la conformité et l'officialisation de la mesure.</p>
+
+    <!-- Étape 3 : Actions disponibles -->
+    <h3 class="subhead"><span class="num">3</span>Gérer les collectes via la colonne Actions</h3>
+    <ol class="steps">
+      <li>
+        Dans la colonne <b>Actions</b> (indiquée par la flèche rouge), vous disposez de trois options pour chaque ligne de collecte :
+        <ul>
+          <li><b>Consulter les données collectées (icône base de données) :</b> affiche le détail des variables brutes saisies lors de la collecte.</li>
+          <li><b>Modifier la collecte (icône crayon) :</b> ouvre la boîte de dialogue d'édition pour ajuster les informations de la collecte.</li>
+          <li><b>Supprimer (icône corbeille) :</b> supprime l'enregistrement en cas d'erreur de saisie.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-103.png" alt="Colonne Actions avec icônes de consultation, modification et suppression">
+    </div>
+    <p class="shot-caption">Colonne <b>« Actions »</b> — la flèche rouge désigne les outils de gestion directe : consultation des variables brutes, modification et suppression.</p>
+
+    <!-- Étape 4 : Détail des données collectées -->
+    <h3 class="subhead"><span class="num">4</span>Consulter le détail des données brutes collectées</h3>
+    <ol class="steps">
+      <li>
+        En cliquant sur l'icône de base de données dans la colonne Actions, vous accédez à l'écran <b>« Données collectées »</b>.
+      </li>
+      <li>
+        <b>Rappel du contexte :</b> visualisez l'ODD de rattachement, l'intitulé complet de la Cible et le libellé officiel de l'Indicateur.
+      </li>
+      <li>
+        <b>Variables de terrain :</b> consultez les réponses brutes aux questions d'enquête ayant servi à alimenter l'indicateur (ex. <i>« Quel est le montant des recettes propres mobilisées par la commune au cours de l'année passée ? »</i> : <b>201 563 624</b>, <i>« Quel est le montant exécuté du budget de la commune... ? »</i> : <b>505 947 473</b>).
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-104.png" alt="Détail des variables et réponses d'enquête de la collecte">
+    </div>
+    <p class="shot-caption">Écran <b>« Données collectées »</b> — vue détaillée des variables brutes et montants recueillis servant au calcul automatique de la valeur de l'indicateur.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour saisir une nouvelle mesure sur le terrain, accédez à la section suivante <a href="#odd-collecte-nouvelle" style="color:inherit;font-weight:600;">Créer une nouvelle collecte →</a>
+    </div>
   </section>
 
   <section class="block" id="odd-collecte-nouvelle">
     <div class="section-kicker">Module ODD</div>
     <h2>Créer une nouvelle collecte</h2>
     <p class="lede">
-      L'enregistrement d'une mesure terrain s'effectue via un formulaire modal rapide et guidé garantissant l'intégrité et la précision des séries temporelles.
+      L'enregistrement d'une mesure terrain s'effectue via un formulaire modal rapide et guidé garantissant l'intégrité et la traçabilité des séries temporelles.
+      <span class="hint">Ce même formulaire permet d'éditer une collecte existante pour en rectifier les paramètres.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Procédure pas à pas de saisie d'une collecte
-      </h3>
-      <ol class="steps">
-        <li>
-          Depuis l'écran <b>Liste des collectes</b>, cliquez sur le bouton bleu <b>« + Nouvelle collecte »</b> en haut à droite.
-        </li>
-        <li>
-          <b>Sélection de l'indicateur :</b> Déroulez la liste <b>« Liste des indicateurs »</b> et choisissez l'indicateur ODD concerné par votre mesure.
-        </li>
-        <li>
-          <b>Période (« Period ») :</b> Sélectionnez le trimestre ou la période couverte par les données (ex. <i>Octobre à Décembre</i>).
-        </li>
-        <li>
-          <b>Année :</b> Saisissez l'année civile de rattachement de la collecte (ex. <i>2025</i> ou <i>2026</i>).
-        </li>
-        <li>
-          <b>Commune :</b> Vérifiez que la commune assignée correspond bien à votre collectivité territoriale (champ verrouillé ou prérempli sur <i>GLAZOUE</i>).
-        </li>
-        <li>
-          Cliquez sur le bouton bleu <b>« Enregistrer »</b> pour valider et publier la collecte dans la base SIDSE.
-          <span class="hint">Pour annuler la saisie sans enregistrer, cliquez simplement sur le bouton orange <b>« Fermer »</b>.</span>
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 1 : Déclencher la nouvelle collecte -->
+    <h3 class="subhead"><span class="num">1</span>Déclencher la saisie d'une collecte</h3>
+    <ol class="steps">
+      <li>
+        Depuis l'écran <b>Liste des collectes</b>, repérez le bouton bleu foncé <b>« + Nouvelle collecte »</b> en haut à droite désigné par la flèche rouge.
+      </li>
+      <li>
+        Cliquez sur <b>« + Nouvelle collecte »</b> pour ouvrir la boîte de dialogue de saisie.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-68.jpg" alt="Formulaire modal Nouvelle collecte avec sélection indicateur, période, année et commune">
+      <img src="/shot-100.png" alt="Bouton Nouvelle collecte dans la liste des collectes ODD">
     </div>
-    <p class="shot-caption">Boîte de dialogue <b>« Nouvelle collecte »</b> : formulaire de saisie guidée avec sélection de l'indicateur, période temporelle et confirmation par le bouton « Enregistrer ».</p>
+    <p class="shot-caption">Écran <b>« Liste des collectes »</b> — la flèche rouge indique le bouton <b>« + Nouvelle collecte »</b> pour ouvrir la modale d'enregistrement.</p>
+
+    <!-- Étape 2 : Renseigner les champs du formulaire -->
+    <h3 class="subhead"><span class="num">2</span>Renseigner les informations de la collecte</h3>
+    <ol class="steps">
+      <li>
+        <b>Sélection de l'indicateur :</b> dans le champ <b>« Liste des indicateurs »</b>, déroulez la liste et sélectionnez l'indicateur ODD à renseigner.
+      </li>
+      <li>
+        <b>Période (« Period ») :</b> sélectionnez le trimestre ou l'intervalle temporel concerné (ex. <i>Octobre à Décembre</i>).
+      </li>
+      <li>
+        <b>Année :</b> saisissez l'année de rattachement de la collecte (ex. <i>2022</i>).
+      </li>
+      <li>
+        <b>Commune :</b> vérifiez que la collectivité territoriale affichée correspond à votre commune (ex. <i>GLAZOUE</i>).
+      </li>
+      <li>
+        <b>Valider et enregistrer :</b> cliquez sur le bouton bleu <b>« Enregistrer »</b> pour valider la saisie et intégrer la collecte au registre.
+        <span class="hint">Pour fermer la fenêtre sans appliquer de modifications, cliquez sur le bouton orange <b>« Fermer »</b>.</span>
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-105.png" alt="Formulaire modal d'édition et de saisie d'une collecte ODD">
+    </div>
+    <p class="shot-caption">Boîte de dialogue <b>« Édition de la collecte »</b> — formulaire guidé avec indicateur, période, année, commune et bouton d'enregistrement.</p>
 
     <div class="callout">
       <b>Contrôle des doublons</b>
-      Veillez à ne pas enregistrer deux fois la même période pour un même indicateur afin de conserver des séries chronologiques régulières et cohérentes.
+      Veillez à ne pas enregistrer deux fois la même période pour un même indicateur afin de préserver la cohérence des séries chronologiques.
     </div>
   </section>
 
@@ -2106,79 +2214,95 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module ODD</div>
     <h2>Paramètres ODD : Espace d'administration</h2>
     <p class="lede">
-      Accessible via l'entrée <b>« Paramètres ODD »</b> du menu de gauche, cet espace d'administration offre aux communes la maîtrise complète de l'adaptation territoriale du cadre ODD.
+      Accessible via l'entrée <b>« Paramètres ODD »</b> du menu latéral, cet espace d'administration offre aux communes la maîtrise complète de l'adaptation territoriale du cadre ODD.
+      <span class="hint">Deux volets de configuration sont proposés : la reformulation des cibles et la gestion des indicateurs locaux.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Les 2 volets d'administration du hub ODD
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:1.1rem;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-            <span class="badge" style="background:#ecfdf5;color:#059669;font-weight:700;">REFORMULATION</span>
-            <b style="font-size:1rem;color:var(--color-foreground);">Paramètres Cibles :</b>
-          </div>
-          <span style="color:var(--color-muted-foreground);display:block;line-height:1.5;">
-            Permet à la commune de reformuler les libellés standard des cibles ODD internationales afin de les adapter fidèlement au vocabulaire, au contexte et aux compétences de la collectivité territoriale. Cliquez sur <b>« → Gérer »</b> pour accéder à l'interface de reformulation des cibles.
-          </span>
-        </li>
-        <li>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-            <span class="badge" style="background:#eff6ff;color:#2563eb;font-weight:700;">CRÉATION ET REFORMULATION</span>
-            <b style="font-size:1rem;color:var(--color-foreground);">Paramètres Indicateurs :</b>
-          </div>
-          <span style="color:var(--color-muted-foreground);display:block;line-height:1.5;">
-            Permet aux agents communaux de reformuler les indicateurs souscrits ou de créer de nouveaux indicateurs sur mesure (<i>Indicateurs ODD Extra</i>) afin d'assurer le suivi de priorités locales spécifiques. Cliquez sur <b>« → Gérer »</b> pour configurer les indicateurs.
-          </span>
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Accéder aux paramètres ODD -->
+    <h3 class="subhead"><span class="num">1</span>Accéder au hub des paramètres ODD</h3>
+    <ol class="steps">
+      <li>
+        <b>Menu latéral :</b> dans le volet de gauche sous le module ODD, cliquez sur l'onglet <b>« Paramètres ODD »</b> identifié par l'icône d'engrenage.
+      </li>
+      <li>
+        <b>Vue d'ensemble :</b> l'espace affiche le badge récapitulatif <b>« 2 sections »</b> et expose les deux cartes de configuration dédiées à la collectivité.
+      </li>
+    </ol>
+
+    <!-- Étape 2 : Sélectionner un volet de configuration -->
+    <h3 class="subhead"><span class="num">2</span>Choisir le volet d'administration à configurer</h3>
+    <ol class="steps">
+      <li>
+        <b>Paramètres Cibles (REFORMULATION) :</b> permet à la commune de reformuler les libellés standard des cibles ODD internationales afin de les adapter fidèlement au vocabulaire, au contexte et aux compétences de la collectivité territoriale.
+        <br>Pour y accéder, cliquez sur le bouton <b>« → Gérer »</b> pointé par la flèche rouge.
+      </li>
+      <li>
+        <b>Paramètres Indicateurs (CRÉATION ET REFORMULATION) :</b> permet aux équipes communales de reformuler les indicateurs souscrits ou de créer de nouveaux indicateurs sur mesure (<i>Indicateurs ODD Extra</i>) pour suivre des priorités territoriales spécifiques.
+        <br>Cliquez sur le bouton <b>« → Gérer »</b> de la carte correspondante pour lancer la configuration.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-69.jpg" alt="Hub des paramètres ODD avec cartes Paramètres Cibles et Paramètres Indicateurs">
+      <img src="/shot-106.png" alt="Hub Paramètres ODD avec cartes Paramètres Cibles et Paramètres Indicateurs">
     </div>
-    <p class="shot-caption">Espace <b>« Paramètres ODD »</b> : les deux cartes de gestion pour la reformulation des cibles et la configuration des indicateurs locaux.</p>
+    <p class="shot-caption">Espace <b>« Paramètres ODD »</b> — la flèche rouge désigne le bouton <b>« → Gérer »</b> de la carte <b>Paramètres Cibles</b> pour accéder à l'atelier de reformulation.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour personnaliser les libellés des cibles communales, accédez à la section suivante <a href="#odd-param-cibles" style="color:inherit;font-weight:600;">Paramètres des cibles →</a>
+    </div>
   </section>
 
   <section class="block" id="odd-param-cibles">
     <div class="section-kicker">Module ODD</div>
     <h2>Paramètres des cibles</h2>
     <p class="lede">
-      Accessible en cliquant sur le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Cibles</i>, cet écran permet d'adapter le libellé des cibles ODD souscrites sans rompre leur lien méthodologique avec le référentiel des Nations Unies.
+      Accessible en cliquant sur le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Cibles</i>, cette interface permet d'adapter le libellé des cibles ODD souscrites sans rompre leur lien méthodologique avec le référentiel des Nations Unies.
+      <span class="hint">La reformulation personnalise l'affichage pour les acteurs locaux tout en préservant l'intégrité de la codification officielle.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Comment reformuler une cible ODD ?
-      </h3>
-      <ol class="steps">
-        <li>
-          <b>Consulter la liste des cibles :</b> Le tableau répertorie l'ensemble des cibles souscrites (ex. 11 cibles affichées) avec leur ODD de rattachement et leur libellé actuel.
-        </li>
-        <li>
-          <b>Filtrer par cible :</b> Utilisez le filtre déroulant <b>« Toutes les cibles de... »</b> pour trouver rapidement la cible souhaitée.
-        </li>
-        <li>
-          <b>Ouvrir le menu d'action :</b> Dans la colonne <i>Action</i> à droite de la ligne correspondante, cliquez sur l'icône à trois points verticaux <b>⋮</b>.
-        </li>
-        <li>
-          <b>Sélectionner « ✎ Reformuler » :</b> Un menu contextuel blanc s'ouvre avec l'option <b>« ✎ Reformuler »</b>.
-        </li>
-        <li>
-          <b>Adapter le texte :</b> Saisissez la formulation adaptée aux réalités communales puis validez. Le libellé révisé sera désormais visible sur tous les tableaux de bord et rapports de la collectivité.
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 1 : Consulter le catalogue des cibles -->
+    <h3 class="subhead"><span class="num">1</span>Consulter et filtrer la liste des cibles</h3>
+    <ol class="steps">
+      <li>
+        <b>Tableau des cibles souscrites :</b> le tableau <b>« Liste des cibles »</b> répertorie l'ensemble des cibles de la collectivité (11 cibles souscrites) avec leur ODD de rattachement et leur énoncé complet.
+      </li>
+      <li>
+        <b>Filtrer par ODD :</b> utilisez le menu déroulant <b>« Toutes les cibles de... »</b> situé au-dessus du tableau pour restreindre l'affichage aux cibles d'un ODD particulier.
+      </li>
+      <li>
+        <b>Pagination des résultats :</b> ajustez le nombre de lignes affichées par page (10 par défaut) ou parcourez les pages successives via le sélecteur en bas à droite.
+      </li>
+    </ol>
+
+    <!-- Étape 2 : Déclencher la reformulation -->
+    <h3 class="subhead"><span class="num">2</span>Déclencher la reformulation d'une cible</h3>
+    <ol class="steps">
+      <li>
+        <b>Menu d'action contextuel :</b> repérez la colonne <b>Action</b> à l'extrémité droite de la ligne de la cible concernée et cliquez sur l'icône à trois points verticaux <b>⋮</b>.
+      </li>
+      <li>
+        <b>Sélectionner « ✎ Reformuler » :</b> dans le menu contextuel flottant qui s'affiche, cliquez sur l'option <b>« ✎ Reformuler »</b>.
+      </li>
+      <li>
+        <b>Saisir l'adaptation locale :</b> modifiez le libellé pour l'aligner sur les priorités et le vocabulaire communal, puis enregistrez la modification.
+        <br>L'énoncé adapté s'appliquera automatiquement à tous les tableaux de bord et rapports municipaux.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-70.jpg" alt="Écran Paramètres Cibles avec menu contextuel et action Reformuler">
+      <img src="/shot-70.jpg" alt="Écran Paramètres Cibles avec tableau et déclenchement de l'action Reformuler via le menu contextuel">
     </div>
-    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres cible »</b> : liste des cibles souscrites et déclenchement de l'action « ✎ Reformuler » via le menu contextuel.</p>
+    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres cible »</b> — répertoire des cibles souscrites et ouverture du menu d'action contextuel <b>⋮</b> pour personnaliser le libellé.</p>
 
     <div class="callout">
       <b>Conservation des références officielles</b>
-      La reformulation locale ne modifie que l'intitulé d'affichage : le code officiel de la cible (ex. <i>5.5</i>, <i>6.2</i>, <i>8.2</i>) reste préservé pour assurer la consolidation aux échelons départemental et national.
+      La reformulation locale ne modifie que l'intitulé d'affichage : le code officiel de la cible (ex. <i>5.5</i>, <i>6.2</i>, <i>8.2</i>) reste préservé afin de garantir la consolidation aux échelons départemental et national.
+    </div>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour configurer les indicateurs communaux et créer des indicateurs sur mesure, accédez à la section suivante <a href="#odd-param-indicateurs" style="color:inherit;font-weight:600;">Indicateurs &amp; indicateurs Extra →</a>
     </div>
   </section>
 
@@ -2186,49 +2310,54 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module ODD</div>
     <h2>Indicateurs &amp; indicateurs Extra</h2>
     <p class="lede">
-      Accessible via le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Indicateurs</i>, cet écran est scindé en deux sections : la gestion des indicateurs souscrits et la création d'indicateurs personnalisés dits <b>Indicateurs ODD Extra</b>.
+      Accessible via le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Indicateurs</i>, cet écran est scindé en deux volets opérationnels : l'adaptation du socle standard et la création d'indicateurs personnalisés dits <b>Indicateurs ODD Extra</b>.
+      <span class="hint">Cet espace confère à la municipalité une flexibilité totale pour suivre des indicateurs sur mesure adaptés à ses projets de territoire.</span>
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Section 1 : Les indicateurs des ODD (Socle standard)
-      </h3>
-      <p style="color:var(--color-muted-foreground);margin-bottom:0.75rem;">
-        Ce tableau présente la liste complète des indicateurs officiels souscrits (ex. 16 indicateurs). Tout comme pour les cibles, chaque indicateur dispose d'un menu d'action <b>⋮</b> permettant de cliquer sur <b>« ✎ Reformuler »</b> afin de spécifier une appellation locale plus familière aux acteurs communaux.
-      </p>
-    </div>
+    <!-- Étape 1 : Gérer les indicateurs du socle standard -->
+    <h3 class="subhead"><span class="num">1</span>Reformuler les indicateurs du socle standard</h3>
+    <ol class="steps">
+      <li>
+        <b>Consulter le socle standard :</b> le premier tableau <b>« Les indicateurs des ODD »</b> liste l'ensemble des 16 indicateurs souscrits, avec leur ODD, leur cible parente, leur libellé officiel et leur périodicité de collecte (ex. <i>trimestriel</i>).
+      </li>
+      <li>
+        <b>Filtrer la vue :</b> sélectionnez un groupe dans le filtre <b>« Tous les indicateurs »</b> pour cibler rapidement un sous-ensemble.
+      </li>
+      <li>
+        <b>Action « ✎ Reformuler » :</b> cliquez sur le menu à trois points verticaux <b>⋮</b> dans la colonne d'action de l'indicateur souhaité, puis cliquez sur <b>« ✎ Reformuler »</b> pour adapter sa dénomination au contexte territorial.
+      </li>
+    </ol>
 
-    <div class="card" style="margin-top:1.2rem;">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Section 2 : Mes indicateurs ODD Extra (Indicateurs locaux personnalisés)
-      </h3>
-      <p style="color:var(--color-muted-foreground);margin-bottom:0.8rem;">
-        Cette section permet à la commune de créer des indicateurs spécifiques propres à ses défis locaux, non couverts par les indicateurs standards de l'ONU :
-      </p>
-      <ol class="steps">
-        <li>
-          Faites défiler la page jusqu'au bloc <b>« Mes indicateurs ODD Extra »</b>.
-        </li>
-        <li>
-          Cliquez sur le bouton bleu foncé <b>« + Ajouter »</b> situé en haut à droite du bloc.
-        </li>
-        <li>
-          Renseignez l'ODD concerné, la cible de rattachement, l'intitulé de l'indicateur Extra et la périodicité de collecte souhaitée.
-        </li>
-        <li>
-          Validez pour enregistrer : l'indicateur Extra s'ajoute immédiatement à la liste et devient disponible dans le formulaire de collecte de données.
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 2 : Créer un indicateur personnalisé -->
+    <h3 class="subhead"><span class="num">2</span>Créer un indicateur local « ODD Extra »</h3>
+    <ol class="steps">
+      <li>
+        <b>Section dédiée :</b> faites défiler la page jusqu'au second volet intitulé <b>« Mes indicateurs ODD Extra »</b>.
+      </li>
+      <li>
+        <b>Bouton d'ajout :</b> cliquez sur le bouton bleu <b>« + Ajouter »</b> positionné en haut à droite du tableau.
+      </li>
+      <li>
+        <b>Renseigner les métadonnées :</b> dans le formulaire, sélectionnez l'ODD concerné, associez la cible de référence, spécifiez l'intitulé clair de l'indicateur local et définissez sa périodicité de collecte.
+      </li>
+      <li>
+        <b>Activation immédiate :</b> validez la création. L'indicateur Extra apparaît aussitôt dans le registre communal et devient immédiatement disponible dans le module <b>Faire une collecte</b>.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-71.jpg" alt="Écran Paramètres Indicateurs avec tableau des indicateurs ODD, reformulation et section Mes indicateurs ODD Extra avec bouton Ajouter">
+      <img src="/shot-71.jpg" alt="Écran Paramètres Indicateurs avec tableau des indicateurs ODD et section Mes indicateurs ODD Extra avec bouton Ajouter">
     </div>
-    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres indicateurs »</b> : reformulation des indicateurs standards et section inférieure <b>« Mes indicateurs ODD Extra »</b> avec le bouton d'ajout « + Ajouter ».</p>
+    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres indicateurs »</b> — volet supérieur de reformulation du socle standard et volet inférieur <b>« Mes indicateurs ODD Extra »</b> avec bouton <b>« + Ajouter »</b>.</p>
 
     <div class="callout">
-      <b>Souplesse et rigueur</b>
-      Les indicateurs ODD Extra offrent à la municipalité une flexibilité totale pour mesurer l'impact de ses projets locaux tout en respectant l'architecture globale des Objectifs de Développement Durable.
+      <b>Complémentarité et cohérence</b>
+      Les indicateurs ODD Extra enrichissent le pilotage local sur des enjeux communaux très ciblés tout en restant rigoureusement rattachés à la taxonomie officielle des ODD.
+    </div>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour découvrir le pilotage des investissements et grands chantiers communaux, poursuivez vers le module suivant <a href="#projet-acces" style="color:inherit;font-weight:600;">Accéder au module Projets Phares →</a>
     </div>
   </section>
 
@@ -2405,33 +2534,59 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module Projets Phares</div>
     <h2>Secteurs d'activité</h2>
     <p class="lede">
-      Accessible via l'onglet <b>« Secteurs »</b> du menu latéral, cette page permet de configurer la typologie sectorielle communale afin de classer les projets par domaine d'intervention.
+      Accessible depuis le menu latéral via l'onglet <b>« Secteurs »</b>, cette interface permet de gérer et de configurer la nomenclature des secteurs d'activité de la collectivité. Elle sert à classer méthodiquement chaque projet phare selon son domaine d'intervention (ex. <i>Infrastructures</i>, <i>Santé</i>, <i>Éducation</i>, <i>Eau &amp; Assainissement</i>...).
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Fonctionnalités de l'écran « Secteurs d'activité »
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.75rem;">
-          <b>Bouton « + Nouveau secteur » :</b> Permet de créer une nouvelle catégorie thématique (ex. <i>Eau &amp; Assainissement</i>, <i>Éducation &amp; Formation</i>, <i>Santé communautaire</i>, <i>Infrastructures marchandes</i>).
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Recherche textuelle :</b> Champ <b>« RECHERCHE : Rechercher un secteur... »</b> pour localiser rapidement un secteur existant.
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Filtre par statut :</b> Menu déroulant <b>« STATUT : Tous »</b> (Actif, Inactif, Archivé).
-        </li>
-        <li>
-          <b>Tableau récapitulatif :</b> Colonnes <b>ID</b> (identifiant), <b>SECTEUR</b> (intitulé) et <b>STATUT</b>.
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Répertoire des secteurs -->
+    <h3 class="subhead"><span class="num">1</span>Consulter le répertoire des secteurs d'activité</h3>
+    <p>
+      Le tableau central liste l'ensemble des secteurs enregistrés pour la commune avec leur identifiant (ID), leur libellé et leur statut opérationnel. En haut à droite, le badge récapitulatif indique le nombre total de secteurs actifs (ex. <b>« 0 secteurs »</b> lors de l'initialisation de la collectivité).
+    </p>
 
     <div class="shot">
-      <img src="/shot-75.jpg" alt="Écran Secteurs d'activité avec filtres de recherche, statut et bouton Nouveau secteur">
+      <img src="/shot-89.png" alt="Tableau des secteurs d'activité dans le module Projet Phare">
     </div>
-    <p class="shot-caption">Écran <b>« Secteurs d'activité »</b> : classification sectorielle des projets phares avec outils de recherche et bouton d'ajout.</p>
+    <p class="shot-caption">Écran <b>« Secteurs d'activité »</b> — la flèche rouge désigne le <b>tableau de la liste des secteurs</b> récapitulant les domaines d'intervention communaux.</p>
+
+    <!-- Étape 2 : Filtrer et rechercher -->
+    <h3 class="subhead"><span class="num">2</span>Rechercher et filtrer les secteurs d'activité</h3>
+    <ol class="steps">
+      <li>
+        <b>Recherche textuelle instantanée :</b> cliquez dans la barre <b>« RECHERCHE »</b> et tapez le libellé ou un mot-clé du secteur (ex. <i>« Eau »</i>, <i>« Santé »</i>, <i>« Voirie »</i>) pour filtrer les lignes en direct.
+      </li>
+      <li>
+        <b>Filtre par statut :</b> cliquez sur le menu déroulant <b>« STATUT : Tous »</b> pour afficher uniquement les secteurs actifs ou inactifs selon vos besoins d'analyse.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-90.png" alt="Outils de recherche et de filtrage par statut des secteurs d'activité">
+    </div>
+    <p class="shot-caption">Barre de filtres — les flèches rouges mettent en évidence la <b>recherche textuelle par mot-clé</b> et le <b>filtre déroulant par statut</b>.</p>
+
+    <!-- Étape 3 : Ajouter un secteur -->
+    <h3 class="subhead"><span class="num">3</span>Ajouter un nouveau secteur d'activité</h3>
+    <ol class="steps">
+      <li>
+        Depuis l'écran <b>Secteurs d'activité</b>, repérez et cliquez sur le bouton bleu foncé <b>« + Nouveau secteur »</b> situé en haut à droite.
+      </li>
+      <li>
+        Dans la boîte de dialogue qui s'ouvre, saisissez le nom du nouveau secteur communal et définissez son statut.
+      </li>
+      <li>
+        Validez l'enregistrement : le secteur est instantanément ajouté à la nomenclature et devient sélectionnable lors de la création ou de l'édition des projets phares.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-91.png" alt="Bouton Nouveau secteur pour ajouter une catégorie d'activité">
+    </div>
+    <p class="shot-caption">Bouton d'action — la flèche rouge indique l'emplacement du bouton <b>« + Nouveau secteur »</b> pour déclarer un domaine d'intervention supplémentaire.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Une fois vos projets et secteurs configurés, accédez à la section suivante pour enregistrer les données de suivi de terrain : <a href="#projet-collecte" style="color:inherit;font-weight:600;">Collecte de données Projets →</a>
+    </div>
   </section>
 
   <section class="block" id="projet-collecte">
@@ -2441,98 +2596,106 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Accessible via l'onglet <b>« Collecte de données »</b> du menu latéral, cette interface sert de point de saisie terrain pour renseigner les valeurs réelles des indicateurs affectés aux projets phares.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Comment effectuer une collecte sur un projet ?
-      </h3>
-      <ol class="steps">
-        <li>
-          <b>Filtrer par projet :</b> Ouvrez le menu déroulant <b>« FILTRER PAR PROJET »</b> et sélectionnez le projet concerné par votre mission de suivi.
-        </li>
-        <li>
-          <b>Rechercher l'indicateur :</b> Tapez le mot-clé de l'indicateur recherché dans la barre <b>« RECHERCHE : Rechercher un indicateur... »</b>.
-        </li>
-        <li>
-          <b>Sélectionner l'indicateur :</b> Cliquez sur l'indicateur désiré dans la liste déployée.
-        </li>
-        <li>
-          <b>Renseigner et transmettre :</b> Saisissez la valeur constatée sur le terrain, précisez la période de référence et validez pour envoyer la mesure dans le circuit de vérification.
-        </li>
-      </ol>
-    </div>
+    <!-- Étape 1 : Accéder à l'interface de collecte -->
+    <h3 class="subhead"><span class="num">1</span>Accéder à l'écran de collecte de données</h3>
+    <p>
+      Cliquez sur l'onglet <b>« Collecte de données »</b> dans le menu latéral pour afficher l'interface d'enregistrement des indicateurs.
+    </p>
 
     <div class="shot">
-      <img src="/shot-76.jpg" alt="Écran Collecte de données Projets avec filtres projet et recherche d'indicateurs">
+      <img src="/shot-76.jpg" alt="Écran Collecte de données Projets">
     </div>
-    <p class="shot-caption">Écran <b>« Collecte de données »</b> : interface de sélection du projet et recherche de l'indicateur à renseigner.</p>
+    <p class="shot-caption">Écran <b>« Collecte de données »</b> — interface de sélection du projet et recherche de l'indicateur à renseigner.</p>
+
+    <!-- Étape 2 : Filtrer et rechercher -->
+    <h3 class="subhead"><span class="num">2</span>Filtrer par projet et rechercher un indicateur</h3>
+    <ol class="steps">
+      <li>
+        <b>Filtrer par projet :</b> ouvrez le menu déroulant <b>« FILTRER PAR PROJET »</b> pour sélectionner le projet concerné.
+      </li>
+      <li>
+        <b>Rechercher l'indicateur :</b> tapez le mot-clé dans la barre <b>« RECHERCHE : Rechercher un indicateur... »</b> pour filtrer les indicateurs.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-92.png" alt="Outils de filtrage par projet et recherche d'indicateurs">
+    </div>
+    <p class="shot-caption">Barre de filtres — les flèches rouges mettent en évidence le menu déroulant <b>« FILTRER PAR PROJET »</b> (à gauche) et le champ <b>« RECHERCHE »</b> (à droite).</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Une fois vos données de terrain enregistrées, accédez à la section suivante pour vérifier et valider les informations : <a href="#projet-qualite" style="color:inherit;font-weight:600;">Contrôle qualité des données →</a>
+    </div>
   </section>
 
   <section class="block" id="projet-qualite">
     <div class="section-kicker">Module Projets Phares</div>
     <h2>Contrôle qualité des données</h2>
     <p class="lede">
-      Le volet <b>Contrôle qualité</b> (accessible depuis le menu latéral) constitue le filtre de gouvernance et de fiabilisation garantissant l'exactitude des informations avant leur diffusion officielle.
+      Accessible depuis le menu latéral via l'onglet <b>« Contrôle qualité »</b>, cette interface constitue le filtre de vérification garantissant l'exactitude des informations collectées avant leur consolidation officielle.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Filtres d'audit et tableau des vérifications
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.75rem;">
-          <b>Filtres combinés :</b> Filtrage par <b>UTILISATEUR</b> (ex. <i>Agent terrain</i>, <i>Superviseur</i>, <i>Administrateur</i>), par <b>PROJET</b> (ex. <i>Projet Alpha</i>, <i>Projet Beta</i>, <i>Projet Gamma</i>) et par <b>INDICATEUR</b>. Bouton <b>« ⟳ Réinitialiser »</b> pour réinitialiser la vue.
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Compteur d'audit :</b> Badge indiquant le volume d'enregistrements en cours d'examen (ex. <i>4 entrées</i>).
-        </li>
-        <li>
-          <b>Tableau « Vérifications en cours » :</b>
-          Colonnes <b>ID</b> (ex. <i>C-001</i>, <i>C-002</i>), <b>INDICATEUR</b> (ex. <i>Taux de satisfaction</i>, <i>Performance opérationnelle</i>, <i>Efficacité énergétique</i>, <i>Délais de livraison</i>), <b>VALEUR</b> (valeur collectée), <b>PÉRIODE</b> (ex. <i>T2 2024</i>), <b>PROJET</b>, <b>SAISI PAR</b>, <b>STATUT</b> (badge jaune <i>• En attente</i> ou vert <i>• Validé</i>) et champ interactif <b>OBSERVATION</b>.
-        </li>
-      </ul>
-    </div>
-
-    <div class="shot">
-      <img src="/shot-77.jpg" alt="Tableau de contrôle qualité avec vérifications en cours, filtres et champ observation">
-    </div>
-    <p class="shot-caption">Écran <b>« Contrôle qualité »</b> : tableau des vérifications en cours, statuts d'approbation et ajout d'observations d'audit.</p>
-  </section>
-
-  <section class="block" id="projet-qualite-actions">
-    <div class="section-kicker">Module Projets Phares</div>
-    <h2>Validation et rejet des données</h2>
-    <p class="lede">
-      Dans la colonne <b>ACTIONS</b> du tableau de contrôle qualité, les superviseurs et administrateurs disposent des boutons de décision formelle pour approuver ou rejeter les données soumises.
+    <!-- Étape 1 : Accéder au contrôle qualité -->
+    <h3 class="subhead"><span class="num">1</span>Consulter le tableau des vérifications en cours</h3>
+    <p>
+      Cliquez sur l'onglet <b>« Contrôle qualité »</b> dans le menu latéral. L'écran affiche le badge récapitulatif (ex. <i>4 entrées</i>) et le tableau <b>« Vérifications en cours »</b> listant les mesures soumises avec leurs statuts d'approbation.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Circuit d'approbation ou de rejet d'une mesure
-      </h3>
-      <ol class="steps">
-        <li style="margin-bottom:0.8rem;">
-          <b>Audit de conformité :</b> Comparez la valeur soumise avec les pièces justificatives et les valeurs des trimestres précédents.
-        </li>
-        <li style="margin-bottom:0.8rem;">
-          <b>Saisie d'une observation :</b> Tapez votre commentaire dans la case <i>« Ajouter une observation »</i> pour expliciter votre décision ou signaler une recommandation.
-        </li>
-        <li style="margin-bottom:0.8rem;">
-          <b>Bouton « ✔ Valider » :</b> Cliquez sur le bouton bleu pour approuver la mesure. Le statut passe instantanément à <b>« Validé »</b> (badge vert) et les indicateurs du Dashboard sont immédiatement recalculés.
-        </li>
-        <li>
-          <b>Bouton « ✖ Rejeter » :</b> Cliquez sur le bouton rouge en cas d'erreur avérée, d'anomalie de calcul ou de document manquant. La soumission est rejetée et l'agent collecteur est notifié pour corriger la saisie.
-        </li>
-      </ol>
+    <div class="shot">
+      <img src="/shot-77.jpg" alt="Tableau de contrôle qualité avec vérifications en cours">
     </div>
+    <p class="shot-caption">Écran <b>« Contrôle qualité »</b> — tableau des vérifications en cours, statuts d'approbation et champ observation.</p>
+
+    <!-- Étape 2 : Filtrer les vérifications -->
+    <h3 class="subhead"><span class="num">2</span>Filtrer les données par utilisateur, projet et indicateur</h3>
+    <ol class="steps">
+      <li>
+        <b>Filtre par utilisateur :</b> sélectionnez un agent dans le menu déroulant <b>« UTILISATEUR »</b> (flèche de gauche).
+      </li>
+      <li>
+        <b>Filtre par projet :</b> choisissez un projet spécifique dans le menu <b>« PROJET »</b> (flèche du milieu).
+      </li>
+      <li>
+        <b>Filtre par indicateur :</b> ciblez un indicateur particulier dans le menu <b>« INDICATEUR »</b> (flèche de droite).
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-78.jpg" alt="Colonne Actions du contrôle qualité avec boutons Valider et Rejeter">
+      <img src="/shot-93.png" alt="Filtres combinés utilisateur, projet et indicateur">
     </div>
-    <p class="shot-caption">Focus sur la colonne <b>« ACTIONS »</b> : boutons de certification <b>« ✔ Valider »</b> et de renvoi <b>« ✖ Rejeter »</b> pour une gouvernance rigoureuse des données communales.</p>
+    <p class="shot-caption">Barre de filtres — les trois flèches rouges mettent en évidence les filtres <b>« UTILISATEUR »</b>, <b>« PROJET »</b> et <b>« INDICATEUR »</b>.</p>
+
+    <!-- Étape 3 : Réinitialiser les filtres -->
+    <h3 class="subhead"><span class="num">3</span>Réinitialiser les filtres d'affichage</h3>
+    <p>
+      Pour effacer les critères de filtrage sélectionnés et réafficher l'ensemble des enregistrements, cliquez sur le bouton <b>« ⟳ Réinitialiser »</b>.
+    </p>
+
+    <div class="shot">
+      <img src="/shot-94.png" alt="Bouton Réinitialiser les filtres">
+    </div>
+    <p class="shot-caption">Bouton d'action — la flèche rouge indique l'emplacement du bouton <b>« ⟳ Réinitialiser »</b> pour réinitialiser la vue.</p>
+
+    <!-- Étape 4 : Valider ou rejeter une mesure -->
+    <h3 class="subhead"><span class="num">4</span>Valider ou rejeter une mesure collectée</h3>
+    <ol class="steps">
+      <li>
+        <b>Bouton « ✔ Valider » :</b> cliquez sur le bouton bleu pour approuver la mesure. Le statut passe à <b>« Validé »</b> (badge vert).
+      </li>
+      <li>
+        <b>Bouton « ✖ Rejeter » :</b> cliquez sur le bouton pour refuser la donnée si une correction est nécessaire.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-95.png" alt="Colonne Actions avec boutons Valider et Rejeter">
+    </div>
+    <p class="shot-caption">Colonne Actions — la flèche rouge indique l'emplacement des boutons <b>« ✔ Valider »</b> et <b>« ✖ Rejeter »</b> pour approuver ou rejeter une saisie.</p>
 
     <div class="callout">
-      <b>Traçabilité des décisions</b>
-      L'ensemble des validations et rejets est consigné dans les journaux d'audit de SIDSE IBDC avec horodatage et identifiant du validateur, garantissant une redevabilité totale devant les partenaires techniques et financiers.
+      <b>Que faire ensuite ?</b>
+      Retrouvez la suite des fonctionnalités de la plateforme dans les prochaines sections du guide : <a href="#a-venir" style="color:inherit;font-weight:600;">Sections à venir →</a>
     </div>
   </section>
 

@@ -730,56 +730,94 @@ _L'écran **Liste des ODD** centralise l'ensemble des Objectifs de Développemen
 
 ### [Module ODD] Détail d'un ODD & cibles
 
-_La fiche détaillée de l'ODD sélectionné récapitule l'ensemble des cibles souscrites pour cet objectif._
+_En cliquant sur **« Voir les cibles & indicateurs → »** depuis une carte d'ODD, vous accédez à la fiche descriptive de l'objectif et à la liste des cibles prioritaires souscrites par la commune._
 
-![Fiche descriptive Détail ODD](./images/shot-64.jpg)
+1. **Consulter la fiche de l'ODD et les cibles souscrites :**
+   - Visualisez en haut de l'écran le libellé officiel de l'objectif (ex. *ÉGALITÉ ENTRE LES SEXES*) ainsi que son logo officiel.
+   - Parcourez la section **« Toutes les cibles de l'ODD »** qui récapitule les cibles souscrites pour cet objectif.
 
-*📷 Écran « Détail ODD » : fiche descriptive de l'objectif sélectionné, tableau des cibles souscrites et bouton d'action « ouvrir ».*
+2. **Accéder au détail d'une cible :**
+   - Repérez la cible souhaitée dans le tableau (ex. *5.5 - Garantir la participation entière et effective des femmes...*).
+   - Dans la colonne **Action**, cliquez sur le bouton **« 👁 ouvrir »** (mis en évidence par la flèche rouge) pour afficher la fiche détaillée de la cible et ses indicateurs de suivi.
 
-1. **Fil d'Ariane & Bouton Retour :** utilisez `Liste des ODD • Détail ODD` ou le bouton **« ← Retour »** pour revenir à la grille principale.
-2. **Information ODD :** consultez le libellé officiel et le logo de l'ODD.
-3. **Toutes les cibles de l'ODD :** consultez le tableau des cibles prioritaires souscrites avec possibilité de filtrer par cible.
-4. Cliquez sur le bouton **« 👁 ouvrir »** dans la colonne *Action* pour examiner les indicateurs de suivi de la cible.
+![Écran Détail ODD avec tableau des cibles souscrites et bouton ouvrir](./images/shot-96.png)
+
+*📷 Écran « Détail ODD » — la flèche rouge indique l'emplacement du bouton « 👁 ouvrir » dans la colonne Action pour afficher le détail de la cible.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour découvrir la fiche détaillée d'une cible et ses indicateurs de mesure, consultez la section **Détail d'une cible ODD & ses indicateurs**.
 
 ---
 
 ### [Module ODD] Détail d'une cible ODD
 
-_L'écran Détail Cible présente les spécifications de la cible sélectionnée ainsi que le tableau des indicateurs opérationnels associés._
+_Accessible après avoir cliqué sur **« 👁 ouvrir »** depuis le tableau des cibles, l'écran **Détail Cible** présente l'énoncé complet de la cible retenue ainsi que les indicateurs opérationnels chargés de mesurer son niveau d'atteinte._
 
-![Écran Détail Cible](./images/shot-65.jpg)
+1. **Consulter les spécifications de la cible :**
+   - **Fil d'Ariane et retour :** visualisez la position hiérarchique (`Liste des ODD • Détail ODD • Détail Cible`) ou utilisez le bouton **« ← Retour »** pour remonter d'un niveau.
+   - **Libellé de la cible :** lisez l'énoncé complet définissant la finalité poursuivie (ex. *« Garantir la participation entière et effective des femmes et leur accès en toute égalité aux fonctions de direction... »*).
 
-*📷 Écran « Détail Cible » : énoncé officiel de la cible et tableau des indicateurs de suivi associés.*
+2. **Examiner les indicateurs de suivi rattachés :**
+   - **Tableau des indicateurs :** parcourez la section **« Tous les indicateurs de la cible »** listant chaque indicateur opérationnel avec son code (ex. *5.5.3*, *5.5.6*).
+   - **Périodicité de collecte :** vérifiez la fréquence de renseignement des données sur le terrain (ex. *trimestriel*).
 
-1. **Fil d'Ariane :** navigation fluide `Liste des ODD • Détail ODD • Détail Cible` avec bouton **« ← Retour »**.
-2. **Information Cible :** lecture du libellé complet décrivant la finalité visée.
-3. **Tous les indicateurs de la cible :** tableau listant le code et l'intitulé de chaque indicateur (ex. *5.5.3*, *5.5.6*) ainsi que sa **périodicité de collecte** (*trimestriel*).
+![Écran Détail Cible avec libellé de la cible et tableau des indicateurs associés](./images/shot-65.jpg)
+
+*📷 Écran « Détail Cible » — énoncé officiel de la cible et liste des indicateurs de suivi avec périodicité de collecte trimestrielle.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour consulter l'ensemble des indicateurs de la commune toutes cibles confondues, accédez à la section **Liste des indicateurs ODD**.
 
 ---
 
 ### [Module ODD] Liste des indicateurs ODD
 
-_Accessible via l'onglet **« Liste des indicateurs »** du menu latéral, cette page consolide l'ensemble des 16 indicateurs ODD souscrits par la collectivité._
+_Accessible depuis le menu latéral via l'onglet **« Liste des indicateurs »**, cet écran centralise l'ensemble des indicateurs ODD souscrits par la collectivité (16 indicateurs actifs à Glazoué)._
 
-![Catalogue des indicateurs ODD souscrits](./images/shot-66.jpg)
+1. **Consulter le répertoire des indicateurs :**
+   - **Accéder à l'écran :** cliquez sur **« Liste des indicateurs »** dans le menu latéral sous le module ODD.
+   - **Tableau récapitulatif :** consultez les colonnes **ODD**, **Cible**, **Indicateur** (code et intitulé) et **Périodicité de collecte** (ex. *trimestriel*).
 
-*📷 Écran « Liste des indicateurs » : catalogue des 16 indicateurs souscrits avec options d'analyse visuelle.*
+![Catalogue des 16 indicateurs ODD souscrits avec tableau et boutons de visualisation](./images/shot-66.jpg)
 
-1. **Compteur et filtres :** visualisez le badge *16 indicateurs* et filtrez via le menu déroulant **« Tous les indicateurs »**.
-2. **Tableau des indicateurs :** identification claire de l'ODD parent, de la cible, de l'intitulé de l'indicateur et de la périodicité de collecte (trimestrielle).
-3. **Visualisation :** accès direct aux outils d'analyse via les boutons **« Histogramme »** et **« Tableau »** dans la colonne *Visualisation*.
+*📷 Écran « Liste des indicateurs » — répertoire des indicateurs souscrits pour la collectivité.*
+
+2. **Lancer la visualisation d'un indicateur :**
+   - Dans la colonne **Visualisation** (désignée par la flèche rouge), repérez les boutons d'action disponibles pour chaque indicateur.
+   - Cliquez sur **« ⟳ Histogramme »** pour afficher l'évolution graphique ou sur **« ⟳ Tableau »** pour afficher la table de données chiffrées.
+
+![Boutons Histogramme et Tableau dans la colonne Visualisation des indicateurs ODD](./images/shot-97.png)
+
+*📷 Colonne « Visualisation » — la flèche rouge désigne les boutons « Histogramme » et « Tableau » pour analyser les mesures collectées.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour découvrir l'écran d'analyse graphique et tabulaire, consultez la section **Visualisation graphique & tabulaire**.
 
 ---
 
 ### [Module ODD] Visualisation graphique & tabulaire
 
-_Deux modes d'exploration complémentaires sont proposés dans la colonne Visualisation pour analyser les résultats communaux._
+_Accessible en cliquant sur **« Histogramme »** ou **« Tableau »** depuis la liste des indicateurs, cette interface permet d'explorer les données collectées sous forme de graphique ou de tableau chiffré._
 
-1. **Bouton « 📊 Histogramme » :** génère un graphique chronologique en barres retraçant l'évolution des données collectées par trimestre et par année.
-2. **Bouton « 📋 Tableau » :** affiche la table des séries statistiques chiffrées détaillées avec les périodes et les valeurs enregistrées.
+1. **Consulter l'évolution graphique de l'indicateur :**
+   - **Affichage de l'histogramme :** la vue graphique s'affiche avec l'intitulé de l'indicateur (ex. *5.5.3 Proportion de femmes conseillères communales*).
+   - **Filtrer par période :** sélectionnez l'année souhaitée dans le menu déroulant **« Filtre par période »** (ex. *2022*) pour afficher les données correspondantes.
 
-> 💡 **Actualisation en temps réel**  
-> Tout enregistrement d'une nouvelle collecte met à jour instantanément les graphiques d'histogramme et les tableaux sans rechargement nécessaire.
+![Écran de visualisation de l'histogramme de l'indicateur ODD](./images/shot-99.jpeg)
+
+*📷 Écran « Visualisation » — affichage de l'histogramme par période avec filtre annuel.*
+
+2. **Basculer vers la vue tabulaire :**
+   - En haut à droite de l'écran, repérez le sélecteur d'affichage composé des boutons **« Graphique »** et **« Tableau »**.
+   - Cliquez sur le bouton **« Tableau »** (indiqué par la flèche rouge) pour afficher les données sous forme tabulaire.
+   - Pour revenir à la liste des indicateurs, cliquez sur le bouton **« ← Retour »** situé en haut à gauche.
+
+![Bascule vers la vue tabulaire avec le bouton Tableau](./images/shot-98.png)
+
+*📷 Bascule d'affichage — la flèche rouge met en évidence le bouton « Tableau » pour passer de la vue graphique à la vue tabulaire.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour renseigner de nouvelles mesures sur le terrain, accédez à la section **Collecte de données ODD**.
 
 ---
 
@@ -942,16 +980,30 @@ Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la descriptio
 
 ### [Module Projets Phares] Secteurs d'activité
 
-_Accessible via l'onglet **« Secteurs »** du menu latéral, cette page permet de configurer la typologie sectorielle communale afin de classer les projets par domaine d'intervention._
+_Accessible depuis le menu latéral via l'onglet **« Secteurs »**, cette interface permet de gérer et de configurer la nomenclature des secteurs d'activité de la collectivité. Elle sert à classer méthodiquement chaque projet phare selon son domaine d'intervention (ex. *Infrastructures*, *Santé*, *Éducation*, *Eau & Assainissement*...)._
 
-![Écran Secteurs d'activité](./images/shot-75.jpg)
+1. **Consulter le répertoire des secteurs :** visualisez le tableau central récapitulant les secteurs enregistrés pour la commune avec leur identifiant (ID), leur libellé et leur statut opérationnel.
 
-*📷 Écran « Secteurs d'activité » : classification sectorielle des projets phares avec outils de recherche et bouton d'ajout.*
+![Tableau des secteurs d'activité](./images/shot-89.png)
 
-1. **Bouton d'ajout :** cliquer sur **« + Nouveau secteur »** pour créer une nouvelle catégorie thématique (ex. *Eau & Assainissement*, *Éducation*, *Santé*, *Infrastructures*).
-2. **Recherche textuelle :** champ **« RECHERCHE : Rechercher un secteur... »** pour trouver un secteur existant.
-3. **Filtre par statut :** menu déroulant **« STATUT : Tous »** (Actif, Inactif, Archivé).
-4. **Tableau récapitulatif :** affichage des colonnes ID, SECTEUR et STATUT.
+*📷 Écran « Secteurs d'activité » — la flèche rouge désigne le tableau de la liste des secteurs récapitulant les domaines d'intervention communaux.*
+
+2. **Rechercher et filtrer les secteurs :**
+   - **Recherche textuelle instantanée :** cliquez dans le champ **« RECHERCHE »** pour filtrer par mot-clé (ex. *« Eau »*, *« Santé »*).
+   - **Filtre par statut :** utilisez le menu déroulant **« STATUT : Tous »** pour afficher uniquement les secteurs actifs ou inactifs.
+
+![Outils de recherche et filtrage des secteurs](./images/shot-90.png)
+
+*📷 Barre de filtres — les flèches rouges mettent en évidence la recherche textuelle par mot-clé et le filtre déroulant par statut.*
+
+3. **Ajouter un nouveau secteur d'activité :** cliquez sur le bouton bleu foncé **« + Nouveau secteur »** situé en haut à droite pour créer un domaine d'intervention supplémentaire.
+
+![Bouton Nouveau secteur](./images/shot-91.png)
+
+*📷 Bouton d'action — la flèche rouge indique l'emplacement du bouton « + Nouveau secteur » pour déclarer un domaine d'intervention supplémentaire.*
+
+> 💡 **Que faire ensuite ?**  
+> Une fois vos projets et secteurs configurés, accédez à la section suivante pour enregistrer les données de suivi de terrain : **Collecte de données Projets**.
 
 ---
 
@@ -959,46 +1011,60 @@ _Accessible via l'onglet **« Secteurs »** du menu latéral, cette page permet 
 
 _Accessible via l'onglet **« Collecte de données »** du menu latéral, cette interface sert de point de saisie terrain pour renseigner les valeurs réelles des indicateurs affectés aux projets phares._
 
+1. **Accéder à l'écran de collecte de données :** cliquez sur l'onglet **« Collecte de données »** dans le menu latéral.
+
 ![Écran Collecte de données Projets](./images/shot-76.jpg)
 
-*📷 Écran « Collecte de données » : interface de sélection du projet et recherche de l'indicateur à renseigner.*
+*📷 Écran « Collecte de données » — interface de sélection du projet et recherche de l'indicateur à renseigner.*
 
-1. **Filtrer par projet :** ouvrir le menu déroulant **« FILTRER PAR PROJET »** et sélectionner le projet concerné.
-2. **Rechercher l'indicateur :** taper le mot-clé dans la barre **« RECHERCHE : Rechercher un indicateur... »**.
-3. **Sélectionner l'indicateur :** cliquer sur l'indicateur désiré dans la liste déployée.
-4. **Saisir la mesure :** renseigner la valeur constatée sur le terrain, préciser la période de référence et valider pour soumission au contrôle qualité.
+2. **Filtrer par projet et rechercher un indicateur :**
+   - **Filtrer par projet :** ouvrez le menu déroulant **« FILTRER PAR PROJET »** (flèche de gauche) pour sélectionner le projet concerné.
+   - **Rechercher l'indicateur :** tapez le mot-clé dans la barre **« RECHERCHE : Rechercher un indicateur... »** (flèche de droite) pour filtrer les indicateurs.
+
+![Outils de filtrage par projet et recherche d'indicateurs](./images/shot-92.png)
+
+*📷 Barre de filtres — les flèches rouges mettent en évidence le menu déroulant « FILTRER PAR PROJET » (à gauche) et le champ « RECHERCHE » (à droite).*
+
+> 💡 **Que faire ensuite ?**  
+> Une fois vos données de terrain enregistrées, accédez à la section suivante : **Contrôle qualité des données**.
 
 ---
 
 ### [Module Projets Phares] Contrôle qualité des données
 
-_Le volet **Contrôle qualité** constitue le filtre de gouvernance et de fiabilisation garantissant l'exactitude des informations avant leur diffusion officielle._
+_Accessible depuis le menu latéral via l'onglet **« Contrôle qualité »**, cette interface constitue le filtre de vérification garantissant l'exactitude des informations collectées avant leur consolidation officielle._
+
+1. **Consulter le tableau des vérifications en cours :** cliquez sur l'onglet **« Contrôle qualité »** dans le menu latéral.
 
 ![Tableau de contrôle qualité](./images/shot-77.jpg)
 
-*📷 Écran « Contrôle qualité » : tableau des vérifications en cours, statuts d'approbation et ajout d'observations d'audit.*
+*📷 Écran « Contrôle qualité » — tableau des vérifications en cours, statuts d'approbation et champ observation.*
 
-1. **Filtres combinés :** filtrage par **UTILISATEUR** (ex. *Agent terrain*, *Superviseur*, *Administrateur*), par **PROJET** (ex. *Projet Alpha*, *Projet Beta*, *Projet Gamma*) et par **INDICATEUR**. Bouton **« ⟳ Réinitialiser »** pour réinitialiser la vue.
-2. **Badge d'audit :** indique le volume d'enregistrements en cours d'examen (ex. *4 entrées*).
-3. **Tableau des vérifications :** colonnes ID (ex. *C-001*, *C-002*), INDICATEUR, VALEUR collectée, PÉRIODE (ex. *T2 2024*), PROJET, SAISI PAR, STATUT (*• En attente*, *• Validé*) et champ interactif OBSERVATION pour insérer un commentaire d'audit.
+2. **Filtrer les données par utilisateur, projet et indicateur :**
+   - **Filtre par utilisateur :** sélectionnez un agent dans le menu déroulant **« UTILISATEUR »** (flèche de gauche).
+   - **Filtre par projet :** choisissez un projet spécifique dans le menu **« PROJET »** (flèche du milieu).
+   - **Filtre par indicateur :** ciblez un indicateur particulier dans le menu **« INDICATEUR »** (flèche de droite).
 
----
+![Filtres combinés utilisateur, projet et indicateur](./images/shot-93.png)
 
-### [Module Projets Phares] Validation et rejet des données collectées
+*📷 Barre de filtres — les trois flèches rouges mettent en évidence les filtres « UTILISATEUR », « PROJET » et « INDICATEUR ».*
 
-_Dans la colonne **ACTIONS** du tableau de contrôle qualité, les superviseurs et administrateurs disposent des boutons de décision formelle pour approuver ou rejeter les données soumises._
+3. **Réinitialiser les filtres d'affichage :** cliquez sur le bouton **« ⟳ Réinitialiser »** pour réafficher l'ensemble des enregistrements.
 
-![Colonne Actions du contrôle qualité](./images/shot-78.jpg)
+![Bouton Réinitialiser les filtres](./images/shot-94.png)
 
-*📷 Focus sur la colonne « ACTIONS » : boutons décisionnels « ✔ Valider » et « ✖ Rejeter » pour certifier ou retourner une mesure.*
+*📷 Bouton d'action — la flèche rouge indique l'emplacement du bouton « ⟳ Réinitialiser » pour réinitialiser la vue.*
 
-1. **Audit de conformité :** examiner la cohérence de la mesure par rapport aux justificatifs et à l'historique de l'indicateur.
-2. **Saisie d'une observation :** formuler un avis ou une réserve dans le champ *« Ajouter une observation »*.
-3. **Bouton « ✔ Valider » :** approuver la mesure. Le statut passe à **« Validé »** (badge vert) et la valeur est répercutée sur les graphiques du Dashboard.
-4. **Bouton « ✖ Rejeter » :** rejeter la donnée en cas d'erreur ou d'incohérence. La soumission est renvoyée avec observation pour correction par l'agent de terrain.
+4. **Valider ou rejeter les données collectées :**
+   - **Bouton « ✔ Valider » :** approuver la mesure. Le statut passe à **« Validé »** (badge vert).
+   - **Bouton « ✖ Rejeter » :** rejeter la donnée en cas d'erreur ou d'incohérence.
 
-> 💡 **Traçabilité des décisions**  
-> L'ensemble des validations et rejets est consigné dans les journaux d'audit de SIDSE IBDC avec horodatage et identifiant du validateur.
+![Colonne Actions avec boutons Valider et Rejeter](./images/shot-95.png)
+
+*📷 Colonne Actions — la flèche rouge indique l'emplacement des boutons « ✔ Valider » et « ✖ Rejeter » pour approuver ou rejeter une saisie.*
+
+> 💡 **Que faire ensuite ?**  
+> Retrouvez la suite des fonctionnalités de la plateforme dans les prochaines sections du guide : **Sections à venir**.
 
 ---
 
