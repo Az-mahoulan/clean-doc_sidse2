@@ -2353,31 +2353,35 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
     <!-- Présentation synthétique du répertoire -->
     <p>
-      Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu <b>« + Nouveau projet »</b> permet d'ajouter une opération au registre communal.
+      Le tableau récapitulatif liste l'ensemble des opérations avec leur identifiant (ID), leur libellé, une description synthétique et le nombre d'indicateurs de résultat associés. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu <b>« + Nouveau projet »</b> permet de lancer la déclaration d'une nouvelle initiative.
     </p>
 
-    <div class="shot">
-      <img src="/shot-73.jpg" alt="Tableau de gestion des projets phares avec répertoire et bouton Nouveau projet">
-    </div>
-    <p class="shot-caption">Écran <b>« Gestion des projets »</b> : vue d'ensemble du répertoire des projets phares communaux avec bouton d'ajout « + Nouveau projet ».</p>
+    <!-- Étape 1 : Ouvrir la boîte de dialogue -->
+    <h3 class="subhead"><span class="num">1</span>Déclencher la création d'un projet phare</h3>
+    <ol class="steps">
+      <li>Depuis le menu latéral, cliquez sur l'onglet <b>« Projets »</b> pour afficher le répertoire communal.</li>
+      <li>Repérez et cliquez sur le bouton bleu foncé <b>« + Nouveau projet »</b> situé en haut à droite du tableau.</li>
+    </ol>
 
-    <!-- Créer un nouveau projet -->
-    <h3 class="subhead"><span class="num">1</span>Créer un nouveau projet phare</h3>
+    <div class="shot">
+      <img src="/shot-87.png" alt="Bouton Nouveau projet dans le répertoire des projets phares">
+    </div>
+    <p class="shot-caption">Écran <b>« Gestion des projets »</b> — la flèche rouge désigne l'emplacement du bouton <b>« + Nouveau projet »</b> pour ouvrir la boîte de dialogue de création.</p>
+
+    <!-- Étape 2 : Renseigner les paramètres et valider -->
+    <h3 class="subhead"><span class="num">2</span>Renseigner les paramètres du projet et valider</h3>
     <ol class="steps">
       <li>
-        Depuis l'écran <b>Gestion des projets</b>, cliquez sur le bouton bleu <b>« + Nouveau projet »</b> situé en haut à droite.
-      </li>
-      <li>
-        Dans la boîte de dialogue <b>« Nouveau projet »</b>, renseignez les informations demandées :
+        Dans la boîte de dialogue <b>« Nouveau projet »</b>, complétez les informations requises :
         <ul>
           <li><b>Libellé du projet :</b> saisissez l'intitulé officiel du chantier (ex. <i>« Réhabilitation de la piste rurale Glazoué-Thio »</i>).</li>
           <li><b>Description :</b> détaillez succinctement les finalités, la zone géographique et les retombées attendues.</li>
-          <li><b>Date de début :</b> sélectionnez la date prévisionnelle de démarrage à l'aide du calendrier 📅.</li>
+          <li><b>Date de début :</b> sélectionnez la date prévisionnelle de démarrage à l'aide du sélecteur calendrier 📅.</li>
           <li><b>Statut :</b> choisissez l'état d'avancement initial dans la liste déroulante (ex. <i>En attente</i>, <i>En cours</i>, <i>Planifié</i>).</li>
         </ul>
       </li>
       <li>
-        Cliquez sur le bouton bleu <b>« Créer »</b> pour enregistrer le projet dans la base de données communale (ou sur <b>« Annuler »</b> pour abandonner).
+        Cliquez sur le bouton bleu <b>« Créer »</b> pour enregistrer et publier le projet (ou sur <b>« Annuler »</b> pour abandonner la saisie).
       </li>
     </ol>
 

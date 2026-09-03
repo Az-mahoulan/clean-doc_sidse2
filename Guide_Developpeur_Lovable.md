@@ -912,18 +912,15 @@ _Le tableau de bord du module Projets Phares offre une vue consolidée et intera
 
 _Accessible depuis le menu latéral via l'onglet **« Projets »**, cette interface centralise le registre officiel de l'ensemble des projets prioritaires pilotés par la commune. Elle permet de consulter en un clin d'œil les chantiers engagés, de suivre leur avancement et d'enregistrer de nouvelles opérations._
 
-Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu **« + Nouveau projet »** permet d'ajouter une opération au registre communal.
+Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu **« + Nouveau projet »** permet de lancer la déclaration d'une nouvelle initiative.
 
-![Tableau de gestion des projets phares](./images/shot-73.jpg)
+1. **Déclencher la création :** repérez et cliquez sur le bouton bleu foncé **« + Nouveau projet »** situé en haut à droite du répertoire.
 
-*📷 Écran « Gestion des projets » : répertoire centralisé des projets phares communaux et bouton « + Nouveau projet ».*
+![Bouton Nouveau projet dans le répertoire des projets phares](./images/shot-87.png)
 
-#### Créer un nouveau projet phare
+*📷 Écran « Gestion des projets » — la flèche rouge désigne l'emplacement du bouton « + Nouveau projet » pour ouvrir la boîte de dialogue de création.*
 
-Pour enregistrer une nouvelle opération dans le registre communal :
-
-1. Depuis l'écran **Gestion des projets**, cliquez sur le bouton bleu **« + Nouveau projet »** en haut à droite.
-2. Dans la boîte de dialogue **« Nouveau projet »**, renseignez les informations :
+2. **Renseigner les paramètres et valider :** dans la boîte de dialogue **« Nouveau projet »**, renseignez les informations demandées :
    - **Libellé du projet :** intitulé officiel du chantier (ex. *« Réhabilitation de la piste rurale Glazoué-Thio »*).
    - **Description :** finalités, zone géographique et retombées attendues.
    - **Date de début :** date prévisionnelle de démarrage via le calendrier 📅.
