@@ -271,11 +271,6 @@ export const navGroups: NavGroup[] = [
         "sub": false
       },
       {
-        "href": "projet-nouveau",
-        "title": "Créer un nouveau projet",
-        "sub": true
-      },
-      {
         "href": "projet-secteurs",
         "title": "Secteurs d'activité",
         "sub": false
@@ -2353,81 +2348,48 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module Projets Phares</div>
     <h2>Gestion des Projets Phares</h2>
     <p class="lede">
-      Accessible depuis le menu latéral via l'onglet <b>« Projets »</b>, cette interface constitue le registre officiel de l'ensemble des projets prioritaires pilotés par la commune.
+      Accessible depuis le menu latéral via l'onglet <b>« Projets »</b>, cette interface centralise le registre officiel de l'ensemble des projets prioritaires pilotés par la commune. Elle permet de consulter en un clin d'œil les chantiers engagés, de suivre leur avancement et d'enregistrer de nouvelles opérations.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Organisation du répertoire des projets
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.7rem;">
-          <b>Bouton d'action principal :</b> Bouton bleu foncé <b>« + Nouveau projet »</b> en haut à droite pour ajouter un projet phare au registre.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Compteur d'activité :</b> Badge récapitulatif indiquant le nombre total de projets enregistrés et le volume d'indicateurs associés.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>ID :</b> Numéro matricule unique assigné à chaque projet dans la base de données communale.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>LIBELLÉ :</b> Intitulé officiel et public du projet de développement.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>DESCRIPTION :</b> Contexte synthétique, finalités et zone géographique d'intervention.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>INDICATEURS :</b> Nombre de métriques de mesure rattachées pour l'évaluation des résultats.
-        </li>
-        <li>
-          <b>DÉTAILS :</b> Lien d'ouverture de la fiche projet complète avec historique des livrables.
-        </li>
-      </ul>
-    </div>
+    <!-- Présentation synthétique du répertoire -->
+    <p>
+      Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu <b>« + Nouveau projet »</b> permet d'ajouter une opération au registre communal.
+    </p>
 
     <div class="shot">
-      <img src="/shot-73.jpg" alt="Tableau de gestion des projets phares avec colonnes et bouton Nouveau projet">
+      <img src="/shot-73.jpg" alt="Tableau de gestion des projets phares avec répertoire et bouton Nouveau projet">
     </div>
-    <p class="shot-caption">Écran <b>« Gestion des projets »</b> : répertoire centralisé des projets phares communaux et déclenchement de la création d'un projet.</p>
-  </section>
+    <p class="shot-caption">Écran <b>« Gestion des projets »</b> : vue d'ensemble du répertoire des projets phares communaux avec bouton d'ajout « + Nouveau projet ».</p>
 
-  <section class="block" id="projet-nouveau">
-    <div class="section-kicker">Module Projets Phares</div>
-    <h2>Créer un nouveau projet phare</h2>
-    <p class="lede">
-      L'enregistrement d'un projet prioritaire s'effectue au moyen d'un formulaire modal ergonomique permettant de renseigner les paramètres essentiels de l'opération.
-    </p>
-
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Champs à renseigner dans le formulaire
-      </h3>
-      <ol class="steps">
-        <li>
-          Depuis l'écran <b>Gestion des projets</b>, cliquez sur le bouton bleu <b>« + Nouveau projet »</b>.
-        </li>
-        <li>
-          <b>Libellé du projet :</b> Saisissez un titre explicite et représentatif (ex. <i>« Réhabilitation de la piste rurale Glazoué-Thio »</i> ou <i>« Construction du centre de santé communal »</i>).
-        </li>
-        <li>
-          <b>Description :</b> Décrivez succinctement le périmètre technique, la population cible et les impacts attendus.
-        </li>
-        <li>
-          <b>Date de début :</b> Indiquez la date prévisionnelle ou effective de démarrage des travaux au format <code>jj/mm/aaaa</code> à l'aide du sélecteur calendrier 📅.
-        </li>
-        <li>
-          <b>Statut :</b> Sélectionnez l'état d'avancement initial dans le menu déroulant (ex. <i>En attente</i>, <i>En cours</i>, <i>Planifié</i>).
-        </li>
-        <li>
-          Cliquez sur le bouton bleu <b>« Créer »</b> pour valider l'enregistrement, ou sur <b>« Annuler »</b> pour fermer sans sauvegarder.
-        </li>
-      </ol>
-    </div>
+    <!-- Créer un nouveau projet -->
+    <h3 class="subhead"><span class="num">1</span>Créer un nouveau projet phare</h3>
+    <ol class="steps">
+      <li>
+        Depuis l'écran <b>Gestion des projets</b>, cliquez sur le bouton bleu <b>« + Nouveau projet »</b> situé en haut à droite.
+      </li>
+      <li>
+        Dans la boîte de dialogue <b>« Nouveau projet »</b>, renseignez les informations demandées :
+        <ul>
+          <li><b>Libellé du projet :</b> saisissez l'intitulé officiel du chantier (ex. <i>« Réhabilitation de la piste rurale Glazoué-Thio »</i>).</li>
+          <li><b>Description :</b> détaillez succinctement les finalités, la zone géographique et les retombées attendues.</li>
+          <li><b>Date de début :</b> sélectionnez la date prévisionnelle de démarrage à l'aide du calendrier 📅.</li>
+          <li><b>Statut :</b> choisissez l'état d'avancement initial dans la liste déroulante (ex. <i>En attente</i>, <i>En cours</i>, <i>Planifié</i>).</li>
+        </ul>
+      </li>
+      <li>
+        Cliquez sur le bouton bleu <b>« Créer »</b> pour enregistrer le projet dans la base de données communale (ou sur <b>« Annuler »</b> pour abandonner).
+      </li>
+    </ol>
 
     <div class="shot">
       <img src="/shot-74.jpg" alt="Formulaire modal Nouveau projet avec saisie libellé, description, date de début et statut">
     </div>
-    <p class="shot-caption">Boîte de dialogue <b>« Nouveau projet »</b> : saisie du libellé, description, calendrier et statut initial.</p>
+    <p class="shot-caption">Boîte de dialogue <b>« Nouveau projet »</b> : formulaire de saisie des paramètres initiaux du projet phare.</p>
+
+    <div class="callout">
+      <b>Que faire ensuite ?</b>
+      Pour organiser et classifier vos projets par grands domaines d'intervention communaux, accédez à la section suivante <a href="#projet-secteurs" style="color:inherit;font-weight:600;">Secteurs d'activité →</a>
+    </div>
   </section>
 
   <section class="block" id="projet-secteurs">

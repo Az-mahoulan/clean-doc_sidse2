@@ -910,32 +910,32 @@ _Le tableau de bord du module Projets Phares offre une vue consolidée et intera
 
 ### [Module Projets Phares] Gestion des Projets Phares
 
-_Accessible depuis le menu latéral via l'onglet **« Projets »**, cette interface constitue le registre officiel de l'ensemble des projets prioritaires pilotés par la commune._
+_Accessible depuis le menu latéral via l'onglet **« Projets »**, cette interface centralise le registre officiel de l'ensemble des projets prioritaires pilotés par la commune. Elle permet de consulter en un clin d'œil les chantiers engagés, de suivre leur avancement et d'enregistrer de nouvelles opérations._
+
+Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu **« + Nouveau projet »** permet d'ajouter une opération au registre communal.
 
 ![Tableau de gestion des projets phares](./images/shot-73.jpg)
 
 *📷 Écran « Gestion des projets » : répertoire centralisé des projets phares communaux et bouton « + Nouveau projet ».*
 
-1. **Bouton d'action principal :** bouton bleu foncé **« + Nouveau projet »** en haut à droite pour déclarer une nouvelle initiative.
-2. **Compteur d'activité :** badge indiquant le nombre de projets et d'indicateurs associés.
-3. **Colonnes du tableau :** ID technique, LIBELLÉ du projet, DESCRIPTION du périmètre, nombre d'INDICATEURS rattachés et lien vers les DÉTAILS.
+#### Créer un nouveau projet phare
 
----
+Pour enregistrer une nouvelle opération dans le registre communal :
 
-### [Module Projets Phares] Créer un nouveau projet phare
-
-_L'enregistrement d'un projet prioritaire s'effectue au moyen d'un formulaire modal ergonomique permettant de renseigner les paramètres essentiels de l'opération._
+1. Depuis l'écran **Gestion des projets**, cliquez sur le bouton bleu **« + Nouveau projet »** en haut à droite.
+2. Dans la boîte de dialogue **« Nouveau projet »**, renseignez les informations :
+   - **Libellé du projet :** intitulé officiel du chantier (ex. *« Réhabilitation de la piste rurale Glazoué-Thio »*).
+   - **Description :** finalités, zone géographique et retombées attendues.
+   - **Date de début :** date prévisionnelle de démarrage via le calendrier 📅.
+   - **Statut :** état d'avancement initial (ex. *En attente*, *En cours*, *Planifié*).
+3. Cliquez sur le bouton bleu **« Créer »** pour valider l'enregistrement (ou sur **« Annuler »** pour abandonner).
 
 ![Formulaire modal Nouveau projet](./images/shot-74.jpg)
 
 *📷 Boîte de dialogue « Nouveau projet » : saisie du libellé, description, calendrier et statut initial.*
 
-1. Depuis l'écran Gestion des projets, cliquer sur **« + Nouveau projet »**.
-2. **Libellé du projet :** saisir un titre explicite et représentatif du projet.
-3. **Description :** décrire succinctement les finalités, la zone géographique et les livrables attendus.
-4. **Date de début :** indiquer la date officielle de démarrage au format `jj/mm/aaaa` ou via le calendrier contextuel 📅.
-5. **Statut :** sélectionner l'état d'avancement initial (ex. *En attente*, *En cours*, *Planifié*).
-6. Cliquer sur **« Créer »** pour enregistrer et publier le projet (ou sur **« Annuler »** pour fermer sans sauvegarder).
+> 💡 **Que faire ensuite ?**  
+> Pour organiser et classifier vos projets par grands domaines d'intervention communaux, accédez à la section **Secteurs d'activité**.
 
 ---
 
