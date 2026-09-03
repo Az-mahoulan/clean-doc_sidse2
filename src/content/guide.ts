@@ -193,6 +193,111 @@ export const navGroups: NavGroup[] = [
     ]
   },
   {
+    "label": "Module ODD",
+    "items": [
+      {
+        "href": "odd-acces",
+        "title": "Accéder au module ODD",
+        "sub": false
+      },
+      {
+        "href": "odd-liste",
+        "title": "Liste des ODD",
+        "sub": false
+      },
+      {
+        "href": "odd-detail",
+        "title": "Détail d'un ODD & cibles",
+        "sub": true
+      },
+      {
+        "href": "odd-cible-detail",
+        "title": "Détail d'une cible",
+        "sub": true
+      },
+      {
+        "href": "odd-indicateurs",
+        "title": "Liste des indicateurs ODD",
+        "sub": false
+      },
+      {
+        "href": "odd-indicateurs-visu",
+        "title": "Visualisation graphique & tabulaire",
+        "sub": true
+      },
+      {
+        "href": "odd-collecte",
+        "title": "Collecte de données ODD",
+        "sub": false
+      },
+      {
+        "href": "odd-collecte-nouvelle",
+        "title": "Créer une nouvelle collecte",
+        "sub": true
+      },
+      {
+        "href": "odd-parametres",
+        "title": "Paramètres ODD",
+        "sub": false
+      },
+      {
+        "href": "odd-param-cibles",
+        "title": "Paramètres des cibles",
+        "sub": true
+      },
+      {
+        "href": "odd-param-indicateurs",
+        "title": "Indicateurs & indicateurs Extra",
+        "sub": true
+      }
+    ]
+  },
+  {
+    "label": "Module Projets Phares",
+    "items": [
+      {
+        "href": "projet-acces",
+        "title": "Accéder aux Projets Phares",
+        "sub": false
+      },
+      {
+        "href": "projet-dashboard",
+        "title": "Dashboard & Indicateurs",
+        "sub": false
+      },
+      {
+        "href": "projet-gestion",
+        "title": "Gestion des Projets Phares",
+        "sub": false
+      },
+      {
+        "href": "projet-nouveau",
+        "title": "Créer un nouveau projet",
+        "sub": true
+      },
+      {
+        "href": "projet-secteurs",
+        "title": "Secteurs d'activité",
+        "sub": false
+      },
+      {
+        "href": "projet-collecte",
+        "title": "Collecte de données Projets",
+        "sub": false
+      },
+      {
+        "href": "projet-qualite",
+        "title": "Contrôle qualité des données",
+        "sub": false
+      },
+      {
+        "href": "projet-qualite-actions",
+        "title": "Validation et rejet des données",
+        "sub": true
+      }
+    ]
+  },
+  {
     "label": "La suite",
     "items": [
       {
@@ -1418,71 +1523,963 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">PTA, PIT &amp; Évaluations</div>
     <h2>Nouvelle évaluation de PTA</h2>
     <p class="lede">
-      Lancez une évaluation périodique (trimestrielle ou annuelle) pour mesurer l'état d'avancement des tâches et l'exécution budgétaire d'un PTA.
+      L'interface <b>Nouvelle Évaluation</b> permet de mesurer et suivre l'avancement physique et l'exécution financière des activités d'un Plan de Travail Annuel (PTA). Depuis cet écran, vous pouvez soit consulter une évaluation déjà existante en filtrant par PDC et par année, soit initialiser une nouvelle évaluation périodique via la fenêtre de création.
+      <span class="hint">Pour y accéder : depuis le menu latéral gauche, sous la rubrique <b>EVALUATION</b>, cliquez sur <b>« Nouvelle Évaluation »</b>.</span>
     </p>
-    <div class="shot">
-      <img src="/shot-35.jpg" alt="Écran Liste des Évaluations">
-    </div>
-    <p class="shot-caption">Écran Liste des Évaluations : historique des évaluations et bouton de création.</p>
+
+    <!-- ÉTAPE 1 : Consulter ou sélectionner une évaluation existante -->
+    <h3 class="subhead"><span class="num">1</span>Consulter ou sélectionner une évaluation existante</h3>
+    <p>
+      Pour visualiser les évaluations déjà enregistrées pour votre commune, commencez par filtrer la liste grâce aux deux sélecteurs situés en haut de l'écran :
+    </p>
     <ol class="steps">
-      <li>Sélectionnez un <b>PDC</b>, puis une <b>année</b>, pour voir les évaluations existantes.</li>
-      <li>Cliquez sur le bouton <b>« + Nouvelle Évaluation »</b> pour ouvrir le formulaire.</li>
+      <li>
+        Dans le champ déroulant <b>« PDC »</b>, cliquez puis sélectionnez le <b>Plan de Développement Communal</b> de votre collectivité.
+      </li>
+      <li>
+        Dans le champ déroulant <b>« ANNÉE »</b>, sélectionnez l'année d'exercice correspondante.
+        <span class="hint">Ce champ s'active automatiquement dès que le PDC est sélectionné pour vous proposer les années disponibles.</span>
+      </li>
+      <li>
+        Une fois le PDC et l'année choisis, la liste des évaluations correspondantes apparaît directement dans l'espace principal. Vous pouvez alors cliquer sur l'évaluation souhaitée pour consulter ses données ou poursuivre sa saisie.
+      </li>
     </ol>
+
     <div class="shot">
-      <img src="/shot-36.jpg" alt="Formulaire Nouvelle évaluation">
+      <img src="/shot-59.png" alt="Écran Liste des Évaluations avec sélection du PDC et de l'Année">
     </div>
-    <p class="shot-caption">Formulaire « Nouvelle évaluation » : choix du PDC, du PTA, de la période et du statut.</p>
+    <p class="shot-caption">Écran <b>« Liste des Évaluations »</b> : sélection obligatoire d'un PDC puis d'une année pour afficher les évaluations disponibles.</p>
+
+    <div class="callout">
+      <b>État initial avant sélection</b>
+      Tant qu'aucun PDC ni aucune année ne sont sélectionnés, la zone d'affichage présente un message informatif avec une icône filtre : <i>« Sélectionnez un PDC puis une année — Commencez par choisir un PDC pour voir les années disponibles »</i>.
+    </div>
+
+    <!-- ÉTAPE 2 : Ouvrir la fenêtre de création -->
+    <h3 class="subhead"><span class="num">2</span>Lancer la création d'une nouvelle évaluation</h3>
+    <p>
+      Si vous souhaitez initier une nouvelle session d'évaluation (trimestrielle, semestrielle ou annuelle) pour un PTA :
+    </p>
     <ol class="steps">
-      <li><b>Planification :</b> choisir le <b>PDC</b> puis le <b>PTA associé</b>.</li>
-      <li><b>Période :</b> renseigner la <b>Date de début</b> et la <b>Date de fin</b> de la période évaluée.</li>
-      <li><b>Configuration :</b> définir le <b>Statut</b>, puis cliquer sur <b>« Enregistrer »</b> pour lancer l'évaluation.</li>
+      <li>
+        Sur l'écran principal <b>« Liste des Évaluations »</b>, repérez le bouton bleu foncé <b>« + Nouvelle Évaluation »</b> situé en haut à droite du cadre.
+      </li>
+      <li>
+        Cliquez sur <b>« + Nouvelle Évaluation »</b> pour ouvrir la fenêtre de dialogue modale.
+      </li>
     </ol>
+
+    <div class="shot">
+      <img src="/shot-60.png" alt="Bouton Nouvelle Évaluation en haut à droite de la boîte Liste des Évaluations">
+    </div>
+    <p class="shot-caption">Cliquer sur le bouton <b>« + Nouvelle Évaluation »</b> en haut à droite pour afficher la fenêtre de création.</p>
+
+    <!-- ÉTAPE 3 : Remplir le formulaire modal -->
+    <h3 class="subhead"><span class="num">3</span>Renseigner les informations et enregistrer</h3>
+    <p>
+      La fenêtre modale <b>« Nouvelle évaluation — Plan de Travail Annuel »</b> s'ouvre. Le formulaire est organisé en trois volets distincts :
+    </p>
+
+    <div class="card" style="margin-top:1.25rem;background:transparent;">
+      <h4 style="font-family:var(--font-display);font-size:1.02rem;font-weight:700;margin:0 0 0.6rem;color:var(--color-foreground);">
+        <span class="badge" style="background:#e0f2fe;color:#0369a1;margin-right:6px;">Volet 1</span> Planification (Champs obligatoires)
+      </h4>
+      <ol class="steps">
+        <li>
+          <b>PDC * :</b> Cliquez sur le menu déroulant avec l'icône institutionnelle et sélectionnez le <b>Plan de Développement Communal</b> concerné.
+        </li>
+        <li>
+          <b>PTA associé * :</b> Sélectionnez dans la liste le <b>Plan de Travail Annuel</b> qui fera l'objet de l'évaluation.
+        </li>
+      </ol>
+
+      <h4 style="font-family:var(--font-display);font-size:1.02rem;font-weight:700;margin:1.5rem 0 0.6rem;color:var(--color-foreground);">
+        <span class="badge" style="background:#fef3c7;color:#92400e;margin-right:6px;">Volet 2</span> Période de l'évaluation
+      </h4>
+      <ol class="steps">
+        <li>
+          <b>Date de début * :</b> Saisissez la date de début au format <code>jj/mm/aaaa</code> ou utilisez l'icône calendrier pour la sélectionner.
+        </li>
+        <li>
+          <b>Date de fin * :</b> Saisissez la date de fin de la période évaluée au format <code>jj/mm/aaaa</code>.
+        </li>
+      </ol>
+
+      <h4 style="font-family:var(--font-display);font-size:1.02rem;font-weight:700;margin:1.5rem 0 0.6rem;color:var(--color-foreground);">
+        <span class="badge" style="background:#f3f4f6;color:#374151;margin-right:6px;">Volet 3</span> Configuration &amp; Validation
+      </h4>
+      <ol class="steps">
+        <li>
+          <b>Statut :</b> Définissez le statut initial attribué à l'évaluation (ex. <i>En cours</i>, <i>Brouillon</i>).
+        </li>
+        <li>
+          Cliquez sur le bouton bleu foncé <b>« ✔ Enregistrer »</b> pour créer et enregistrer l'évaluation.
+          <span class="hint">Pour fermer la fenêtre sans enregistrer les modifications, cliquez sur le bouton <b>« Annuler »</b> ou sur la croix <b>✖</b> en haut à droite.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-61.png" alt="Formulaire modal Nouvelle évaluation avec les volets Planification, Période et Configuration">
+    </div>
+    <p class="shot-caption">Fenêtre modale <b>« Nouvelle évaluation »</b> : renseignement du PDC, du PTA associé, des dates de période et confirmation par le bouton « Enregistrer ».</p>
+
+    <div class="callout">
+      <b>Étape suivante : Renseignement et analyse</b>
+      Dès son enregistrement, la nouvelle évaluation s'ajoute à la liste des évaluations de votre collectivité. Vous pourrez y renseigner le taux d'exécution physique (TEP), les mandats financiers et consulter les bilans dans la section <a href="#pdc-rapports" style="color:inherit;font-weight:600;">Rapports &amp; Évaluations →</a>
+    </div>
   </section>
 
   <section class="block" id="pdc-rapports">
     <div class="section-kicker">PTA, PIT &amp; Évaluations</div>
     <h2>Rapports &amp; Évaluations</h2>
     <p class="lede">
-      Le hub « Rapports » regroupe l'ensemble des modules d'analyse et de reporting pour évaluer l'exécution physique et financière des plans communaux.
+      Le pôle <b>Rapports &amp; Évaluations</b> constitue le centre névralgique d'aide à la décision et de redevabilité de la plateforme SIDSE IBDC. Il permet de mesurer avec précision le niveau de réalisation physique et l'exécution budgétaire des plans communaux à travers six modules spécialisés.
+      <span class="hint">Pour y accéder : depuis le menu latéral gauche, sous la rubrique <b>PRINCIPAL</b>, cliquez sur <b>« Rapports »</b>.</span>
     </p>
+
+    <!-- ÉTAPE 1 : Le Hub des 6 modules de reporting -->
+    <h3 class="subhead"><span class="num">1</span>Accéder au Hub des Rapports &amp; Évaluations</h3>
+    <p>
+      L'interface d'accueil présente une vue d'ensemble structurée autour de <b>6 modules analytiques</b> couvrant tous les niveaux de planification communale :
+    </p>
+
     <div class="shot">
-      <img src="/shot-37.jpg" alt="Hub Rapports PDC">
+      <img src="/shot-37.jpg" alt="Hub Rapports PDC regroupant les 6 modules d'évaluation">
     </div>
-    <p class="shot-caption">Le hub « Rapports » regroupe 6 modules d'analyse du PDC.</p>
-    <div class="card">
+    <p class="shot-caption">Le hub <b>« Rapports PDC »</b> : point d'entrée unique vers les 6 modules d'évaluation et de visualisation de la commune.</p>
+
+    <div class="card" style="margin-top:1.25rem;background:transparent;">
+      <h4 style="font-family:var(--font-display);font-size:1.02rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Les 6 modules d'analyse disponibles
+      </h4>
       <ul class="plain">
-        <li><b>Évaluation de PIT :</b> analyse du niveau de réalisation du Plan de Travail Individuel.</li>
-        <li><b>Évaluation de PTA :</b> analyse du niveau de réalisation du Plan de Travail Annuel.</li>
-        <li><b>Évaluation de PDC :</b> analyse du niveau de mise en œuvre et des résultats du Plan de Développement Communal.</li>
-        <li><b>Projection financière :</b> estimation prévisionnelle des ressources financières par source de financement.</li>
-        <li><b>Visualisation de PTA :</b> le Plan de Travail Annuel sous forme de tableau détaillé.</li>
-        <li><b>Synthèse Évaluation :</b> vue d'ensemble consolidée des indicateurs d'évaluation (budget, TEP, activités en retard, dates clés).</li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#e0f2fe;color:#0369a1;margin-right:6px;">01</span>
+          <b>Évaluation de PIT :</b> Analyse du niveau de réalisation et des résultats des Plans Individuels de Travail assignés aux agents communaux.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#ecfdf5;color:#047857;margin-right:6px;">02</span>
+          <b>Évaluation de PTA :</b> Analyse approfondie de l'avancement physique et financier des activités du Plan de Travail Annuel.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#f5f3ff;color:#6d28d9;margin-right:6px;">03</span>
+          <b>Évaluation de PDC :</b> Analyse globale et pluriannuelle de la mise en œuvre et de l'impact du Plan de Développement Communal.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#fffbeb;color:#b45309;margin-right:6px;">04</span>
+          <b>Projection financière :</b> Estimation prévisionnelle et cadrage pluriannuel des ressources financières par source de financement.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#f0fdfa;color:#0f766e;margin-right:6px;">05</span>
+          <b>Visualisation de PTA :</b> Consultation granulaire sous forme de tableau détaillé des tâches, échéances et responsabilités du PTA.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <span class="badge" style="background:#fdf2f8;color:#be185d;margin-right:6px;">06</span>
+          <b>Synthèse Évaluation :</b> Vue consolidée et transversale des indicateurs de performance (TEP physique, TEF financier, alertes et dates clés).
+        </li>
+      </ul>
+    </div>
+
+    <!-- ÉTAPE 2 : Évaluation de PTA -->
+    <h3 class="subhead"><span class="num">2</span>Évaluation détaillée du Plan de Travail Annuel (PTA)</h3>
+    <p>
+      Ce module fournit une photographie complète de l'état d'exécution du plan annuel de votre commune à travers des indicateurs synthétiques et une table multicritère.
+    </p>
+    <ol class="steps">
+      <li>
+        <b>Indicateurs clés (KPIs) :</b> Dès l'ouverture, 4 cartes résument instantanément la situation :
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li><b>Tâches totales :</b> Volume global d'activités programmées.</li>
+          <li><b>Terminées :</b> Activités finalisées à 100%.</li>
+          <li><b>En cours :</b> Activités actuellement en phase de réalisation.</li>
+          <li><b>En retard :</b> Alertes sur les tâches dont l'échéance calendaire est dépassée.</li>
+        </ul>
+      </li>
+      <li>
+        <b>Filtres multicritères :</b> Affinez les résultats en renseignant les critères de recherche : <i>PDC</i>, <i>Année</i>, <i>PTA</i>, <i>Trimestre</i>, <i>Lead de structure</i> ou <i>Structure associée</i>.
+      </li>
+      <li>
+        Cliquez sur le bouton bleu foncé <b>« 🔍 Rechercher »</b> pour actualiser le tableau des résultats.
+      </li>
+      <li>
+        <b>Export des données :</b> Cliquez sur le bouton vert <b>« 📊 Exportateur »</b> pour extraire les résultats sous forme de tableur ou rapport exploitable.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-38.jpg" alt="Écran Évaluation de PTA avec KPIs, filtres de recherche et tableau de résultats">
+    </div>
+    <p class="shot-caption">Module <b>« Évaluation de PTA »</b> : suivi synthétique des tâches (terminées, en cours, alertes) et tableau de décomposition financière (TEF mandaté, engagé, décaissé).</p>
+
+    <!-- ÉTAPE 3 : Évaluation de PIT et Visualisation -->
+    <h3 class="subhead"><span class="num">3</span>Évaluation individuelle (PIT) &amp; Visualisation du PTA</h3>
+    <p>
+      Pour descendre au niveau de la responsabilisation individuelle des équipes et du détail ligne par ligne :
+    </p>
+
+    <!-- Sous-partie PIT -->
+    <div class="card" style="margin-top:1rem;margin-bottom:1.5rem;background:transparent;">
+      <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0 0 0.5rem;color:var(--color-foreground);">
+        A. Évaluation de PIT (Plan Individuel de Travail)
+      </h4>
+      <p style="font-size:0.92rem;color:var(--color-muted-foreground);margin-bottom:0.9rem;">
+        Permet d'évaluer la charge de travail et l'assiduité de chaque agent ou responsable de structure opérationnelle.
+      </p>
+      <ol class="steps">
+        <li>Filtrez par <b>PDC</b>, <b>Année</b> et par <b>Lead de structure</b> pour cibler un agent ou un service précis.</li>
+        <li>Consultez la table des tâches avec le <b>Taux d'exécution</b>, le <b>Statut Lead</b> et le <b>Statut Admin</b> pour valider l'activité.</li>
+      </ol>
+      <div class="shot">
+        <img src="/shot-39.jpg" alt="Écran Évaluation de PIT au niveau individuel">
+      </div>
+      <p class="shot-caption">Module <b>« Évaluation de PIT »</b> : suivi nominatif des tâches individuelles avec double niveau de validation (Lead et Administrateur).</p>
+    </div>
+
+    <!-- Sous-partie Visualisation -->
+    <div class="card" style="margin-top:1rem;margin-bottom:1.5rem;background:transparent;">
+      <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0 0 0.5rem;color:var(--color-foreground);">
+        B. Visualisation détaillée du PTA
+      </h4>
+      <p style="font-size:0.92rem;color:var(--color-muted-foreground);margin-bottom:0.9rem;">
+        Offre une grille de lecture exhaustive des tâches du PTA croisant l'avancement physique et les 3 niveaux d'exécution budgétaire.
+      </p>
+      <ol class="steps">
+        <li>Accédez à la vue complète des tâches avec leur code de référence et la structure responsable.</li>
+        <li>Suivez les montants financiers décomposés : <b>TEF Mandaté</b>, <b>TEF Engagé</b> et <b>TEF Décaissé</b>.</li>
+      </ol>
+      <div class="shot">
+        <img src="/shot-40.jpg" alt="Écran Visualisation de PTA">
+      </div>
+      <p class="shot-caption">Module <b>« Visualisation de PTA »</b> : contrôle précis des lignes d'activités avec triple traçabilité budgétaire (mandaté, engagé, décaissé).</p>
+    </div>
+
+    <!-- ÉTAPE 4 : Synthèse Évaluation -->
+    <h3 class="subhead"><span class="num">4</span>Synthèse consolidée par niveau hiérarchique</h3>
+    <p>
+      L'écran <b>Synthèse Évaluation</b> regroupe les données de manière transversale afin d'offrir une vision macroscopique aux décideurs (Maire, Secrétaire Exécutif, Directeurs et Partenaires techniques et financiers).
+    </p>
+    <ol class="steps">
+      <li>
+        Renseignez vos filtres de recherche (<i>PDC</i>, <i>Année</i>, <i>PTA</i>, <i>Trimestre</i>...) puis cliquez sur <b>« Rechercher »</b>.
+      </li>
+      <li>
+        Naviguez entre les <b>4 niveaux d'agrégation hiérarchique</b> en cliquant sur les onglets situés au-dessus du rapport :
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li><b>Programme :</b> Vision stratégique globale des grands axes de développement communal.</li>
+          <li><b>Projet :</b> Regroupement opérationnel par projet d'investissement ou de fonctionnement.</li>
+          <li><b>Action :</b> Déclinaison par composante d'action spécifique.</li>
+          <li><b>Activité :</b> Maille la plus fine détaillant chaque tâche sur le terrain.</li>
+        </ul>
+      </li>
+      <li>
+        Analysez la corrélation directe entre le <b>Taux d'Exécution Physique (TEP)</b> et le <b>Taux d'Exécution Financière (TEF)</b> pour détecter d'éventuels écarts de consommation des crédits.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-41.jpg" alt="Écran Synthèse Évaluation consolidée avec onglets Programme, Projet, Action, Activité">
+    </div>
+    <p class="shot-caption">Écran <b>« Synthèse Évaluation »</b> : agrégation hiérarchique dynamique (Programme, Projet, Action, Activité) pour un pilotage stratégique de la commune.</p>
+
+    <div class="callout">
+      <b>Bonne pratique de pilotage</b>
+      Il est recommandé de consulter la synthèse consolidée au terme de chaque trimestre afin d'identifier rapidement les activités en retard ou sous-consommées avant la tenue des revues trimestrielles du PDC.
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- MODULE ODD                                 -->
+  <!-- ========================================== -->
+
+  <section class="block" id="odd-acces">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Accéder au module ODD</h2>
+    <p class="lede">
+      Le module <b>Objectifs de Développement Durable (ODD)</b> de SIDSE IBDC offre aux collectivités un cadre méthodologique et opérationnel complet pour intégrer, suivre et évaluer l'alignement des politiques locales avec les 17 ODD des Nations Unies.
+      <span class="hint">Pour y accéder depuis l'accueil de la plateforme : repérez la carte <b>« Objectif de Développement Durable (ODD) »</b> affichant le statut <b>Disponible</b>, puis cliquez sur <b>« Accéder au module → »</b>.</span>
+    </p>
+
+    <h3 class="subhead"><span class="num">1</span>Sélectionner le module ODD depuis l'espace d'accueil</h3>
+    <ol class="steps">
+      <li>Depuis le tableau de bord d'accueil de la commune (espace de travail), parcourez la liste des modules disponibles.</li>
+      <li>Localisez la carte violette <b>« Objectif de Développement Durable (ODD) »</b> portant le badge vert <b>« ✔ Disponible »</b>.</li>
+      <li>Cliquez sur le lien <b>« Accéder au module → »</b> situé au bas de la carte, ou basculez directement via le menu sélecteur de module situé dans l'en-tête supérieur droit.</li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-62.jpg" alt="Espace d'accueil et sélection du module Objectif de Développement Durable (ODD)">
+    </div>
+    <p class="shot-caption">Espace de travail communal : carte du module <b>« Objectif de Développement Durable (ODD) »</b> avec badge « Disponible » et lien d'accès direct.</p>
+
+    <div class="callout">
+      <b>Territorialisation des ODD</b>
+      Le module ODD est interconnecté avec les orientations du PDC et les activités des PTA. Il permet de mesurer concrètement comment les investissements communaux contribuent aux cibles mondiales de développement durable.
+    </div>
+  </section>
+
+  <section class="block" id="odd-liste">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Liste des ODD souscrits</h2>
+    <p class="lede">
+      Dès votre entrée dans le module ODD, l'écran <b>Liste des ODD</b> affiche l'ensemble des Objectifs de Développement Durable souscrits par la collectivité (ex. <b>9 ODDs abonnés</b> pour la commune de Glazoué).
+      <span class="hint">Cet écran offre une vue panoramique des priorités durables retenues par la commune avec des outils de recherche et de filtrage rapide.</span>
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Les outils de navigation et de filtrage de la liste
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.7rem;">
+          <b>Badge récapitulatif :</b> Indique en haut à droite le nombre total d'ODD souscrits par la collectivité (ex. <i>9 ODDs abonnés</i>).
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Filtre par ODD :</b> Menu déroulant <b>« FILTRER : Tous les ODD »</b> pour cibler instantanément un objectif en particulier.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Champ de recherche textuelle :</b> Barre <b>« RECHERCHE : Rechercher un ODD... »</b> permettant de filtrer par mot-clé sur les intitulés.
+        </li>
+        <li>
+          <b>Cartes ODD interactives :</b> Chaque carte présente le logo officiel ONU, le numéro d'ordre, le titre en majuscules (ex. <i>5 - ÉGALITÉ ENTRE LES SEXES</i>, <i>6 - EAU PROPRE ET ASSAINISSEMENT</i>, <i>8 - TRAVAIL DÉCENT ET CROISSANCE ÉCONOMIQUE</i>, <i>13 - LUTTE CONTRE LES CHANGEMENTS CLIMATIQUES</i>, <i>15 - VIE TERRESTRE</i>, <i>16 - PAIX, JUSTICE ET INSTITUTIONS EFFICACES</i>, <i>17 - PARTENARIATS</i>, <i>1 - PAS DE PAUVRETÉ</i>, <i>2 - FAIM ZÉRO</i>) et le lien <b>« Voir les cibles & indicateurs → »</b>.
+        </li>
       </ul>
     </div>
 
     <div class="shot">
-      <img src="/shot-38.jpg" alt="Écran Évaluation de PTA">
+      <img src="/shot-63.jpg" alt="Grille des 9 ODD souscrits par la commune avec filtres et recherche">
     </div>
-    <p class="shot-caption">Évaluation de PTA : tâches totales, terminées, en cours, en retard, avec filtres de recherche détaillés (PDC, année, PTA, trimestre, structure…).</p>
+    <p class="shot-caption">Écran <b>« Liste des ODD »</b> : vue en grille des 9 ODD souscrits par la commune de Glazoué avec barre de filtrage et liens vers les cibles.</p>
+
+    <div class="callout">
+      <b>Navigation transversale</b>
+      Depuis le volet latéral de navigation du module ODD, vous accédez directement aux trois autres espaces de travail : la <b>Liste des indicateurs</b>, la page <b>Faire une collecte</b> et les <b>Paramètres ODD</b>.
+    </div>
+  </section>
+
+  <section class="block" id="odd-detail">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Détail d'un ODD &amp; cibles</h2>
+    <p class="lede">
+      En cliquant sur <b>« Voir les cibles &amp; indicateurs → »</b> depuis une carte d'ODD, vous accédez à la fiche détaillée de l'objectif et à la liste complète des cibles associées souscrites par la commune.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Organisation de l'écran « Détail ODD »
+      </h3>
+      <ol class="steps">
+        <li>
+          <b>Fil d'Ariane &amp; Bouton Retour :</b> La barre supérieure indique la position <code>Liste des ODD • Détail ODD</code>. Cliquez sur <b>« ← Retour »</b> pour revenir à la grille des ODD à tout moment.
+        </li>
+        <li>
+          <b>Bloc Information ODD :</b> Rappelle le libellé officiel de l'objectif (ex. <i>ÉGALITÉ ENTRE LES SEXES</i>) accompagné de son pictogramme international.
+        </li>
+        <li>
+          <b>Section « Toutes les cibles de l'ODD » :</b> Tableau recensant les cibles prioritaires souscrites pour cet objectif, avec filtre déroulant pour isoler une cible spécifique.
+        </li>
+        <li>
+          <b>Action « 👁 ouvrir » :</b> Cliquez sur le bouton bleu bordé <b>« 👁 ouvrir »</b> dans la colonne <i>Action</i> pour afficher la fiche détaillée d'une cible et ses indicateurs de mesure.
+        </li>
+      </ol>
+    </div>
 
     <div class="shot">
-      <img src="/shot-39.jpg" alt="Écran Évaluation de PIT">
+      <img src="/shot-64.jpg" alt="Fiche descriptive Détail ODD avec tableau des cibles souscrites et bouton ouvrir">
     </div>
-    <p class="shot-caption">Évaluation de PIT : même principe que l'évaluation de PTA, au niveau individuel.</p>
+    <p class="shot-caption">Écran <b>« Détail ODD »</b> : fiche descriptive de l'objectif sélectionné, tableau des cibles souscrites et bouton d'action « ouvrir ».</p>
+  </section>
+
+  <section class="block" id="odd-cible-detail">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Détail d'une cible ODD &amp; ses indicateurs</h2>
+    <p class="lede">
+      L'écran <b>Détail Cible</b> affiche les spécifications complètes de la cible sélectionnée ainsi que le tableau des indicateurs opérationnels servant à mesurer son niveau d'atteinte.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Éléments consultables sur la fiche cible
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.75rem;">
+          <b>Fil d'Ariane à 3 niveaux :</b> <code>Liste des ODD • Détail ODD • Détail Cible</code> avec bouton <b>« ← Retour »</b> pour remonter d'un cran dans la hiérarchie.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Libellé intégral de la cible :</b> Texte complet décrivant la finalité visée (ex. <i>« Garantir la participation entière et effective des femmes et leur accès en toute égalité aux fonctions de direction à tous les niveaux de décision, dans la vie politique, économique et publique »</i>).
+        </li>
+        <li>
+          <b>Tableau « Tous les indicateurs de la cible » :</b> Détaille chaque indicateur rattaché avec son code (ex. <i>5.5.3 - Proportion de femmes conseillères communales</i>, <i>5.5.6 - Proportion de femmes occupant des postes de responsabilités dans l'administration communale</i>) et sa <b>périodicité de collecte</b> (ex. <i>trimestriel</i>).
+        </li>
+      </ul>
+    </div>
 
     <div class="shot">
-      <img src="/shot-40.jpg" alt="Écran Visualisation de PTA">
+      <img src="/shot-65.jpg" alt="Écran Détail Cible avec libellé de la cible et tableau des indicateurs associés">
     </div>
-    <p class="shot-caption">Visualisation de PTA : liste détaillée des tâches du PTA avec taux d'exécution et suivi financier (TEF mandaté / engagé / décaissé).</p>
+    <p class="shot-caption">Écran <b>« Détail Cible »</b> : énoncé officiel de la cible et liste des indicateurs de suivi avec périodicité de collecte trimestrielle.</p>
+  </section>
+
+  <section class="block" id="odd-indicateurs">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Liste des indicateurs ODD</h2>
+    <p class="lede">
+      Accessible directement depuis le menu latéral via <b>« Liste des indicateurs »</b>, cet écran constitue le répertoire centralisé de tous les indicateurs ODD souscrits par la collectivité (ex. <b>16 indicateurs</b> actifs à Glazoué).
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Structure du tableau des indicateurs
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.7rem;">
+          <b>ODD :</b> Indique l'ODD de rattachement (ex. <i>5 - ÉGALITÉ ENTRE LES SEXES</i>, <i>6 - EAU PROPRE ET ASSAINISSEMENT</i>, <i>8 - TRAVAIL DÉCENT ET CROISSANCE ÉCONOMIQUE</i>).
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Cible :</b> Rappelle le numéro et l'énoncé de la cible mère associée.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Indicateur :</b> Numérotation et libellé précis de la métrique (ex. <i>6.2.2 - Nombre de toilettes publiques fonctionnelles</i>, <i>6.2.3 - Nombre de toilettes publiques avec lavage des mains</i>, <i>8.2.2 - Ressources propres par habitant</i>).
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Périodicité de collecte :</b> Fréquence réglementaire d'actualisation des données (ex. <i>trimestriel</i>).
+        </li>
+        <li>
+          <b>Visualisation :</b> Deux boutons interactifs dédiés à l'analyse (<b>Histogramme</b> et <b>Tableau</b>).
+        </li>
+      </ul>
+    </div>
 
     <div class="shot">
-      <img src="/shot-41.jpg" alt="Écran Synthèse Évaluation">
+      <img src="/shot-66.jpg" alt="Catalogue des 16 indicateurs ODD souscrits avec tableau et boutons de visualisation">
     </div>
-    <p class="shot-caption">Synthèse Évaluation : vue consolidée par niveau hiérarchique (Programme, Projet, Action, Activité) — TEP physique &amp; TEF financier.</p>
+    <p class="shot-caption">Écran <b>« Liste des indicateurs »</b> : répertoire des indicateurs souscrits avec options de visualisation analytique.</p>
+  </section>
+
+  <section class="block" id="odd-indicateurs-visu">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Visualisation graphique &amp; tabulaire</h2>
+    <p class="lede">
+      Pour chaque indicateur du répertoire, la plateforme met à votre disposition deux formats d'exploration complémentaires dans la colonne <b>Visualisation</b> : l'histogramme chronologique et la table de données chiffrées.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
+        Les deux modes de visualisation disponibles
+      </h3>
+      <ol class="steps">
+        <li style="margin-bottom:0.8rem;">
+          <b>Bouton « 📊 Histogramme » :</b>
+          Génère un graphique d'évolution dans le temps des valeurs collectées au fil des trimestres et des années. Il permet aux décideurs et aux agents de visualiser immédiatement les tendances, les progrès enregistrés ou les paliers de stagnation.
+        </li>
+        <li>
+          <b>Bouton « 📋 Tableau » :</b>
+          Affiche les séries statistiques détaillées sous forme tabulaire (date exacte, valeur numérique collectée, période de référence, utilisateur collecteur). Idéal pour les contrôles de cohérence et l'export des données dans les rapports périodiques.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-66.jpg" alt="Boutons Histogramme et Tableau dans la colonne Visualisation des indicateurs ODD">
+    </div>
+    <p class="shot-caption">Focus sur la colonne <b>« Visualisation »</b> : accès immédiat au rendu graphique (Histogramme) et au détail tabulaire (Tableau) pour chaque indicateur.</p>
+
+    <div class="callout">
+      <b>Mise à jour automatique</b>
+      Dès qu'une nouvelle collecte est validée dans le système, l'histogramme et le tableau de l'indicateur sont instantanément réactualisés sans aucune intervention manuelle.
+    </div>
+  </section>
+
+  <section class="block" id="odd-collecte">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Collecte de données ODD</h2>
+    <p class="lede">
+      Accessible via l'onglet <b>« Faire une collecte »</b> du menu latéral, cette interface constitue le registre centralisé de toutes les données collectées sur le terrain pour renseigner les indicateurs communaux.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Les composantes de l'écran « Liste des collectes »
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.7rem;">
+          <b>Bouton « + Nouvelle collecte » :</b> Bouton d'action bleu foncé en haut à droite pour ouvrir la fenêtre de saisie d'une nouvelle mesure.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Filtres multicritères combinables :</b> Trois menus déroulants pour restreindre la liste : filtre par <b>ODD</b>, filtre par <b>CIBLE</b> et filtre par <b>INDICATEUR</b>.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Colonnes de données :</b> Date et heure de soumission, ODD, Cible, Indicateur, Région/Commune (ex. <i>GLAZOUE</i>), Année (ex. <i>2022</i>), Période (ex. <i>Octobre à Décembre</i>) et Valeur exacte relevée.
+        </li>
+        <li>
+          <b>Statut &amp; Gestion :</b> Badge vert <b>« Valider »</b> attestant de la prise en compte officielle de la mesure, et icône de corbeille bleue pour supprimer ou corriger un enregistrement erroné si vous détenez les droits requis.
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-67.jpg" alt="Tableau récapitulatif des collectes ODD avec filtres et statuts de validation">
+    </div>
+    <p class="shot-caption">Écran <b>« Liste des collectes »</b> : historique exhaustif des 15 collectes enregistrées avec filtres multicritères et statut validé.</p>
+  </section>
+
+  <section class="block" id="odd-collecte-nouvelle">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Créer une nouvelle collecte</h2>
+    <p class="lede">
+      L'enregistrement d'une mesure terrain s'effectue via un formulaire modal rapide et guidé garantissant l'intégrité et la précision des séries temporelles.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
+        Procédure pas à pas de saisie d'une collecte
+      </h3>
+      <ol class="steps">
+        <li>
+          Depuis l'écran <b>Liste des collectes</b>, cliquez sur le bouton bleu <b>« + Nouvelle collecte »</b> en haut à droite.
+        </li>
+        <li>
+          <b>Sélection de l'indicateur :</b> Déroulez la liste <b>« Liste des indicateurs »</b> et choisissez l'indicateur ODD concerné par votre mesure.
+        </li>
+        <li>
+          <b>Période (« Period ») :</b> Sélectionnez le trimestre ou la période couverte par les données (ex. <i>Octobre à Décembre</i>).
+        </li>
+        <li>
+          <b>Année :</b> Saisissez l'année civile de rattachement de la collecte (ex. <i>2025</i> ou <i>2026</i>).
+        </li>
+        <li>
+          <b>Commune :</b> Vérifiez que la commune assignée correspond bien à votre collectivité territoriale (champ verrouillé ou prérempli sur <i>GLAZOUE</i>).
+        </li>
+        <li>
+          Cliquez sur le bouton bleu <b>« Enregistrer »</b> pour valider et publier la collecte dans la base SIDSE.
+          <span class="hint">Pour annuler la saisie sans enregistrer, cliquez simplement sur le bouton orange <b>« Fermer »</b>.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-68.jpg" alt="Formulaire modal Nouvelle collecte avec sélection indicateur, période, année et commune">
+    </div>
+    <p class="shot-caption">Boîte de dialogue <b>« Nouvelle collecte »</b> : formulaire de saisie guidée avec sélection de l'indicateur, période temporelle et confirmation par le bouton « Enregistrer ».</p>
+
+    <div class="callout">
+      <b>Contrôle des doublons</b>
+      Veillez à ne pas enregistrer deux fois la même période pour un même indicateur afin de conserver des séries chronologiques régulières et cohérentes.
+    </div>
+  </section>
+
+  <section class="block" id="odd-parametres">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Paramètres ODD : Espace d'administration</h2>
+    <p class="lede">
+      Accessible via l'entrée <b>« Paramètres ODD »</b> du menu de gauche, cet espace d'administration offre aux communes la maîtrise complète de l'adaptation territoriale du cadre ODD.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
+        Les 2 volets d'administration du hub ODD
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:1.1rem;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+            <span class="badge" style="background:#ecfdf5;color:#059669;font-weight:700;">REFORMULATION</span>
+            <b style="font-size:1rem;color:var(--color-foreground);">Paramètres Cibles :</b>
+          </div>
+          <span style="color:var(--color-muted-foreground);display:block;line-height:1.5;">
+            Permet à la commune de reformuler les libellés standard des cibles ODD internationales afin de les adapter fidèlement au vocabulaire, au contexte et aux compétences de la collectivité territoriale. Cliquez sur <b>« → Gérer »</b> pour accéder à l'interface de reformulation des cibles.
+          </span>
+        </li>
+        <li>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+            <span class="badge" style="background:#eff6ff;color:#2563eb;font-weight:700;">CRÉATION ET REFORMULATION</span>
+            <b style="font-size:1rem;color:var(--color-foreground);">Paramètres Indicateurs :</b>
+          </div>
+          <span style="color:var(--color-muted-foreground);display:block;line-height:1.5;">
+            Permet aux agents communaux de reformuler les indicateurs souscrits ou de créer de nouveaux indicateurs sur mesure (<i>Indicateurs ODD Extra</i>) afin d'assurer le suivi de priorités locales spécifiques. Cliquez sur <b>« → Gérer »</b> pour configurer les indicateurs.
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-69.jpg" alt="Hub des paramètres ODD avec cartes Paramètres Cibles et Paramètres Indicateurs">
+    </div>
+    <p class="shot-caption">Espace <b>« Paramètres ODD »</b> : les deux cartes de gestion pour la reformulation des cibles et la configuration des indicateurs locaux.</p>
+  </section>
+
+  <section class="block" id="odd-param-cibles">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Paramètres des cibles</h2>
+    <p class="lede">
+      Accessible en cliquant sur le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Cibles</i>, cet écran permet d'adapter le libellé des cibles ODD souscrites sans rompre leur lien méthodologique avec le référentiel des Nations Unies.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Comment reformuler une cible ODD ?
+      </h3>
+      <ol class="steps">
+        <li>
+          <b>Consulter la liste des cibles :</b> Le tableau répertorie l'ensemble des cibles souscrites (ex. 11 cibles affichées) avec leur ODD de rattachement et leur libellé actuel.
+        </li>
+        <li>
+          <b>Filtrer par cible :</b> Utilisez le filtre déroulant <b>« Toutes les cibles de... »</b> pour trouver rapidement la cible souhaitée.
+        </li>
+        <li>
+          <b>Ouvrir le menu d'action :</b> Dans la colonne <i>Action</i> à droite de la ligne correspondante, cliquez sur l'icône à trois points verticaux <b>⋮</b>.
+        </li>
+        <li>
+          <b>Sélectionner « ✎ Reformuler » :</b> Un menu contextuel blanc s'ouvre avec l'option <b>« ✎ Reformuler »</b>.
+        </li>
+        <li>
+          <b>Adapter le texte :</b> Saisissez la formulation adaptée aux réalités communales puis validez. Le libellé révisé sera désormais visible sur tous les tableaux de bord et rapports de la collectivité.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-70.jpg" alt="Écran Paramètres Cibles avec menu contextuel et action Reformuler">
+    </div>
+    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres cible »</b> : liste des cibles souscrites et déclenchement de l'action « ✎ Reformuler » via le menu contextuel.</p>
+
+    <div class="callout">
+      <b>Conservation des références officielles</b>
+      La reformulation locale ne modifie que l'intitulé d'affichage : le code officiel de la cible (ex. <i>5.5</i>, <i>6.2</i>, <i>8.2</i>) reste préservé pour assurer la consolidation aux échelons départemental et national.
+    </div>
+  </section>
+
+  <section class="block" id="odd-param-indicateurs">
+    <div class="section-kicker">Module ODD</div>
+    <h2>Indicateurs &amp; indicateurs Extra</h2>
+    <p class="lede">
+      Accessible via le bouton <b>« → Gérer »</b> de la carte <i>Paramètres Indicateurs</i>, cet écran est scindé en deux sections : la gestion des indicateurs souscrits et la création d'indicateurs personnalisés dits <b>Indicateurs ODD Extra</b>.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Section 1 : Les indicateurs des ODD (Socle standard)
+      </h3>
+      <p style="color:var(--color-muted-foreground);margin-bottom:0.75rem;">
+        Ce tableau présente la liste complète des indicateurs officiels souscrits (ex. 16 indicateurs). Tout comme pour les cibles, chaque indicateur dispose d'un menu d'action <b>⋮</b> permettant de cliquer sur <b>« ✎ Reformuler »</b> afin de spécifier une appellation locale plus familière aux acteurs communaux.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:1.2rem;">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Section 2 : Mes indicateurs ODD Extra (Indicateurs locaux personnalisés)
+      </h3>
+      <p style="color:var(--color-muted-foreground);margin-bottom:0.8rem;">
+        Cette section permet à la commune de créer des indicateurs spécifiques propres à ses défis locaux, non couverts par les indicateurs standards de l'ONU :
+      </p>
+      <ol class="steps">
+        <li>
+          Faites défiler la page jusqu'au bloc <b>« Mes indicateurs ODD Extra »</b>.
+        </li>
+        <li>
+          Cliquez sur le bouton bleu foncé <b>« + Ajouter »</b> situé en haut à droite du bloc.
+        </li>
+        <li>
+          Renseignez l'ODD concerné, la cible de rattachement, l'intitulé de l'indicateur Extra et la périodicité de collecte souhaitée.
+        </li>
+        <li>
+          Validez pour enregistrer : l'indicateur Extra s'ajoute immédiatement à la liste et devient disponible dans le formulaire de collecte de données.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-71.jpg" alt="Écran Paramètres Indicateurs avec tableau des indicateurs ODD, reformulation et section Mes indicateurs ODD Extra avec bouton Ajouter">
+    </div>
+    <p class="shot-caption">Écran <b>« Paramètres ODD • Paramètres indicateurs »</b> : reformulation des indicateurs standards et section inférieure <b>« Mes indicateurs ODD Extra »</b> avec le bouton d'ajout « + Ajouter ».</p>
+
+    <div class="callout">
+      <b>Souplesse et rigueur</b>
+      Les indicateurs ODD Extra offrent à la municipalité une flexibilité totale pour mesurer l'impact de ses projets locaux tout en respectant l'architecture globale des Objectifs de Développement Durable.
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- MODULE PROJETS PHARES                      -->
+  <!-- ========================================== -->
+
+  <section class="block" id="projet-acces">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Accéder au module Projets Phares</h2>
+    <p class="lede">
+      Le module <b>Projet Phare</b> centralise la planification, le suivi opérationnel et l'évaluation continue des investissements et chantiers stratégiques portés par la municipalité.
+      <span class="hint">Pour y accéder depuis la page d'accueil de la plateforme : repérez la carte <b>« Projet Phare »</b> affichant le statut <b>Disponible</b>, puis cliquez sur <b>« Accéder au module → »</b>.</span>
+    </p>
+
+    <h3 class="subhead"><span class="num">1</span>Sélectionner le module depuis l'espace de travail</h3>
     <ol class="steps">
-      <li>Depuis chaque écran de rapport, définissez les <b>filtres de recherche</b> souhaités puis cliquez sur <b>« Rechercher »</b>.</li>
-      <li>Utilisez le bouton <b>« Exportateur »</b> pour exporter les résultats lorsque disponible.</li>
+      <li>Depuis le tableau de bord d'accueil de la collectivité, repérez la carte marron/orangée intitulée <b>« Projet Phare »</b>.</li>
+      <li>Vérifiez la présence du badge vert <b>« ✔ Disponible »</b> attestant de l'activation du module pour votre commune.</li>
+      <li>Cliquez sur le lien <b>« Accéder au module → »</b> au bas de la carte, ou sélectionnez directement <b>« PROJET »</b> dans le menu déroulant de l'en-tête en haut à droite.</li>
     </ol>
+
+    <div class="shot">
+      <img src="/shot-62.jpg" alt="Espace de travail communal et sélection de la carte Projet Phare">
+    </div>
+    <p class="shot-caption">Espace d'accueil communal : carte d'accès au module <b>« Projet Phare »</b> avec badge « Disponible ».</p>
+
+    <div class="callout">
+      <b>Rôle des Projets Phares</b>
+      Contrairement aux activités courantes de fonctionnement, les projets phares constituent les opérations structurantes à fort impact socio-économique pour les populations locales.
+    </div>
+  </section>
+
+  <section class="block" id="projet-dashboard">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Dashboard &amp; Indicateurs</h2>
+    <p class="lede">
+      Le tableau de bord du module Projets Phares offre une vue consolidée et interactive des performances atteintes par chaque investissement communal selon les indicateurs et périodes retenus.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Composants du Dashboard des projets
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.75rem;">
+          <b>Bandeau d'en-tête bleu :</b> Titré <b>« Visualisation d'indicateurs »</b> avec la baseline <i>« Analysez les performances de vos indicateurs par projet et période »</i>.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Badge de suivi :</b> Compteur indiquant le nombre d'indicateurs opérationnels disponibles pour la collectivité.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Filtre déroulant « FILTRER PAR PROJET » :</b> Permet de basculer instantanément la vue sur un projet phare spécifique ou d'examiner l'ensemble du portefeuille communal.
+        </li>
+        <li>
+          <b>Barre de recherche rapide :</b> Champ <b>« RECHERCHE : Rechercher un indicateur... »</b> pour filtrer immédiatement les métriques par mot-clé.
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-72.jpg" alt="Écran Dashboard Visualisation d'indicateurs du module Projet Phare avec filtres et recherche">
+    </div>
+    <p class="shot-caption">Écran <b>« Dashboard • Visualisation d'indicateurs »</b> : filtrage par projet, recherche thématique et suivi des métriques de performance.</p>
+
+    <div class="callout">
+      <b>Visualisation en temps réel</b>
+      Les graphiques et courbes de tendance s'actualisent automatiquement à chaque validation d'une collecte dans le volet Contrôle qualité.
+    </div>
+  </section>
+
+  <section class="block" id="projet-gestion">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Gestion des Projets Phares</h2>
+    <p class="lede">
+      Accessible depuis le menu latéral via l'onglet <b>« Projets »</b>, cette interface constitue le registre officiel de l'ensemble des projets prioritaires pilotés par la commune.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Organisation du répertoire des projets
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.7rem;">
+          <b>Bouton d'action principal :</b> Bouton bleu foncé <b>« + Nouveau projet »</b> en haut à droite pour ajouter un projet phare au registre.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>Compteur d'activité :</b> Badge récapitulatif indiquant le nombre total de projets enregistrés et le volume d'indicateurs associés.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>ID :</b> Numéro matricule unique assigné à chaque projet dans la base de données communale.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>LIBELLÉ :</b> Intitulé officiel et public du projet de développement.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>DESCRIPTION :</b> Contexte synthétique, finalités et zone géographique d'intervention.
+        </li>
+        <li style="margin-bottom:0.7rem;">
+          <b>INDICATEURS :</b> Nombre de métriques de mesure rattachées pour l'évaluation des résultats.
+        </li>
+        <li>
+          <b>DÉTAILS :</b> Lien d'ouverture de la fiche projet complète avec historique des livrables.
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-73.jpg" alt="Tableau de gestion des projets phares avec colonnes et bouton Nouveau projet">
+    </div>
+    <p class="shot-caption">Écran <b>« Gestion des projets »</b> : répertoire centralisé des projets phares communaux et déclenchement de la création d'un projet.</p>
+  </section>
+
+  <section class="block" id="projet-nouveau">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Créer un nouveau projet phare</h2>
+    <p class="lede">
+      L'enregistrement d'un projet prioritaire s'effectue au moyen d'un formulaire modal ergonomique permettant de renseigner les paramètres essentiels de l'opération.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
+        Champs à renseigner dans le formulaire
+      </h3>
+      <ol class="steps">
+        <li>
+          Depuis l'écran <b>Gestion des projets</b>, cliquez sur le bouton bleu <b>« + Nouveau projet »</b>.
+        </li>
+        <li>
+          <b>Libellé du projet :</b> Saisissez un titre explicite et représentatif (ex. <i>« Réhabilitation de la piste rurale Glazoué-Thio »</i> ou <i>« Construction du centre de santé communal »</i>).
+        </li>
+        <li>
+          <b>Description :</b> Décrivez succinctement le périmètre technique, la population cible et les impacts attendus.
+        </li>
+        <li>
+          <b>Date de début :</b> Indiquez la date prévisionnelle ou effective de démarrage des travaux au format <code>jj/mm/aaaa</code> à l'aide du sélecteur calendrier 📅.
+        </li>
+        <li>
+          <b>Statut :</b> Sélectionnez l'état d'avancement initial dans le menu déroulant (ex. <i>En attente</i>, <i>En cours</i>, <i>Planifié</i>).
+        </li>
+        <li>
+          Cliquez sur le bouton bleu <b>« Créer »</b> pour valider l'enregistrement, ou sur <b>« Annuler »</b> pour fermer sans sauvegarder.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-74.jpg" alt="Formulaire modal Nouveau projet avec saisie libellé, description, date de début et statut">
+    </div>
+    <p class="shot-caption">Boîte de dialogue <b>« Nouveau projet »</b> : saisie du libellé, description, calendrier et statut initial.</p>
+  </section>
+
+  <section class="block" id="projet-secteurs">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Secteurs d'activité</h2>
+    <p class="lede">
+      Accessible via l'onglet <b>« Secteurs »</b> du menu latéral, cette page permet de configurer la typologie sectorielle communale afin de classer les projets par domaine d'intervention.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Fonctionnalités de l'écran « Secteurs d'activité »
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.75rem;">
+          <b>Bouton « + Nouveau secteur » :</b> Permet de créer une nouvelle catégorie thématique (ex. <i>Eau &amp; Assainissement</i>, <i>Éducation &amp; Formation</i>, <i>Santé communautaire</i>, <i>Infrastructures marchandes</i>).
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Recherche textuelle :</b> Champ <b>« RECHERCHE : Rechercher un secteur... »</b> pour localiser rapidement un secteur existant.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Filtre par statut :</b> Menu déroulant <b>« STATUT : Tous »</b> (Actif, Inactif, Archivé).
+        </li>
+        <li>
+          <b>Tableau récapitulatif :</b> Colonnes <b>ID</b> (identifiant), <b>SECTEUR</b> (intitulé) et <b>STATUT</b>.
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-75.jpg" alt="Écran Secteurs d'activité avec filtres de recherche, statut et bouton Nouveau secteur">
+    </div>
+    <p class="shot-caption">Écran <b>« Secteurs d'activité »</b> : classification sectorielle des projets phares avec outils de recherche et bouton d'ajout.</p>
+  </section>
+
+  <section class="block" id="projet-collecte">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Collecte de données Projets</h2>
+    <p class="lede">
+      Accessible via l'onglet <b>« Collecte de données »</b> du menu latéral, cette interface sert de point de saisie terrain pour renseigner les valeurs réelles des indicateurs affectés aux projets phares.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Comment effectuer une collecte sur un projet ?
+      </h3>
+      <ol class="steps">
+        <li>
+          <b>Filtrer par projet :</b> Ouvrez le menu déroulant <b>« FILTRER PAR PROJET »</b> et sélectionnez le projet concerné par votre mission de suivi.
+        </li>
+        <li>
+          <b>Rechercher l'indicateur :</b> Tapez le mot-clé de l'indicateur recherché dans la barre <b>« RECHERCHE : Rechercher un indicateur... »</b>.
+        </li>
+        <li>
+          <b>Sélectionner l'indicateur :</b> Cliquez sur l'indicateur désiré dans la liste déployée.
+        </li>
+        <li>
+          <b>Renseigner et transmettre :</b> Saisissez la valeur constatée sur le terrain, précisez la période de référence et validez pour envoyer la mesure dans le circuit de vérification.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-76.jpg" alt="Écran Collecte de données Projets avec filtres projet et recherche d'indicateurs">
+    </div>
+    <p class="shot-caption">Écran <b>« Collecte de données »</b> : interface de sélection du projet et recherche de l'indicateur à renseigner.</p>
+  </section>
+
+  <section class="block" id="projet-qualite">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Contrôle qualité des données</h2>
+    <p class="lede">
+      Le volet <b>Contrôle qualité</b> (accessible depuis le menu latéral) constitue le filtre de gouvernance et de fiabilisation garantissant l'exactitude des informations avant leur diffusion officielle.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
+        Filtres d'audit et tableau des vérifications
+      </h3>
+      <ul class="plain">
+        <li style="margin-bottom:0.75rem;">
+          <b>Filtres combinés :</b> Filtrage par <b>UTILISATEUR</b> (ex. <i>Agent terrain</i>, <i>Superviseur</i>, <i>Administrateur</i>), par <b>PROJET</b> (ex. <i>Projet Alpha</i>, <i>Projet Beta</i>, <i>Projet Gamma</i>) et par <b>INDICATEUR</b>. Bouton <b>« ⟳ Réinitialiser »</b> pour réinitialiser la vue.
+        </li>
+        <li style="margin-bottom:0.75rem;">
+          <b>Compteur d'audit :</b> Badge indiquant le volume d'enregistrements en cours d'examen (ex. <i>4 entrées</i>).
+        </li>
+        <li>
+          <b>Tableau « Vérifications en cours » :</b>
+          Colonnes <b>ID</b> (ex. <i>C-001</i>, <i>C-002</i>), <b>INDICATEUR</b> (ex. <i>Taux de satisfaction</i>, <i>Performance opérationnelle</i>, <i>Efficacité énergétique</i>, <i>Délais de livraison</i>), <b>VALEUR</b> (valeur collectée), <b>PÉRIODE</b> (ex. <i>T2 2024</i>), <b>PROJET</b>, <b>SAISI PAR</b>, <b>STATUT</b> (badge jaune <i>• En attente</i> ou vert <i>• Validé</i>) et champ interactif <b>OBSERVATION</b>.
+        </li>
+      </ul>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-77.jpg" alt="Tableau de contrôle qualité avec vérifications en cours, filtres et champ observation">
+    </div>
+    <p class="shot-caption">Écran <b>« Contrôle qualité »</b> : tableau des vérifications en cours, statuts d'approbation et ajout d'observations d'audit.</p>
+  </section>
+
+  <section class="block" id="projet-qualite-actions">
+    <div class="section-kicker">Module Projets Phares</div>
+    <h2>Validation et rejet des données</h2>
+    <p class="lede">
+      Dans la colonne <b>ACTIONS</b> du tableau de contrôle qualité, les superviseurs et administrateurs disposent des boutons de décision formelle pour approuver ou rejeter les données soumises.
+    </p>
+
+    <div class="card">
+      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
+        Circuit d'approbation ou de rejet d'une mesure
+      </h3>
+      <ol class="steps">
+        <li style="margin-bottom:0.8rem;">
+          <b>Audit de conformité :</b> Comparez la valeur soumise avec les pièces justificatives et les valeurs des trimestres précédents.
+        </li>
+        <li style="margin-bottom:0.8rem;">
+          <b>Saisie d'une observation :</b> Tapez votre commentaire dans la case <i>« Ajouter une observation »</i> pour expliciter votre décision ou signaler une recommandation.
+        </li>
+        <li style="margin-bottom:0.8rem;">
+          <b>Bouton « ✔ Valider » :</b> Cliquez sur le bouton bleu pour approuver la mesure. Le statut passe instantanément à <b>« Validé »</b> (badge vert) et les indicateurs du Dashboard sont immédiatement recalculés.
+        </li>
+        <li>
+          <b>Bouton « ✖ Rejeter » :</b> Cliquez sur le bouton rouge en cas d'erreur avérée, d'anomalie de calcul ou de document manquant. La soumission est rejetée et l'agent collecteur est notifié pour corriger la saisie.
+        </li>
+      </ol>
+    </div>
+
+    <div class="shot">
+      <img src="/shot-78.jpg" alt="Colonne Actions du contrôle qualité avec boutons Valider et Rejeter">
+    </div>
+    <p class="shot-caption">Focus sur la colonne <b>« ACTIONS »</b> : boutons de certification <b>« ✔ Valider »</b> et de renvoi <b>« ✖ Rejeter »</b> pour une gouvernance rigoureuse des données communales.</p>
+
+    <div class="callout">
+      <b>Traçabilité des décisions</b>
+      L'ensemble des validations et rejets est consigné dans les journaux d'audit de SIDSE IBDC avec horodatage et identifiant du validateur, garantissant une redevabilité totale devant les partenaires techniques et financiers.
+    </div>
   </section>
 
   <section class="block" id="a-venir">
@@ -1497,18 +2494,6 @@ export const guideHtml = `<div class="doc-header" id="intro">
         Modules et fonctionnalités en cours d'intégration
       </h3>
       <ul class="plain">
-        <li style="margin-bottom:0.85rem;">
-          <b> Module Projets Phares :</b>
-          <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
-            Dashboard des projets communaux, gestion des secteurs, formulaires de collecte de données projets et outils de contrôle qualité.
-          </span>
-        </li>
-        <li style="margin-bottom:0.85rem;">
-          <b> Module ODD étendu :</b>
-          <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
-            Paramétrage avancé des cibles ODD, configuration des indicateurs proxy et consolidation des métriques de développement durable.
-          </span>
-        </li>
         <li style="margin-bottom:0.85rem;">
           <b> Gestion des Recommandations :</b>
           <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
