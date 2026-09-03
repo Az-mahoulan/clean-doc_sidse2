@@ -868,10 +868,16 @@ _Le module **Projet Phare** centralise la planification, le suivi opérationnel 
 
 1. Depuis le tableau de bord d'accueil de la collectivité, repérer la carte marron/orangée intitulée **« Projet Phare »**.
 2. Vérifier la présence du badge vert **« ✔ Disponible »** attestant de l'activation du module pour votre commune.
-3. Cliquer sur le lien **« Accéder au module → »** au bas de la carte, ou sélectionner directement **« PROJET »** dans le menu déroulant de l'en-tête en haut à droite.
+3. Cliquer sur le bouton **« Accéder au module → »** au bas de la carte.
 
-> 💡 **Rôle des Projets Phares**  
-> Les projets phares constituent les opérations structurantes à fort impact socio-économique pour les populations locales, à distinguer des activités récurrentes de gestion.
+Dès l'ouverture du module, l'interface s'ouvre par défaut sur le **Dashboard (Visualisation d'indicateurs)** avec le menu de navigation complet à gauche :
+
+![Interface principale du module Projet Phare](./images/shot-83.png)
+
+*📷 Interface principale du module Projet Phare : menu de navigation latéral à gauche et écran d'accueil « Dashboard • Visualisation d'indicateurs » au centre.*
+
+> 💡 **Basculer d'un module à un autre**  
+> Vous pouvez à tout moment changer de module sans repasser par la page d'accueil en cliquant sur le sélecteur situé en haut à droite de l'en-tête (affichant « PROJET », « ODD », « PDC », « PARAMÈTRE »…).
 
 ---
 

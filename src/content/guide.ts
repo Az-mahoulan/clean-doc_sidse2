@@ -2249,21 +2249,33 @@ export const guideHtml = `<div class="doc-header" id="intro">
       <span class="hint">Pour y accéder depuis la page d'accueil de la plateforme : repérez la carte <b>« Projet Phare »</b> affichant le statut <b>Disponible</b>, puis cliquez sur <b>« Accéder au module → »</b>.</span>
     </p>
 
-    <h3 class="subhead"><span class="num">1</span>Sélectionner le module depuis l'espace de travail</h3>
+    <!-- Étape 1 : Sélection du module -->
+    <h3 class="subhead"><span class="num">1</span>Sélectionner le module Projet Phare</h3>
     <ol class="steps">
-      <li>Depuis le tableau de bord d'accueil de la collectivité, repérez la carte marron/orangée intitulée <b>« Projet Phare »</b>.</li>
+      <li>Depuis le tableau de bord d'accueil de la collectivité (espace de travail), repérez la carte marron/orangée intitulée <b>« Projet Phare »</b>.</li>
       <li>Vérifiez la présence du badge vert <b>« ✔ Disponible »</b> attestant de l'activation du module pour votre commune.</li>
-      <li>Cliquez sur le lien <b>« Accéder au module → »</b> au bas de la carte, ou sélectionnez directement <b>« PROJET »</b> dans le menu déroulant de l'en-tête en haut à droite.</li>
+      <li>Cliquez sur le bouton <b>« Accéder au module → »</b> au bas de la carte.</li>
     </ol>
 
     <div class="shot">
       <img src="/shot-62.jpg" alt="Espace de travail communal et sélection de la carte Projet Phare">
     </div>
-    <p class="shot-caption">Espace d'accueil communal : carte d'accès au module <b>« Projet Phare »</b> avec badge « Disponible ».</p>
+    <p class="shot-caption">Espace d'accueil communal : carte d'accès au module <b>« Projet Phare »</b> avec badge « Disponible » et bouton d'accès direct.</p>
+
+    <!-- Étape 2 : Interface principale du module Projet Phare -->
+    <h3 class="subhead"><span class="num">2</span>L'interface de travail et le menu du module Projets Phares</h3>
+    <p>
+      Dès que vous accédez au module Projet Phare, l'interface principale s'ouvre par défaut sur le <b>Dashboard (Visualisation d'indicateurs)</b>, et le menu latéral de gauche se déploie avec l'ensemble des fonctionnalités du module :
+    </p>
+
+    <div class="shot">
+      <img src="/shot-83.png" alt="Interface principale du module Projet Phare avec menu latéral et écran Dashboard">
+    </div>
+    <p class="shot-caption">Interface principale du module <b>Projet Phare</b> : menu de navigation latéral à gauche et écran d'accueil « Dashboard • Visualisation d'indicateurs » au centre.</p>
 
     <div class="callout">
-      <b>Rôle des Projets Phares</b>
-      Contrairement aux activités courantes de fonctionnement, les projets phares constituent les opérations structurantes à fort impact socio-économique pour les populations locales.
+      <b>Basculer d'un module à un autre</b>
+      Vous pouvez à tout moment changer de module sans repasser par la page d'accueil en cliquant sur le <b>sélecteur de module</b> situé en haut à droite de l'en-tête (affichant « PROJET », « ODD », « PDC », « PARAMÈTRE »…).
     </div>
   </section>
 
