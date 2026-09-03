@@ -695,18 +695,30 @@ _Le module **Objectifs de Développement Durable (ODD)** de SIDSE IBDC offre aux
 
 ---
 
-### [Module ODD] Liste des ODD souscrits
+### [Module ODD] Liste des ODD
 
-_Dès l'entrée dans le module ODD, l'écran **Liste des ODD** présente l'ensemble des Objectifs de Développement Durable retenus et souscrits par la collectivité (9 ODDs abonnés pour la commune de Glazoué)._
+_L'écran **Liste des ODD** centralise l'ensemble des Objectifs de Développement Durable intégrés à la plateforme SIDSE IBDC pour la collectivité (ici illustrée avec les 9 ODD de la commune de Glazoué). Il permet de visualiser rapidement les priorités territoriales et d'accéder aux cibles et indicateurs associés._
 
-![Grille des 9 ODD souscrits par la commune](./images/shot-63.jpg)
+1. **Filtrer via le menu déroulant :** cliquez sur **« FILTRER : Tous les ODD »** pour isoler un objectif particulier.
 
-*📷 Écran « Liste des ODD » : vue en grille des 9 ODD souscrits par la commune avec barre de filtrage et recherche.*
+![Sélection déroulante pour filtrer les ODD](./images/shot-80.png)
 
-1. **Badge récapitulatif :** visualisez en haut à droite le nombre total d'ODD souscrits (*9 ODDs abonnés*).
-2. **Filtres et Recherche :** utilisez le menu déroulant **« FILTRER : Tous les ODD »** ou la barre **« RECHERCHE : Rechercher un ODD... »** pour cibler un objectif précis.
-3. **Cartes d'ODD :** parcourez les 9 cartes (ODD 5 Égalité des sexes, ODD 6 Eau propre, ODD 8 Travail décent, ODD 13 Changements climatiques, ODD 15 Vie terrestre, ODD 16 Paix et justice, ODD 17 Partenariats, ODD 1 Pas de pauvreté, ODD 2 Faim zéro).
-4. Cliquer sur **« Voir les cibles & indicateurs → »** au bas d'une carte pour afficher son détail.
+*📷 Menu déroulant « FILTRER : Tous les ODD » — la flèche rouge indique l'outil de sélection pour cibler directement un ODD dans la liste.*
+
+2. **Rechercher par mot-clé :** saisissez un terme dans la barre **« RECHERCHE »** pour filtrer instantanément les cartes.
+
+![Barre de recherche textuelle des ODD](./images/shot-79.png)
+
+*📷 Champ « RECHERCHE : Rechercher un ODD... » — la flèche rouge met en évidence la barre de recherche textuelle.*
+
+3. **Consulter les cibles et indicateurs :** cliquez sur le lien **« Voir les cibles & indicateurs → »** au bas d'une carte d'ODD pour ouvrir sa fiche détaillée.
+
+![Lien Voir les cibles et indicateurs](./images/shot-81.png)
+
+*📷 Lien « Voir les cibles & indicateurs → » — la flèche rouge désigne l'accès direct aux cibles et indicateurs de l'ODD sélectionné.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour découvrir comment analyser et ouvrir le détail des cibles rattachées à un ODD, consultez la section **Détail d'un ODD & cibles**.
 
 ---
 

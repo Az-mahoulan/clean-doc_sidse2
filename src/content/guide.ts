@@ -1142,7 +1142,7 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <h3 class="subhead"><span class="num">1</span>Sélectionner le module PDC</h3>
     <ol class="steps">
       <li>Depuis l'espace d'accueil de la plateforme, repérez la carte <b>« Plan de Développement Communal (PDC) »</b>.</li>
-      <li>Cliquez sur le bouton <b>« Accéder au module »</b> sous la carte (ou sélectionnez <b>« PDC »</b> dans le sélecteur en haut à droite).</li>
+      <li>Cliquez sur le bouton <b>« Accéder au module »</b> sous la carte.</li>
     </ol>
 
     <div class="shot">
@@ -1820,40 +1820,68 @@ export const guideHtml = `<div class="doc-header" id="intro">
 
   <section class="block" id="odd-liste">
     <div class="section-kicker">Module ODD</div>
-    <h2>Liste des ODD souscrits</h2>
+    <h2>Liste des ODD</h2>
     <p class="lede">
-      Dès votre entrée dans le module ODD, l'écran <b>Liste des ODD</b> affiche l'ensemble des Objectifs de Développement Durable souscrits par la collectivité (ex. <b>9 ODDs abonnés</b> pour la commune de Glazoué).
-      <span class="hint">Cet écran offre une vue panoramique des priorités durables retenues par la commune avec des outils de recherche et de filtrage rapide.</span>
+      L'écran <b>Liste des ODD</b> centralise l'ensemble des Objectifs de Développement Durable intégrés à la plateforme SIDSE IBDC pour la collectivité (ici illustrée avec les <b>9 ODD</b> de la commune de Glazoué). Il permet de visualiser rapidement les priorités territoriales et d'accéder aux cibles et indicateurs associés.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Les outils de navigation et de filtrage de la liste
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.7rem;">
-          <b>Badge récapitulatif :</b> Indique en haut à droite le nombre total d'ODD souscrits par la collectivité (ex. <i>9 ODDs abonnés</i>).
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Filtre par ODD :</b> Menu déroulant <b>« FILTRER : Tous les ODD »</b> pour cibler instantanément un objectif en particulier.
-        </li>
-        <li style="margin-bottom:0.7rem;">
-          <b>Champ de recherche textuelle :</b> Barre <b>« RECHERCHE : Rechercher un ODD... »</b> permettant de filtrer par mot-clé sur les intitulés.
-        </li>
-        <li>
-          <b>Cartes ODD interactives :</b> Chaque carte présente le logo officiel ONU, le numéro d'ordre, le titre en majuscules (ex. <i>5 - ÉGALITÉ ENTRE LES SEXES</i>, <i>6 - EAU PROPRE ET ASSAINISSEMENT</i>, <i>8 - TRAVAIL DÉCENT ET CROISSANCE ÉCONOMIQUE</i>, <i>13 - LUTTE CONTRE LES CHANGEMENTS CLIMATIQUES</i>, <i>15 - VIE TERRESTRE</i>, <i>16 - PAIX, JUSTICE ET INSTITUTIONS EFFICACES</i>, <i>17 - PARTENARIATS</i>, <i>1 - PAS DE PAUVRETÉ</i>, <i>2 - FAIM ZÉRO</i>) et le lien <b>« Voir les cibles & indicateurs → »</b>.
-        </li>
-      </ul>
-    </div>
+    <h3 class="subhead"><span class="num">1</span>Filtrer les ODD via la sélection déroulante</h3>
+    <ol class="steps">
+      <li>
+        Repérez le menu déroulant <b>« FILTRER »</b> situé au-dessus de la grille des ODD.
+      </li>
+      <li>
+        Cliquez sur <b>« Tous les ODD »</b> pour déployer la liste complète des objectifs disponibles.
+      </li>
+      <li>
+        Sélectionnez l'ODD souhaité pour isoler instantanément sa carte à l'écran.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-63.jpg" alt="Grille des 9 ODD souscrits par la commune avec filtres et recherche">
+      <img src="/shot-80.png" alt="Sélection déroulante pour filtrer la liste des ODD">
     </div>
-    <p class="shot-caption">Écran <b>« Liste des ODD »</b> : vue en grille des 9 ODD souscrits par la commune de Glazoué avec barre de filtrage et liens vers les cibles.</p>
+    <p class="shot-caption">Menu déroulant <b>« FILTRER : Tous les ODD »</b> — la flèche rouge indique l'outil de sélection pour cibler directement un ODD spécifique dans la liste.</p>
+
+    <h3 class="subhead"><span class="num">2</span>Rechercher un ODD par mot-clé</h3>
+    <ol class="steps">
+      <li>
+        Cliquez dans la barre de saisie <b>« RECHERCHE »</b> située à côté du filtre.
+      </li>
+      <li>
+        Saisissez le nom, le numéro ou un mot-clé de l'objectif recherché (ex. <i>« Eau »</i>, <i>« Climat »</i>, <i>« Égalité »</i>, <i>« Pauvreté »</i>).
+      </li>
+      <li>
+        La grille se met à jour en temps réel pour n'afficher que les cartes correspondant à votre recherche.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-79.png" alt="Barre de recherche textuelle pour filtrer les cartes ODD">
+    </div>
+    <p class="shot-caption">Champ <b>« RECHERCHE : Rechercher un ODD... »</b> — la flèche rouge met en évidence la barre de recherche textuelle instantanée.</p>
+
+    <h3 class="subhead"><span class="num">3</span>Consulter les cibles et indicateurs d'un ODD</h3>
+    <ol class="steps">
+      <li>
+        Parcourez les cartes d'ODD affichées sur la grille (chacune portant son numéro, son pictogramme officiel et son libellé).
+      </li>
+      <li>
+        Au bas de la carte de l'ODD qui vous intéresse, repérez le lien bleu <b>« Voir les cibles &amp; indicateurs → »</b>.
+      </li>
+      <li>
+        Cliquez sur ce lien pour ouvrir la fiche descriptive détaillée de l'ODD et découvrir toutes les cibles associées.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-81.png" alt="Lien Voir les cibles et indicateurs sur une carte ODD">
+    </div>
+    <p class="shot-caption">Lien <b>« Voir les cibles &amp; indicateurs → »</b> — la flèche rouge désigne l'accès direct à la fiche détaillée et aux indicateurs opérationnels de l'ODD sélectionné.</p>
 
     <div class="callout">
-      <b>Navigation transversale</b>
-      Depuis le volet latéral de navigation du module ODD, vous accédez directement aux trois autres espaces de travail : la <b>Liste des indicateurs</b>, la page <b>Faire une collecte</b> et les <b>Paramètres ODD</b>.
+      <b>Que faire ensuite ?</b>
+      Pour découvrir comment analyser et ouvrir le détail des cibles rattachées à un ODD, consultez la section suivante <a href="#odd-detail" style="color:inherit;font-weight:600;">Détail d'un ODD &amp; cibles →</a>
     </div>
   </section>
 
