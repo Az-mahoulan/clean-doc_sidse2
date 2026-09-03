@@ -883,16 +883,28 @@ Dès l'ouverture du module, l'interface s'ouvre par défaut sur le **Dashboard (
 
 ### [Module Projets Phares] Dashboard & Indicateurs
 
-_Le tableau de bord du module Projets Phares offre une vue consolidée et interactive des performances atteintes par chaque investissement communal selon les indicateurs et périodes retenus._
+_Le tableau de bord du module Projets Phares offre une vue consolidée et interactive des performances atteintes par chaque investissement communal selon les indicateurs et périodes retenus. Il permet de suivre l'évolution des métriques, de filtrer par projet stratégique et de rechercher rapidement un indicateur clé._
 
-![Écran Dashboard Visualisation d'indicateurs du module Projet Phare](./images/shot-72.jpg)
+1. **Consulter le volume d'indicateurs :** repérez le badge compteur situé en haut à droite de la carte *« Visualisation des Indicateurs »* (ex. *0 indicateurs*).
 
-*📷 Écran « Dashboard • Visualisation d'indicateurs » : filtrage par projet, recherche thématique et suivi des métriques de performance.*
+![Badge compteur d'indicateurs](./images/shot-86.png)
 
-1. **Bandeau supérieur :** zone bleue intitulée **« Visualisation d'indicateurs »** avec baseline explicative.
-2. **Compteur d'indicateurs :** badge indiquant le volume d'indicateurs configurés pour la commune.
-3. **Filtre par projet :** menu déroulant **« FILTRER PAR PROJET »** pour isoler une opération précise ou visualiser tous les projets.
-4. **Recherche rapide :** champ **« RECHERCHE : Rechercher un indicateur... »** pour filtrer immédiatement les métriques.
+*📷 Carte « Visualisation des Indicateurs » — la flèche rouge désigne le badge compteur qui affiche le nombre total d'indicateurs configurés pour la collectivité.*
+
+2. **Filtrer par projet :** utilisez le menu déroulant **« FILTRER PAR PROJET »** pour isoler les indicateurs d'un chantier stratégique particulier.
+
+![Filtrer par projet](./images/shot-84.png)
+
+*📷 Menu déroulant « FILTRER PAR PROJET » — la flèche rouge indique l'outil de sélection permettant d'isoler les indicateurs rattachés à un projet précis.*
+
+3. **Rechercher un indicateur par mot-clé :** tapez un intitulé dans le champ **« RECHERCHE »** pour filtrer instantanément la liste.
+
+![Rechercher un indicateur](./images/shot-85.png)
+
+*📷 Champ « RECHERCHE : Rechercher un indicateur... » — la flèche rouge met en valeur la barre de recherche textuelle instantanée.*
+
+> 💡 **Que faire ensuite ?**  
+> Pour consulter le répertoire complet des chantiers ou déclarer un nouveau projet phare communal, accédez à la section **Gestion des Projets Phares**.
 
 ---
 

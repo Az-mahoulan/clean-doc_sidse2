@@ -2283,37 +2283,69 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <div class="section-kicker">Module Projets Phares</div>
     <h2>Dashboard &amp; Indicateurs</h2>
     <p class="lede">
-      Le tableau de bord du module Projets Phares offre une vue consolidée et interactive des performances atteintes par chaque investissement communal selon les indicateurs et périodes retenus.
+      Le tableau de bord du module Projets Phares offre une vue consolidée et interactive des performances atteintes par chaque investissement communal selon les indicateurs et périodes retenus. Il permet de suivre l'évolution des métriques, de filtrer par projet stratégique et de rechercher rapidement un indicateur clé.
     </p>
 
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.8rem;color:var(--color-foreground);">
-        Composants du Dashboard des projets
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.75rem;">
-          <b>Bandeau d'en-tête bleu :</b> Titré <b>« Visualisation d'indicateurs »</b> avec la baseline <i>« Analysez les performances de vos indicateurs par projet et période »</i>.
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Badge de suivi :</b> Compteur indiquant le nombre d'indicateurs opérationnels disponibles pour la collectivité.
-        </li>
-        <li style="margin-bottom:0.75rem;">
-          <b>Filtre déroulant « FILTRER PAR PROJET » :</b> Permet de basculer instantanément la vue sur un projet phare spécifique ou d'examiner l'ensemble du portefeuille communal.
-        </li>
-        <li>
-          <b>Barre de recherche rapide :</b> Champ <b>« RECHERCHE : Rechercher un indicateur... »</b> pour filtrer immédiatement les métriques par mot-clé.
-        </li>
-      </ul>
-    </div>
+    <!-- Étape 1 : Compteur des indicateurs -->
+    <h3 class="subhead"><span class="num">1</span>Consulter le volume d'indicateurs configurés</h3>
+    <ol class="steps">
+      <li>
+        En arrivant sur le tableau de bord, observez la carte <b>« Visualisation des Indicateurs »</b> située sous le bandeau d'en-tête bleu.
+      </li>
+      <li>
+        Repérez le badge récapitulatif situé en haut à droite de la carte (ex. <b>« 0 indicateurs »</b> ou le total d'indicateurs actifs).
+      </li>
+      <li>
+        Ce compteur vous donne un aperçu immédiat du nombre de métriques disponibles pour l'analyse des performances communales.
+      </li>
+    </ol>
 
     <div class="shot">
-      <img src="/shot-72.jpg" alt="Écran Dashboard Visualisation d'indicateurs du module Projet Phare avec filtres et recherche">
+      <img src="/shot-86.png" alt="Badge compteur d'indicateurs dans la carte Visualisation des Indicateurs">
     </div>
-    <p class="shot-caption">Écran <b>« Dashboard • Visualisation d'indicateurs »</b> : filtrage par projet, recherche thématique et suivi des métriques de performance.</p>
+    <p class="shot-caption">Carte <b>« Visualisation des Indicateurs »</b> — la flèche rouge désigne le <b>badge compteur</b> qui affiche le nombre total d'indicateurs configurés pour la collectivité.</p>
+
+    <!-- Étape 2 : Filtrer par projet -->
+    <h3 class="subhead"><span class="num">2</span>Filtrer les indicateurs par projet phare</h3>
+    <ol class="steps">
+      <li>
+        Dans la section <b>« Indicateurs disponibles »</b>, repérez le menu déroulant <b>« FILTRER PAR PROJET »</b>.
+      </li>
+      <li>
+        Cliquez sur <b>« Tous les projets »</b> pour faire apparaître la liste de vos projets phares enregistrés.
+      </li>
+      <li>
+        Sélectionnez le projet souhaité pour cibler instantanément ses indicateurs de suivi et ses données de performance.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-84.png" alt="Menu déroulant Filtrer par projet">
+    </div>
+    <p class="shot-caption">Menu déroulant <b>« FILTRER PAR PROJET »</b> — la flèche rouge indique l'outil de sélection permettant d'isoler les indicateurs rattachés à un projet phare particulier.</p>
+
+    <!-- Étape 3 : Recherche rapide -->
+    <h3 class="subhead"><span class="num">3</span>Rechercher un indicateur par mot-clé</h3>
+    <ol class="steps">
+      <li>
+        Cliquez dans la barre de saisie <b>« RECHERCHE »</b> située à droite du filtre de projet.
+      </li>
+      <li>
+        Saisissez un mot-clé ou le nom de l'indicateur recherché (ex. <i>« Taux »</i>, <i>« Réalisation »</i>, <i>« Bénéficiaires »</i>...).
+      </li>
+      <li>
+        L'affichage s'actualise en direct pour ne présenter que les indicateurs correspondant à votre terme de recherche.
+      </li>
+    </ol>
+
+    <div class="shot">
+      <img src="/shot-85.png" alt="Barre de recherche pour trouver un indicateur">
+    </div>
+    <p class="shot-caption">Champ <b>« RECHERCHE : Rechercher un indicateur... »</b> — la flèche rouge met en valeur la barre de recherche textuelle instantanée.</p>
 
     <div class="callout">
-      <b>Visualisation en temps réel</b>
-      Les graphiques et courbes de tendance s'actualisent automatiquement à chaque validation d'une collecte dans le volet Contrôle qualité.
+      <b>Que faire ensuite ?</b>
+      Pour consulter le répertoire complet des chantiers ou déclarer un nouveau projet phare communal, accédez à la section suivante <a href="#projet-gestion" style="color:inherit;font-weight:600;">Gestion des Projets Phares →</a>
     </div>
   </section>
 
