@@ -2356,6 +2356,11 @@ export const guideHtml = `<div class="doc-header" id="intro">
       Le tableau récapitulatif liste l'ensemble des opérations avec leur identifiant (ID), leur libellé, une description synthétique et le nombre d'indicateurs de résultat associés. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu <b>« + Nouveau projet »</b> permet de lancer la déclaration d'une nouvelle initiative.
     </p>
 
+    <div class="shot">
+      <img src="/shot-88.png" alt="Liste des projets phares dans le tableau de gestion">
+    </div>
+    <p class="shot-caption">Écran <b>« Gestion des projets »</b> — la flèche rouge désigne le <b>tableau de la liste des projets</b> avec ses colonnes d'identification, de description et de suivi.</p>
+
     <!-- Étape 1 : Ouvrir la boîte de dialogue -->
     <h3 class="subhead"><span class="num">1</span>Déclencher la création d'un projet phare</h3>
     <ol class="steps">

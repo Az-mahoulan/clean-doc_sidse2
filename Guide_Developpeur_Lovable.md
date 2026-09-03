@@ -914,6 +914,10 @@ _Accessible depuis le menu latéral via l'onglet **« Projets »**, cette interf
 
 Le tableau récapitulatif affiche l'identifiant (ID), le libellé, la description synthétique et le nombre d'indicateurs rattachés à chaque opération. En haut à droite, le badge récapitulatif indique le nombre total de projets et d'indicateurs de la commune, tandis que le bouton bleu **« + Nouveau projet »** permet de lancer la déclaration d'une nouvelle initiative.
 
+![Tableau de la liste des projets phares](./images/shot-88.png)
+
+*📷 Écran « Gestion des projets » — la flèche rouge désigne le tableau de la liste des projets avec ses colonnes d'identification et de suivi.*
+
 1. **Déclencher la création :** repérez et cliquez sur le bouton bleu foncé **« + Nouveau projet »** situé en haut à droite du répertoire.
 
 ![Bouton Nouveau projet dans le répertoire des projets phares](./images/shot-87.png)
