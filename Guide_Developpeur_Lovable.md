@@ -1063,18 +1063,8 @@ _Accessible depuis le menu latéral via l'onglet **« Contrôle qualité »**, c
 
 *📷 Colonne Actions — la flèche rouge indique l'emplacement des boutons « ✔ Valider » et « ✖ Rejeter » pour approuver ou rejeter une saisie.*
 
-> 💡 **Que faire ensuite ?**  
-> Retrouvez la suite des fonctionnalités de la plateforme dans les prochaines sections du guide : **Sections à venir**.
-
----
-
-### [Prochainement] Sections à venir
-
-_Ce guide sera complété au fur et à mesure avec les captures d'écran des autres modules de la plateforme. Voici les sections prévues :_
-
-- Gestion des Recommandations : saisie, désignation des responsables et suivi des plans d'action
-- Calendriers de planification : calendrier budgétaire et calendrier officiel des évaluations
-- Suppression d'un compte utilisateur
+> 💡 **Gouvernance & Fiabilité**  
+> Le circuit de contrôle qualité et de certification formelle garantit la conformité des données avant consolidation dans les indicateurs stratégiques de la collectivité.
 
 ---
 *Documentation SIDSE IBDC (Piè Baromètre)*

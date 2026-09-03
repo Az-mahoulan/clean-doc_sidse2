@@ -286,16 +286,6 @@ export const navGroups: NavGroup[] = [
         "sub": false
       }
     ]
-  },
-  {
-    "label": "La suite",
-    "items": [
-      {
-        "href": "a-venir",
-        "title": "Sections à venir",
-        "sub": false
-      }
-    ]
   }
 ];
 
@@ -2694,47 +2684,8 @@ export const guideHtml = `<div class="doc-header" id="intro">
     <p class="shot-caption">Colonne Actions — la flèche rouge indique l'emplacement des boutons <b>« ✔ Valider »</b> et <b>« ✖ Rejeter »</b> pour approuver ou rejeter une saisie.</p>
 
     <div class="callout">
-      <b>Que faire ensuite ?</b>
-      Retrouvez la suite des fonctionnalités de la plateforme dans les prochaines sections du guide : <a href="#a-venir" style="color:inherit;font-weight:600;">Sections à venir →</a>
-    </div>
-  </section>
-
-  <section class="block" id="a-venir">
-    <div class="section-kicker">Prochainement</div>
-    <h2>Sections à venir</h2>
-    <p class="lede">
-      Le guide d'utilisation de SIDSE IBDC s'enrichit en continu au fur et à mesure du déploiement des fonctionnalités et des modules complémentaires de la plateforme.
-    </p>
-
-    <div class="card">
-      <h3 style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin:0 0 0.9rem;color:var(--color-foreground);">
-        Modules et fonctionnalités en cours d'intégration
-      </h3>
-      <ul class="plain">
-        <li style="margin-bottom:0.85rem;">
-          <b> Gestion des Recommandations :</b>
-          <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
-            Saisie des recommandations d'évaluation, désignation des responsables et suivi périodique des plans d'action correctifs.
-          </span>
-        </li>
-        <li style="margin-bottom:0.85rem;">
-          <b> Calendriers de planification :</b>
-          <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
-            Calendrier budgétaire communal et calendrier officiel des évaluations trimestrielles et annuelles de PTA.
-          </span>
-        </li>
-        <li>
-          <b> Formulaire détaillé « Nouveau PDC » :</b>
-          <span style="color:var(--color-muted-foreground);display:block;margin-top:0.2rem;">
-            Guide pas à pas de la configuration initiale d'un plan communal (piliers stratégiques, orientations, axes et programmes).
-          </span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="callout">
-      <b>Mises à jour régulières</b>
-      De nouvelles rubriques, tutoriels pas à pas et captures d'écran annotées viendront compléter la documentation au fil des prochaines versions.
+      <b>Gouvernance &amp; Fiabilité</b>
+      Le circuit de contrôle qualité et de certification formelle garantit la conformité des données avant consolidation dans les indicateurs stratégiques de la collectivité.
     </div>
   </section>
 
